@@ -10,7 +10,7 @@ class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=30)
     cuisine_specialization = models.CharField(max_length=100)
-    phone_number = models.PositiveIntegerField()
+    phone_number = models.CharField(max_length=30)
     created_on = models.DateTimeField(auto_now_add=True)
 
     class Meta:

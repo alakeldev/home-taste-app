@@ -1,7 +1,12 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.contrib.auth.models import User
 
 # Create your views here.
 
-def index(request):
-    return HttpResponse("Hello Chefs!")
+def chefs(request):
+
+    chefs_detail = User.objects.all()
+    
+    return render(request, 'account/chefs.html', {
+        'chefs': chefs_detail,
+    })
