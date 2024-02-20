@@ -25,6 +25,8 @@
             <div class="card mb-4"> <!-- Added margin-bottom -->
                 {% if chef.profile.image %}
                 <img src="{{chef.profile.image.url}}" class="card-img-top" alt="Chef">
+                {% else %}
+                <img src="{% static 'static_group1/img/default.jpg' %}" class="card-img-top" alt="No Photo">
                 {% endif %}
                 <div class="card-body">
                     <h5 class="card-title">Chef John Doe</h5>
