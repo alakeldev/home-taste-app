@@ -23,7 +23,9 @@
         {% for chef in chefs %}
         <div class="col-md-4">
             <div class="card mb-4"> <!-- Added margin-bottom -->
-                <img src="path/to/chef-profile.jpg" class="card-img-top" alt="Chef">
+                {% if chef.profile.image %}
+                <img src="{{chef.profile.image.url}}" class="card-img-top" alt="Chef">
+                {% endif %}
                 <div class="card-body">
                     <h5 class="card-title">Chef John Doe</h5>
                     <p class="card-text">Specialization: Italian Cuisine</p>
