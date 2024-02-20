@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-
+from django.db.models.signals import post_save
 
 # Create your models here.
 
@@ -18,4 +18,14 @@ class Profile(models.Model):
         ordering = ["-created_on"]
 
     def __str__(self):
-        return f"Account: {self.name}"
+        return f"User: {self.user} | Name: {self.name}"
+    
+
+
+
+def create_profile(sender , **kwargs):
+    if kwargs['created']:
+        Profile.objects.create(user=kwargs['instance'])
+
+
+post_save.connect(create_profile, sender=User)
