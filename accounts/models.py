@@ -12,7 +12,7 @@ class Profile(models.Model):
     cuisine_specialization = models.CharField(max_length=100)
     phone_number = models.CharField(max_length=30)
     created_on = models.DateTimeField(auto_now_add=True)
-    image = models.ImageField(upload_to='profile')
+    image = models.ImageField(upload_to='profile', default='profile/default.jpg')
 
     class Meta:
         ordering = ["-created_on"]
