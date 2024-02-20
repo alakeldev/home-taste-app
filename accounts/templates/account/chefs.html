@@ -20,6 +20,7 @@
 <div class="container mt-5">
     <div class="row justify-content-center">
         <!-- Chef Card -->
+        {% for chef in chefs %}
         <div class="col-md-4">
             <div class="card mb-4"> <!-- Added margin-bottom -->
                 <img src="path/to/chef-profile.jpg" class="card-img-top" alt="Chef">
@@ -28,10 +29,11 @@
                     <p class="card-text">Specialization: Italian Cuisine</p>
                     <p class="card-text">Experience: 15 Years</p>
                     <p class="card-text">Location: New York, NY</p>
-                    <a href="#" class="btn btn-primary">View Profile</a>
+                    <a href="#" class="btn btn-info">View Profile</a>
                 </div>
             </div>
         </div>
+        {% endfor %}
     </div>
 </div>
 
