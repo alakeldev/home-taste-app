@@ -18,7 +18,10 @@ class Profile(models.Model):
     image = models.ImageField(upload_to='profile', blank=True, null=True)
     slug = models.SlugField(blank=True, null=True)
     email = models.EmailField()
-
+    twitter_account = models.CharField(max_length= 80, blank=True, null=True)
+    youtube_account = models.CharField(max_length= 80, blank=True, null=True)
+    facebook_account = models.CharField(max_length= 80, blank=True, null=True)
+    instagram_account = models.CharField(max_length= 80, blank=True, null=True)
 
     class Meta:
         ordering = ["-created_on"]
