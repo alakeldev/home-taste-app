@@ -3,5 +3,45 @@
 
 
 {% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <!-- Chef Profile -->
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body text-capitalize">
+                    <img src="chef-image.jpg" alt="Chef Image" class="img-fluid mb-3">
+                    <p class="card-title h2 font-weight-bold">{{ chef_info.name }}</p>
+                    <p class="card-text h4 font-weight-bold">Chef Details:</p>
+                    <p class="card-text font-weight-bold">Specialization: {{ chef_info.cuisine_specialization }}</p>
+                    <p class="card-text font-weight-bold">Location: {{ chef_info.city }}, {{ chef_info.country }}</p>
+                    <p class="card-text font-weight-bold">Phone: {{ chef_info.phone_number }}</p>
+                    <p class="card-text">Joined Us On: {{ chef_info.created_on|date:"Y-m-d" }}</p>
+                    <p class="card-text h4 font-weight-bold">Chef Notes:</p>
+                    <p class="card-text h4 font-weight-bold">Dishes Photos:</p>
+                </div>
+            </div>
+        </div>
 
+        <!-- User Comments Section -->
+        <div class="col-md-8 mt-4">
+            <h3>Comments</h3>
+            
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="comment">Comment:</label>
+                    <textarea id="comment" name="comment" rows="4" class="form-control" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-info">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock content %}
