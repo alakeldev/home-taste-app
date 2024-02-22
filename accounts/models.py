@@ -5,6 +5,7 @@ from django.utils.text import slugify
 
 # Create your models here.
 
+GENDER = (("F", "Female"), ("M", "Male"))
 
 class Profile(models.Model):
 
@@ -22,6 +23,8 @@ class Profile(models.Model):
     youtube_account = models.CharField(max_length= 80, blank=True, null=True)
     facebook_account = models.CharField(max_length= 80, blank=True, null=True)
     instagram_account = models.CharField(max_length= 80, blank=True, null=True)
+    gender = models.CharField(choices = GENDER)
+
 
     class Meta:
         ordering = ["-created_on"]
