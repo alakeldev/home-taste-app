@@ -7,17 +7,32 @@
     <div class="row justify-content-center">
         <!-- Chef Profile -->
         <div class="col-md-12">
-            <div class="card">
+            <div class="card text-center">
                 <div class="card-body text-capitalize">
-                    <img src="chef-image.jpg" alt="Chef Image" class="img-fluid mb-3">
+                    {% if chef_info.image %}
+                    <img src="{{ chef_info.image.url }}" alt="Chef Image" class="img-fluid mb-3" width="200">
+                    {% else %}
+                    <img src="{% static 'static_group1/img/default.jpg' %}" alt="Chef Image" class="img-fluid mb-3"
+                        width="200">
+                    {% endif %}
                     <p class="card-title h2 font-weight-bold">{{ chef_info.name }}</p>
-                    <p class="card-text h4 font-weight-bold">Chef Details:</p>
+                    <p class="card-text h4 font-weight-bold text-danger">Chef Details:</p>
                     <p class="card-text font-weight-bold">Specialization: {{ chef_info.cuisine_specialization }}</p>
                     <p class="card-text font-weight-bold">Location: {{ chef_info.city }}, {{ chef_info.country }}</p>
                     <p class="card-text font-weight-bold">Phone: {{ chef_info.phone_number }}</p>
-                    <p class="card-text">Joined Us On: {{ chef_info.created_on|date:"Y-m-d" }}</p>
-                    <p class="card-text h4 font-weight-bold">Chef Notes:</p>
-                    <p class="card-text h4 font-weight-bold">Dishes Photos:</p>
+                    <p class="card-text font-weight-bold">Email: {{ chef_info.email }}</p>
+                    <p class="card-text h4 font-weight-bold text-danger">Chef Social Accounts:</p>
+                    <ul class="text-center">
+                        <li class="list-inline-item pr-2 "><a href="{{ chef_info.facebook_account }}"><i class="fa fa-facebook fa-2x text-info"></i></a>
+                        </li>
+                        <li class="list-inline-item pr-2"><a href="{{ chef_info.instagram }}"><i class="fa fa-instagram fa-2x text-info"></i></a>
+                        </li>
+                        <li class="list-inline-item pr-2"><a href="{{ chef_info.twitter_account }}"><i class="fa fa-twitter fa-2x text-info"></i></a>
+                        </li>
+                        <li class="list-inline-item pr-2"><a href="{{ chef_info.youtube_account }}"><i class="fa fa-youtube fa-2x text-info"></i></a>
+                        </li>
+                    </ul>
+                    <p class="card-text h4 font-weight-bold text-danger">Chef's Specials Dishes:</p>
                 </div>
             </div>
         </div>
@@ -25,7 +40,7 @@
         <!-- User Comments Section -->
         <div class="col-md-8 mt-4">
             <h3>Comments</h3>
-            
+
             <form action="#" method="post">
                 <div class="form-group">
                     <label for="name">Name:</label>
