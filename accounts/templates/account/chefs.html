@@ -21,19 +21,19 @@
     <div class="row justify-content-center">
         <!-- Chef Card -->
         {% for chef in chefs %}
-        <div class="col-md-4">
-            <div class="card mb-4"> <!-- Added margin-bottom -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
                 {% if chef.profile.image %}
-                <img src="{{chef.profile.image.url}}" class="card-img-top" alt="Chef">
+                <img src="{{ chef.profile.image.url }}" class="card-img-top" alt="Chef">
                 {% else %}
                 <img src="{% static 'static_group1/img/default.jpg' %}" class="card-img-top" alt="No Photo">
                 {% endif %}
-                <div class="card-body text-center text-capitalize">
+                <div class="card-body text-center text-capitalize d-flex flex-column">
                     <p class="card-title h5 font-weight-bold">{{ chef.profile.name }}</p>
-                    <p class="card-text text-info">specialization: {{ chef.profile.cuisine_specialization }}</p>
-                    <p class="card-text text-danger">location: {{ chef.profile.country }}, {{ chef.profile.city }}</p>
-                    <p class="card-text">joined us on: {{ chef.profile.created_on|date:"Y-m-d"}}</p>
-                    <a href="#" class="btn btn-info">view profile</a>
+                    <p class="card-text text-info">Specialization: {{ chef.profile.cuisine_specialization }}</p>
+                    <p class="card-text text-danger">Location: {{ chef.profile.country }}, {{ chef.profile.city }}</p>
+                    <p class="card-text">Joined Us On: {{ chef.profile.created_on|date:"Y-m-d" }}</p>
+                    <a href="#" class="btn btn-info mt-auto">View Profile</a>
                 </div>
             </div>
         </div>
