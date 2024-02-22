@@ -17,6 +17,7 @@ class Profile(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     image = models.ImageField(upload_to='profile', blank=True, null=True)
     slug = models.SlugField(blank=True, null=True)
+    email = models.EmailField()
 
 
     class Meta:
