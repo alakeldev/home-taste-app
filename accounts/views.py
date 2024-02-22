@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth.models import User
+from .models import Profile
 
 # Create your views here.
 
@@ -9,4 +10,13 @@ def chefs(request):
     
     return render(request, 'account/chefs.html', {
         'chefs': chefs_detail,
+    })
+
+
+def chef_info(request, slug):
+
+    chef_info = Profile.objects.get(slug = slug)
+
+    return render(request, 'account/chef_info.html', {
+    'chef_info': chef_info,
     })
