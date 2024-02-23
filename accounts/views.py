@@ -24,6 +24,7 @@ def chef_info(request, slug):
 
 
 def user_login(request):
-
+    form = Login()
     return render(request, 'account/login.html', {
+        'form': form
     })
