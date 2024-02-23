@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'crispy_forms',
+    'crispy_bootstrap4',
     'crispy_bootstrap5',
     'cloudinary',
     'accounts',
@@ -72,7 +73,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'home_taste.urls'
-
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
