@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render , redirect
 from django.contrib.auth.models import User
 from .models import Profile
 from .forms import Login
+from django.contrib.auth import authenticate , login
 
 # Create your views here.
 
@@ -24,7 +25,16 @@ def chef_info(request, slug):
 
 
 def user_login(request):
-    form = Login()
+    if request.method == 'POST':
+        form = Login()
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username=username , password=password)
+        if user is not None:
+            login(request , user)
+            return redirect('accounts:chefs_accounts')
+    else:
+        form = Login()
     return render(request, 'account/login.html', {
         'form': form
     })

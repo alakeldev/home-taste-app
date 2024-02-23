@@ -11,19 +11,18 @@ class Profile(models.Model):
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=30)
-    cuisine_specialization = models.CharField(max_length=100)
-    country = models.CharField(max_length=25)
-    city = models.CharField(max_length=25)
+    cuisine_specialization = models.CharField(max_length=100, blank=True, null=True)
+    country = models.CharField(max_length=25, blank=True, null=True)
+    city = models.CharField(max_length=25, blank=True, null=True)
     phone_number = models.CharField(max_length=30, blank=True, null=True)
     created_on = models.DateTimeField(auto_now_add=True)
     image = models.ImageField(upload_to='profile', blank=True, null=True)
     slug = models.SlugField(blank=True, null=True)
-    email = models.EmailField()
     twitter_account = models.CharField(max_length= 80, blank=True, null=True)
     youtube_account = models.CharField(max_length= 80, blank=True, null=True)
     facebook_account = models.CharField(max_length= 80, blank=True, null=True)
     instagram_account = models.CharField(max_length= 80, blank=True, null=True)
-    gender = models.CharField(choices = GENDER)
+    gender = models.CharField(choices = GENDER, blank=True, null=True)
 
 
     class Meta:
