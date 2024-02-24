@@ -43,12 +43,18 @@
                     <li class="nav-item">
                         <a class="nav-link text-danger h5" href="#">CONTACT |</a>
                     </li>
+                    {% if request.user.is.authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link text-danger h5" href="#">LOGIN |</a>
+                        <a class="nav-link text-danger h5" href="/accounts/logout/">LOGOUT |</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link text-danger h5" href="/accounts/login/">LOGIN |</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-danger h5" href="#">SIGN UP |</a>
+                        <a class="nav-link text-danger h5" href="/accounts/signup/">REGISTER |</a>
                     </li>
+                    {% endif %}
                 </ul>
             </div>
         </nav>
