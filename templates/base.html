@@ -1,18 +1,22 @@
 {% load static %}
+
 <!doctype html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Home Taste</title>
     <meta name="description" content="Discover culinary delights with our home chef's expertise.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS here -->
-    <link rel="stylesheet" href="{% static 'static_group1/css/bootstrap.min.css'%}">
+
+    {% block extra_css %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'static_group1/css/font-awesome.min.css'%}">
     <link rel="stylesheet" href="{% static 'static_group1/css/themify-icons.css'%}">
     <link rel="stylesheet" href="{% static 'static_group1/css/style.css'%}">
+    {% endblock %}
+
+    <title>Home Taste - {% block title %} {% endblock %}</title>
 </head>
 
 <body>
@@ -34,7 +38,7 @@
                         <a class="nav-link text-danger h5" href="#">HOME |</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-danger h5" href="#">CHEFS |</a>
+                        <a class="nav-link text-danger h5" href="{% url 'accounts:chefs' %}">CHEFS |</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-danger h5" href="#">CONTACT |</a>
@@ -103,7 +107,9 @@
     <!--/ footer end  -->
 
     <!-- JS here - bootstrap -->
-    <script src="{% static 'static_group1/js/bootstrap.min.js'%}"></script>
+    {% block onload_js %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/js/bootstrap.min.js"></script>
     <script src="{% static 'static_group1/js/main.js'%}"></script>
+    {% endblock %}
 </body>
 </html>
