@@ -36,7 +36,7 @@
                         <a class="nav-link {% if url_name == 'home' %}active{% endif %}" aria-current="page" href="{% url 'home' %}">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">CHEFS</a>
+                        <a class="nav-link {% if url_name == 'chefs' %}active{% endif %}" aria-current="page" href="{% url 'chefs:chefs_list' %}">CHEFS</a>
                     </li>
                     {% if request.user.is_authenticated %}
                     <li class="nav-item">
