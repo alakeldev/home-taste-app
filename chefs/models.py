@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 
 from djrichtextfield.models import RichTextField
 from django_resized import ResizedImageField
+from django.db.models.signals import post_save
 
 # Create your models here.
 
@@ -31,11 +32,18 @@ class Profile(models.Model):
     slug = models.SlugField(blank=True, null=True)
     gender = models.CharField(choices = GENDER, blank=True, null=True, default='not specify')
     instructions = RichTextField(max_length = 20000, blank=True, null=True)
-    image = ResizedImageField(size=[400, None], quality=75, upload_to='profile/', force_format='WEBP', blank=True, null=True)
+    image = ResizedImageField(size=[200, None], quality=75, upload_to='profile/', force_format='WEBP', blank=True, null=True)
 
 
     class Meta:
         ordering = ['-created_on']
 
     def __str__(self):
-        return f"User: {self.user} | Name: {self.name}"
+        return '%s' %(self.user.username)
+    
+
+def create_profile(sender, **kwargs):
+    if kwargs['created']:
+        Profile.objects.create(user=kwargs['instance'])
+
+post_save.connect(create_profile, sender=User)
