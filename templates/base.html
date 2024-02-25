@@ -20,6 +20,7 @@
 
 <body>
     <!-- Start Nav Bar Section using Bootstrap5 -->
+    {% with request.resolver_match.url_name as url_name %}
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="{% url 'home' %}">
@@ -32,23 +33,30 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto mb-2">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">HOME</a>
+                        <a class="nav-link {% if url_name == 'home' %}active{% endif %}" aria-current="page" href="{% url 'home' %}">HOME</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">CHEFS</a>
                     </li>
+                    {% if request.user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="#">LOGIN</a>
+                        <a class="nav-link {% if url_name == 'accounts_logout' %}active{% endif %}" href="/accounts/logout/">LOGOUT</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link {% if url_name == 'accounts_login' %}active{% endif %}" href="/accounts/login/">LOGIN</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">REGISTER</a>
+                        <a class="nav-link {% if url_name == 'accounts_signup' %}active{% endif %}" href="/accounts/signup">REGISTER</a>
                     </li>
+                    {% endif %}
                 </ul>
                 <!-- Form For Search bar -->
 
             </div>
         </div>
     </nav>
+    {% endwith %}
     <!-- End Nav Bar Section using Bootstrap5 -->
 
 
