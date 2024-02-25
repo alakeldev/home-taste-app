@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from djrichtextfield.models import RichTextField
 from django_resized import ResizedImageField
 from django.db.models.signals import post_save
-
+from django.utils.text import slugify
 # Create your models here.
 
 GENDER = (("F", "Female"), ("M", "Male"))
@@ -34,6 +34,10 @@ class Profile(models.Model):
     instructions = RichTextField(max_length = 20000, blank=True, null=True)
     image = ResizedImageField(size=[200, None], quality=75, upload_to='profile/', force_format='WEBP', blank=True, null=True)
 
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.user.username)
+        super(Profile, self).save(*args, **kwargs)
 
     class Meta:
         ordering = ['-created_on']
