@@ -17,3 +17,9 @@ def chef_info(request, slug):
     return render(request, 'chef_info.html', {
         'chef_info' : chef_info
     })
+
+
+def my_profile(request):
+    return render(request, 'my_profile.html', {
+        
+    })
