@@ -34,7 +34,7 @@
                     <p class="card-text text-info">Specialization: {{ chef.profile.cuisine_specialization }}</p>
                     <p class="card-text text-danger">Location: {{ chef.profile.country }}, {{ chef.profile.city }}</p>
                     <p class="card-text">Joined Us On: {{ chef.profile.created_on|date:"Y-m-d" }}</p>
-                    <a href="#" class="btn btn-info mt-auto">View Profile</a>
+                    <a href="{% url 'chefs:chef_info' chef.profile.slug %}" class="btn btn-info mt-auto">View Profile</a>
                 </div>
             </div>
         </div>
