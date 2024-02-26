@@ -21,5 +21,5 @@ def chef_info(request, slug):
 
 def my_profile(request):
     return render(request, 'my_profile.html', {
-        
+        'my_profile' : my_profile
     })
