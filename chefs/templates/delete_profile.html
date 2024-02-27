@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<h2>Confirm Profile Deletion</h2>
+<p>Are you sure you want to delete your profile? This action cannot be undone.</p>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button type="submit">Delete Profile</button>
+</form>
+
+{% endblock %}

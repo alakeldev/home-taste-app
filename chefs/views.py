@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
-from .models import Profile
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from .models import Profile
 from .forms import UserProfileForm
+
 # Create your views here.
 
 
@@ -41,3 +43,13 @@ def edit_profile(request):
         form = UserProfileForm(instance=profile)
 
     return render(request, 'edit_profile.html', {'form': form})
+
+
+@login_required
+def delete_profile(request):
+    if request.method == 'POST':
+        user = request.user
+        user.delete()
+        messages.success(request, "Your profile has been deleted successfully.")
+        return redirect('home') 
+    return render(request, 'delete_profile.html')
