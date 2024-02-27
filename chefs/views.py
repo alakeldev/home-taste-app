@@ -45,7 +45,7 @@ def edit_profile(request):
     return render(request, 'edit_profile.html', {'form': form})
 
 
-@login_required
+@login_required(login_url='/accounts/login/')
 def delete_profile(request):
     if request.method == 'POST':
         user = request.user
