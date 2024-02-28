@@ -24,15 +24,24 @@ class Profile(models.Model):
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
-    cuisine_specialization = models.CharField(max_length=150, default='Indian, Syrian, Italian...' ,blank=True, null=True)
+    cuisine_specialization = models.CharField(max_length=150, default='Indian, Syrian, Italian...')
     Region = models.CharField(max_length=50, choices=REGION, default='Europe')
-    country = models.CharField(max_length=25, blank=True, null=True)
-    city = models.CharField(max_length=25, blank=True, null=True)
+    country = models.CharField(max_length=50, default='Germany, France, Syrian...')
+    city = models.CharField(max_length=50, default='Frankfurt, Damascus, Paris...')
     created_on = models.DateTimeField(auto_now_add=True)
     slug = models.SlugField(blank=True, null=True)
-    gender = models.CharField(choices = GENDER, blank=True, null=True, default='not specify')
-    instructions = RichTextField(max_length = 20000, blank=True, null=True)
-    image = ResizedImageField(size=[200, None], quality=75, upload_to='profile/', force_format='WEBP', blank=True, null=True)
+    gender = models.CharField(choices = GENDER, blank=True, null=True)
+    instructions = RichTextField(max_length = 20000, default='Please Enter Your Instructions/Schedules/Notes...')
+    image = ResizedImageField(size=[400, None], quality=75, upload_to='profile/', force_format='WEBP', blank=True, null=True)
+    facebook_link = models.URLField(blank=True, null=True)
+    instagram_link = models.URLField(blank=True, null=True)
+    youtube_link = models.URLField(blank=True, null=True)
+    tiktok_link = models.URLField(blank=True, null=True)
+    dish1 = ResizedImageField(size=[200, None], quality=75, upload_to='dishes/', force_format='WEBP', blank=True, null=True)
+    dish2 = ResizedImageField(size=[200, None], quality=75, upload_to='dishes/', force_format='WEBP', blank=True, null=True)
+    dish3 = ResizedImageField(size=[200, None], quality=75, upload_to='dishes/', force_format='WEBP', blank=True, null=True)
+    dish4 = ResizedImageField(size=[200, None], quality=75, upload_to='dishes/', force_format='WEBP', blank=True, null=True)
+
 
     def save(self, *args, **kwargs):
         if not self.slug:
