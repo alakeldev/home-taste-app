@@ -14,7 +14,13 @@
                     {% else %}
                     <img src="{% static 'images/default.jpg' %}" alt="Chef Image" class="img-fluid mb-3" width="200">
                     {% endif %}
-                    <p class="card-title h2 font-weight-bold">{{ chef_info.name }}</p>
+                    <p class="card-title h2 font-weight-bold">
+                        {% if chef_info.name %}
+                        {{ chef_info.name }}
+                        {% else %}
+                        {{ chef_info.slug }}
+                        {% endif %}
+                    </p>
                     <p class="card-text h4 font-weight-bold text-danger">Chef Details:</p>
                     <p class="card-text font-weight-bold">Region: {{ chef_info.Region }}</p>
                     <p class="card-text font-weight-bold">Specialization: {{ chef_info.cuisine_specialization }}</p>

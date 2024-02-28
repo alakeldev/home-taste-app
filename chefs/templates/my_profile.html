@@ -14,7 +14,12 @@
                     {% else %}
                     <img src="{% static 'images/default.jpg' %}" alt="Chef Image" class="img-fluid mb-3" width="200">
                     {% endif %}
-                    <p class="card-title h2 font-weight-bold">{{ user.profile.name }}</p>
+                    <p class="card-title h2 font-weight-bold">
+                    {% if user.profile.name %}
+                    {{ user.profile.name }}
+                    {% else %}
+                    {{ user.username }}
+                    {% endif %}</p>
                     <p class="card-text h4 font-weight-bold text-danger">Chef Details:</p>
                     <p class="card-text font-weight-bold">Region: {{ user.profile.Region }}</p>
                     <p class="card-text font-weight-bold">Specialization: {{ user.profile.cuisine_specialization }}</p>

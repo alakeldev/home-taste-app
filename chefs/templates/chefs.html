@@ -29,7 +29,13 @@
                 <img src="{% static 'images/default.jpg' %}" class="card-img-top" alt="No Photo">
                 {% endif %}
                 <div class="card-body text-center text-capitalize d-flex flex-column">
-                    <p class="card-title h5 font-weight-bold">Chef: {{ chef.profile.name }}</p>
+                    <p class="card-title h5 font-weight-bold">Chef: 
+                    {% if chef.profile.name %}
+                    {{ chef.profile.name }}
+                    {% else %}
+                    {{ chef.username }}
+                    {% endif %}
+                    </p>
                     <p class="card-text text-info">Region: {{ chef.profile.Region }}</p>
                     <p class="card-text text-info">Specialization: {{ chef.profile.cuisine_specialization }}</p>
                     <p class="card-text text-danger">Location: {{ chef.profile.country }}, {{ chef.profile.city }}</p>
