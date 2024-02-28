@@ -29,16 +29,25 @@
                     <p class="card-text font-weight-bold">Instructions/Schedules: {{ chef_info.instructions }}</p>
                     <p class="card-text h4 font-weight-bold text-danger">Chef Social Accounts:</p>
                     <ul class="text-center">
-                        <li class="list-inline-item pr-2 "><a href="#"><i
-                                    class="fa fa-facebook fa-2x text-info"></i></a>
-                        </li>
-                        <li class="list-inline-item pr-2"><a href="#"><i
-                                    class="fa fa-instagram fa-2x text-info"></i></a>
-                        </li>
-                        <li class="list-inline-item pr-2"><a href="#"><i class="fa fa-twitter fa-2x text-info"></i></a>
-                        </li>
-                        <li class="list-inline-item pr-2"><a href="#"><i class="fa fa-youtube fa-2x text-info"></i></a>
-                        </li>
+                        {% if chef_info.facebook_link %}
+                        <li class="list-inline-item pr-2"><a href="{{ user.profile.facebook_link }}"><i
+                                    class="fa fa-facebook fa-2x text-info"></i></a></li>
+                        {% endif %}
+                        {% if chef_info.instagram_link %}
+                        <li class="list-inline-item pr-2"><a href="{{ user.profile.instagram_link }}"><i
+                                    class="fa fa-instagram fa-2x text-info"></i></a></li>
+                        {% endif %}
+                        {% if chef_info.tiktok_link %}
+                        <li class="list-inline-item pr-2"><a href="{{ user.profile.tiktok_link }}"><i
+                                    class="fa fa-twitter fa-2x text-info"></i></a></li>
+                        {% endif %}
+                        {% if chef_info.youtube_link %}
+                        <li class="list-inline-item pr-2"><a href="{{ user.profile.youtube_link }}"><i
+                                    class="fa fa-youtube fa-2x text-info"></i></a></li>
+                        {% endif %}
+                        {% if not chef_info.facebook_link and not chef_info.instagram_link and not chef_info.tiktok_link and not chef_info.youtube_link %}
+                        <li class="list-inline-item pr-2">No social media links provided</li>
+                        {% endif %}
                     </ul>
                     <p class="card-text h4 font-weight-bold text-danger">Chef's Specials Dishes:</p>
                 </div>
