@@ -18,7 +18,8 @@
                     <p class="card-text h4 font-weight-bold text-danger">Chef Details:</p>
                     <p class="card-text font-weight-bold">Region: {{ user.profile.Region }}</p>
                     <p class="card-text font-weight-bold">Specialization: {{ user.profile.cuisine_specialization }}</p>
-                    <p class="card-text font-weight-bold">Location: {{ user.profile.country }}, {{ user.profile.city }}</p>
+                    <p class="card-text font-weight-bold">Location: {{ user.profile.country }}, {{ user.profile.city }}
+                    </p>
                     <p class="card-text font-weight-bold">Gender: {{ user.profile.gender }}</p>
                     <p class="card-text font-weight-bold">Instructions/Schedules: {{ user.profile.instructions }}</p>
                     <p class="card-text h4 font-weight-bold text-danger">Chef Social Accounts:</p>
@@ -39,11 +40,7 @@
             </div>
         </div>
         <div>
-        <a href="{% url 'chefs:delete_profile' %}">Delete My Profile</a>
-        </div>
-        <!-- User Comments Section -->
-        <div class="col-md-8 mt-4">
-            <h3>Comments</h3>
+            <a href="{% url 'chefs:delete_profile' %}">Delete My Profile</a>
         </div>
     </div>
 </div>

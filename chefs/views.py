@@ -2,8 +2,9 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from .models import Profile
+from .models import Profile, Comment
 from .forms import UserProfileForm
+from .forms import CommentForm
 
 # Create your views here.
 
@@ -17,9 +18,18 @@ def chefs_list(request):
 
 def chef_info(request, slug):
     chef_info = Profile.objects.get(slug=slug)
-
+    comments = Comment.objects.filter(chef=chef_info, is_approved=True)
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.chef = chef_info
+            comment.save()
+            return redirect(request.path)
+    else:
+        form = CommentForm()
     return render(request, 'chef_info.html', {
-        'chef_info' : chef_info
+        'chef_info' : chef_info, 'comments': comments, 'form': form
     })
 
 

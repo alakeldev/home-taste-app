@@ -51,3 +51,15 @@ def create_profile(sender, **kwargs):
         Profile.objects.create(user=kwargs['instance'])
 
 post_save.connect(create_profile, sender=User)
+
+
+class Comment(models.Model):
+    chef = models.ForeignKey(Profile, on_delete=models.CASCADE)
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    comment = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    is_approved = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f"Comment by {self.name} on {self.chef}"
