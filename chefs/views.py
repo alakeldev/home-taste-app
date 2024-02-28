@@ -5,14 +5,21 @@ from django.contrib.auth.decorators import login_required
 from .models import Profile, Comment
 from .forms import UserProfileForm
 from .forms import CommentForm
+from django.db.models import Q
 
 # Create your views here.
 
-
 def chefs_list(request):
-    chefs = User.objects.all()
+    search_query = request.GET.get('search', '')
+    queryset = User.objects.all()
+    if search_query:
+        queryset = queryset.filter(
+            Q(profile__Region__icontains=search_query) | 
+            Q(profile__country__icontains=search_query) | 
+            Q(profile__city__icontains=search_query) 
+        )
     return render(request, 'chefs.html', {
-        'chefs' : chefs,
+        'chefs': queryset,
     })
 
 
