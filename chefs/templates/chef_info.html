@@ -30,19 +30,19 @@
                     <p class="card-text h4 font-weight-bold text-danger">Chef Social Accounts:</p>
                     <ul class="text-center">
                         {% if chef_info.facebook_link %}
-                        <li class="list-inline-item pr-2"><a href="{{ user.profile.facebook_link }}"><i
+                        <li class="list-inline-item pr-2"><a href="{{ chef_info.facebook_link }}"><i
                                     class="fa fa-facebook fa-2x text-info"></i></a></li>
                         {% endif %}
                         {% if chef_info.instagram_link %}
-                        <li class="list-inline-item pr-2"><a href="{{ user.profile.instagram_link }}"><i
+                        <li class="list-inline-item pr-2"><a href="{{ chef_info.instagram_link }}"><i
                                     class="fa fa-instagram fa-2x text-info"></i></a></li>
                         {% endif %}
                         {% if chef_info.tiktok_link %}
-                        <li class="list-inline-item pr-2"><a href="{{ user.profile.tiktok_link }}"><i
+                        <li class="list-inline-item pr-2"><a href="{{ chef_info.tiktok_link }}"><i
                                     class="fa fa-twitter fa-2x text-info"></i></a></li>
                         {% endif %}
                         {% if chef_info.youtube_link %}
-                        <li class="list-inline-item pr-2"><a href="{{ user.profile.youtube_link }}"><i
+                        <li class="list-inline-item pr-2"><a href="{{ chef_info.youtube_link }}"><i
                                     class="fa fa-youtube fa-2x text-info"></i></a></li>
                         {% endif %}
                         {% if not chef_info.facebook_link and not chef_info.instagram_link and not chef_info.tiktok_link and not chef_info.youtube_link %}
@@ -50,6 +50,23 @@
                         {% endif %}
                     </ul>
                     <p class="card-text h4 font-weight-bold text-danger">Chef's Specials Dishes:</p>
+                    {% if chef_info.dish1 %}
+                    <img src="{{ chef_info.dish1.url }}" alt="Dish 1">
+                    {% endif %}
+                    {% if chef_info.dish2 %}
+                    <img src="{{ chef_info.dish2.url }}" alt="Dish 2">
+                    {% endif %}
+                    {% if chef_info.dish3 %}
+                    <img src="{{ chef_info.dish3.url }}" alt="Dish 3">
+                    {% endif %}
+                    {% if chef_info.dish4 %}
+                    <img src="{{ chef_info.dish4.url }}" alt="Dish 4">
+                    {% endif %}
+                    
+                    <!-- Show a message if no special dishes are provided -->
+                    {% if not chef_info.dish1 and not chef_info.dish2 and not chef_info.dish3 and not chef_info.dish4 %}
+                    <p>No special dishes to show at the moment.</p>
+                    {% endif %}
                 </div>
             </div>
         </div>

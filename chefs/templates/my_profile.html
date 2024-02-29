@@ -50,6 +50,24 @@
                         {% endif %}
                     </ul>
                     <p class="card-text h4 font-weight-bold text-danger">Chef's Specials Dishes:</p>
+                    {% if user.profile.dish1 %}
+                    <img src="{{ user.profile.dish1.url }}" alt="Dish 1">
+                    {% endif %}
+                    {% if user.profile.dish2 %}
+                    <img src="{{ user.profile.dish2.url }}" alt="Dish 2">
+                    {% endif %}
+                    {% if user.profile.dish3 %}
+                    <img src="{{ user.profile.dish3.url }}" alt="Dish 3">
+                    {% endif %}
+                    {% if user.profile.dish4 %}
+                    <img src="{{ user.profile.dish4.url }}" alt="Dish 4">
+                    {% endif %}
+                    
+                    <!-- Show a message if no special dishes are provided -->
+                    {% if not user.profile.dish1 and not user.profile.dish2 and not user.profile.dish3 and not user.profile.dish4 %}
+                    <p>No special dishes to show at the moment.</p>
+                    {% endif %}
+
                 </div>
             </div>
         </div>
