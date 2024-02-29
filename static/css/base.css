@@ -1,10 +1,13 @@
+/* google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Oswald:wght@200..700&display=swap');
 
+/* global scope variables */
 :root {
     --title: 'Oswald', serif;
     --main-font: 'Arimo', serif;
 }
 
+/* global rules */
 html, body {
     height: 100%;
 }
@@ -22,35 +25,4 @@ h1, h2, h3, h4, h5, h6 {
 main {
     flex: 1 0 auto;
     background-color: white;
-}
-
-
-
-/* Start Header */
-
-
-
-/* End Header */
-
-
-/* start footer */
-footer {
-    display: flex;
-    flex-shrink: 0;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-/* end footer */
-
-
-.active {
-    border-bottom: 2px solid blue;
-    font-weight: 500;
-}
-
-.form {
-    width: 100%;
-    margin: 5% auto;
-    border-radius: 5px;
 }
