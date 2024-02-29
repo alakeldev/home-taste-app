@@ -26,7 +26,7 @@
                     <p class="card-text font-weight-bold">Specialization: {{ chef_info.cuisine_specialization }}</p>
                     <p class="card-text font-weight-bold">Location: {{ chef_info.country }}, {{ chef_info.city }}</p>
                     <p class="card-text font-weight-bold">Gender: {{ chef_info.gender }}</p>
-                    <p class="card-text font-weight-bold">Instructions/Schedules: {{ chef_info.instructions }}</p>
+                    <p class="card-text font-weight-bold">Instructions/Schedules: {{ chef_info.instructions|safe }}</p>
                     <p class="card-text h4 font-weight-bold text-danger">Chef Social Accounts:</p>
                     <ul class="text-center">
                         {% if chef_info.facebook_link %}
