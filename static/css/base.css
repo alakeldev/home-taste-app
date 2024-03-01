@@ -5,7 +5,8 @@
 :root {
     --title: 'Oswald', serif;
     --main-font: 'Arimo', serif;
-    --main-color: rgb(33, 37, 41)
+    --main-color: rgb(33, 37, 41);
+    --green-color: #7ab66b;
 }
 
 /* global rules */
@@ -35,7 +36,7 @@ main {
 }
 
 .home-word {
-    color: #7ab66b;
+    color: var(--green-color);
 }
 
 /* start landing section */
@@ -70,7 +71,7 @@ main {
 }
 
 .btn-signup:hover {
-    background-color: #7ab66b;
+    background-color: var(--green-color);
     color: #fff;
 }
 
@@ -87,7 +88,7 @@ main {
 }
 
 .accordion {
-    transform:translate(0%, -10%);
+    transform: translate(0%, -10%);
 }
 
 @media (max-width: 992px) {
@@ -107,7 +108,7 @@ main {
 }
 
 .accordion-button:not(.collapsed)::after,
-.accordion-button:not(.collapsed)::before { 
+.accordion-button:not(.collapsed)::before {
     color: #7ab66b;
 }
 
@@ -143,8 +144,8 @@ main {
 }
 
 .btn-chefs:hover {
-        background-color: #7ab66b;
-        color: #fff;
+    background-color: var(--green-color);
+    color: #fff;
 }
 
 .span-title {
@@ -153,9 +154,83 @@ main {
     font-size: 18px;
 }
 
-.accordion-header .accordion-button{
+.accordion-header .accordion-button {
     font-family: var(--title);
     font-weight: 500;
     color: var(--main-color);
 }
+
 /* end about section */
+
+/* start sign in form */
+#sign-in-div {
+    box-shadow: 0 2px 4px var(--green-color);
+    border: 1px solid var(--green-color);
+    height: 70vh;
+    margin-top: 30px;
+    width: 50%;
+    background-color: var(--green-color);
+}
+
+#sign-in-div h1 {
+    color: var(--main-color);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#sign-in-div a {
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+#sign-in-div a:hover {
+    color: #0a459c;
+}
+
+div#div_id_remember.mb-3.form-check {
+    display: none;
+}
+
+#signin {
+    height: 45px;
+    width: 35%;
+    border: none;
+    outline: none;
+    background-color: var(--main-color);
+    font-weight: 700;
+    color: white;
+    border-radius: 60px;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+#signin:hover {
+    background-color: #f0edef;
+    color: var(--main-color);
+}
+
+label.form-label.requiredField[for="id_login"] {
+    visibility: hidden;
+}
+label.form-label.requiredField[for="id_login"]::before {
+    content: 'Username*';
+    visibility: visible;
+    display: block;
+    position: absolute;
+    transform: translate(-20%,0%);
+    font-weight: bold;
+}
+
+label.form-label.requiredField[for="id_password"] {
+    visibility: hidden;
+}
+
+label.form-label.requiredField[for="id_password"]::before {
+    content: 'Password*';
+    visibility: visible;
+    display: block;
+    position: absolute;
+    transform: translate(1%, 0%);
+    font-weight: bold;
+}
+/* end sign in form */
