@@ -34,6 +34,10 @@ main {
     background-color: white;
 }
 
+.home-word {
+    color: #7ab66b;
+}
+
 /* start landing section */
 .landing {
     background: url(../images/landing.jpg) no-repeat;
@@ -62,6 +66,12 @@ main {
     font-weight: 700;
     color: white;
     border-radius: 60px;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+.btn-signup:hover {
+    background-color: #7ab66b;
+    color: #fff;
 }
 
 /* end landing section */
