@@ -13,6 +13,7 @@
 html,
 body {
     height: 100%;
+    background-color: rgb(236, 236, 236);
 }
 
 body {
@@ -32,7 +33,6 @@ h6 {
 
 main {
     flex: 1 0 auto;
-    background-color: white;
 }
 
 .home-word {
@@ -331,3 +331,33 @@ label.form-label.requiredField[for="id_password"]::before {
 }
 
 /* end sign up form */
+
+/* start search bar */
+.search-bar-container .btn {
+    transform: translate(-7px, 0px);
+    background-color: var(--main-color);
+    color: #fff;
+    transition: background-color 0.4s, color 0.4s;
+    border-color: var(--main-color);
+}
+
+.search-bar-container .btn:hover {
+    background-color: var(--green-color);
+    color: var(--main-color);
+    border-color: var(--green-color);
+}
+
+.search-bar-container input:focus {
+    box-shadow: none;
+    border-color: var(--main-color);
+    color: var(--green-color);
+}
+
+@media (min-width: 992px) {
+    .search-bar-container {
+        transform: translate(25%, 50%);
+        min-width: 100%;
+    }
+}
+
+/* end search bar */

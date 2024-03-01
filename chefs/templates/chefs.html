@@ -4,20 +4,18 @@
 
 
 {% block content %}
-<!-- Search -->
-<div class="container mt-4">
-    <div class="row justify-content-center">
-        <div class="col-lg-6">
-            <form class="input-group" action="{% url 'chefs:chefs_list' %}">
-                <input type="text" class="form-control text-danger" name="search" placeholder="Chefs location...">
-                <div class="input-group-append">
-                    <button class="btn btn-info" type="button">Search</button>
-                </div>
-            </form>
-        </div>
+<!-- start search section -->
+<div class="container mt-4 search-bar-container">
+    <div class="col-lg-6">
+        <form class="d-flex input-group" action="{% url 'chefs:chefs_list' %}">
+            <input class="form-control me-2" type="text" name="search" placeholder="Search by location"
+                aria-label="Search">
+            <button class="btn btn-outline-success" type="button">Search</button>
+        </form>
     </div>
 </div>
-<!-- endsearch -->
+<!-- end search section -->
+
 <div class="container mt-5">
     <div class="row justify-content-center">
         <!-- Chef Card -->
@@ -30,12 +28,12 @@
                 <img src="{% static 'images/default.jpg' %}" class="card-img-top" alt="No Photo">
                 {% endif %}
                 <div class="card-body text-center text-capitalize d-flex flex-column">
-                    <p class="card-title h5 font-weight-bold">Chef: 
-                    {% if chef.profile.name %}
-                    {{ chef.profile.name }}
-                    {% else %}
-                    {{ chef.username }}
-                    {% endif %}
+                    <p class="card-title h5 font-weight-bold">Chef:
+                        {% if chef.profile.name %}
+                        {{ chef.profile.name }}
+                        {% else %}
+                        {{ chef.username }}
+                        {% endif %}
                     </p>
                     <p class="card-text text-info">Region: {{ chef.profile.Region }}</p>
                     <p class="card-text text-info">Specialization: {{ chef.profile.cuisine_specialization }}</p>
