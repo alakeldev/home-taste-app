@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-
 from djrichtextfield.models import RichTextField
 from django_resized import ResizedImageField
 from django.db.models.signals import post_save
@@ -23,15 +22,15 @@ REGION = (
 class Profile(models.Model):
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    name = models.CharField(max_length=100)
-    cuisine_specialization = models.CharField(max_length=150, default='Indian, Syrian, Italian...')
-    Region = models.CharField(max_length=50, choices=REGION, default='Europe')
-    country = models.CharField(max_length=50, default='Germany, France, Syrian...')
-    city = models.CharField(max_length=50, default='Frankfurt, Damascus, Paris...')
+    name = models.CharField(max_length=30)
+    cuisine_specialization = models.CharField(max_length=50, default='-')
+    Region = models.CharField(max_length=25, choices=REGION, default='Asia')
+    country = models.CharField(max_length=25, default='-')
+    city = models.CharField(max_length=25, default='-')
     created_on = models.DateTimeField(auto_now_add=True)
     slug = models.SlugField(blank=True, null=True)
     gender = models.CharField(choices = GENDER, blank=True, null=True)
-    instructions = RichTextField(max_length = 20000, default='Please Enter Your Instructions/Schedules/Notes...')
+    instructions = RichTextField(max_length = 20000, default='-')
     image = ResizedImageField(size=[400, None], quality=75, upload_to='profile/', force_format='WEBP', blank=True, null=True)
     facebook_link = models.URLField(blank=True, null=True)
     instagram_link = models.URLField(blank=True, null=True)
