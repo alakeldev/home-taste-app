@@ -5,10 +5,10 @@
 {% block title %}{% trans "Signup" %}{% endblock %}
 
 {% block content %}
-<div class="container text-center">
-  <h1>{% trans "Sign Up" %}</h1>
+<div class="container text-center" id="sign-up-div">
+  <h1>{% trans "Register" %}</h1>
 
-  <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+  <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>{% endblocktrans %}</p>
 
   <form class="form p-2" id="signup_form" method="post" action="{% url 'account_signup' %}">
     {% csrf_token %}
@@ -16,7 +16,10 @@
     {% if redirect_field_value %}
     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
     {% endif %}
-    <button type="submit">Sign Up</button>
+    <p id="singup-notice">
+      Important Note: Following registration, it will not be possible to modify your chosen email address and username.
+    </p>
+    <button type="submit" id="signup">Sign Up</button>
   </form>
 </div>
 {% endblock content %}

@@ -172,6 +172,12 @@ main {
     background-color: var(--green-color);
 }
 
+@media (max-width: 992px) {
+    #sign-in-div {
+        width: 90%;
+    }
+}
+
 #sign-in-div h1 {
     color: var(--main-color);
     padding-top: 20px;
@@ -212,12 +218,13 @@ div#div_id_remember.mb-3.form-check {
 label.form-label.requiredField[for="id_login"] {
     visibility: hidden;
 }
+
 label.form-label.requiredField[for="id_login"]::before {
     content: 'Username*';
     visibility: visible;
     display: block;
     position: absolute;
-    transform: translate(-20%,0%);
+    transform: translate(-20%, 0%);
     font-weight: bold;
 }
 
@@ -233,4 +240,94 @@ label.form-label.requiredField[for="id_password"]::before {
     transform: translate(1%, 0%);
     font-weight: bold;
 }
+
 /* end sign in form */
+
+/* start sign up form */
+#sign-up-div {
+    box-shadow: 0 2px 4px var(--green-color);
+    border: 1px solid var(--green-color);
+    min-height: 100;
+    width: 80%;
+    margin-top: 30px;
+    background-color: var(--green-color);
+}
+
+@media (min-width: 992px) {
+    #sign-up-div {
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}
+
+#sign-up-div h1 {
+    color: var(--main-color);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#sign-up-div a {
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+#sign-up-div a:hover {
+    color: #0a459c;
+}
+
+#sign-up-div label.form-label.requiredField {
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+#signup {
+    height: 45px;
+    width: 35%;
+    border: none;
+    outline: none;
+    background-color: var(--main-color);
+    font-weight: 700;
+    color: white;
+    border-radius: 60px;
+    margin-top: 10px;
+    transition: background-color 0.4s, color 0.4s;
+    margin-bottom: 20px;
+}
+
+#signup:hover {
+    background-color: #f0edef;
+    color: var(--main-color);
+}
+
+#hint_id_password1 ul {
+    color: #fff;
+    padding-top: 15px;
+    list-style: none;
+    font-weight: bold;
+    width: 60%;
+    transform: translate(26%, 0%);
+}
+
+#singup-notice {
+    color: #fff;
+    list-style: none;
+    font-weight: bold;
+    font-size: 15px;
+    padding-top: 10px;
+    overflow: visible;
+    white-space: wrap;
+}
+
+
+#sign-up-div .textinput {
+    width: 60%;
+    transform: translate(30%, 0%);
+}
+
+#sign-up-div .passwordinput {
+    width: 60%;
+    transform: translate(30%, 0%);
+}
+
+/* end sign up form */
