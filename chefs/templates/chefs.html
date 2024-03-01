@@ -16,36 +16,45 @@
 </div>
 <!-- end search section -->
 
-<div class="container mt-5">
-    <div class="row justify-content-center">
-        <!-- Chef Card -->
+<!-- Chef Card -->
+<section class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="text-center my-5">Meet Our Chefs</h2>
+        </div>
         {% for chef in chefs %}
-        <div class="col-md-4 mb-4">
-            <div class="card h-100">
-                {% if chef.profile.image %}
-                <img src="{{ chef.profile.image.url }}" class="card-img-top" alt="Chef">
-                {% else %}
-                <img src="{% static 'images/default.jpg' %}" class="card-img-top" alt="No Photo">
-                {% endif %}
-                <div class="card-body text-center text-capitalize d-flex flex-column">
-                    <p class="card-title h5 font-weight-bold">Chef:
+        <div class="col-lg-4 col-md-6 col-sm-12 my-2">
+            <div class="shadow d-flex justify-content-center align-items-center p-3 bg-dark rounded-lg flex-column">
+                <div class="person-img">
+                    {% if chef.profile.image %}
+                    <img src="{{ chef.profile.image.url }}" class="img-fluid rounded-circle p-img" alt="Chef Image" height="200"  width="200">
+                    {% else %}
+                    <img src="{% static 'images/default.jpg' %}" class="img-fluid rounded-circle" alt="No Photo" height="200"  width="200">
+                    {% endif %}
+                </div>
+                <div class="person-name my-2">
+                    <h3 class="text-white">Chef: 
                         {% if chef.profile.name %}
                         {{ chef.profile.name }}
                         {% else %}
                         {{ chef.username }}
                         {% endif %}
-                    </p>
-                    <p class="card-text text-info">Region: {{ chef.profile.Region }}</p>
-                    <p class="card-text text-info">Specialization: {{ chef.profile.cuisine_specialization }}</p>
-                    <p class="card-text text-danger">Location: {{ chef.profile.country }}, {{ chef.profile.city }}</p>
-                    <p class="card-text">Joined Us On: {{ chef.profile.created_on|date:"Y-m-d" }}</p>
-                    <a href="{% url 'chefs:chef_info' chef.profile.slug %}" class="btn btn-info mt-auto">View Profile</a>
+                    </h3>
                 </div>
+                <div class="info">
+                    <h6 class="text-white">Region: {{ chef.profile.Region }}</h6>
+                    <h6 class="text-white">Location: {{ chef.profile.country }}, {{ chef.profile.city }}</h6>
+                    <h6 class="text-white">Specialization: {{ chef.profile.cuisine_specialization }}</h6>
+                </div>
+                <div class="social-icons my-2">
+                    <h6 class="text-white">Joined Us On: {{ chef.profile.created_on|date:"Y-m-d" }}</h6>
+                </div>
+                <a href="{% url 'chefs:chef_info' chef.profile.slug %}" class="btn btn-secondary btn-lg btn-block">View Profile</a>
             </div>
         </div>
         {% endfor %}
     </div>
-</div>
-
+</section>
+<!-- Chef Card -->
 
 {% endblock content %}
