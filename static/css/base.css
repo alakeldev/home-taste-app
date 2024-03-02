@@ -432,3 +432,24 @@ label.form-label.requiredField[for="id_password"]::before {
 }
 
 /* end chef profile page */
+
+/* start chef_info page */
+@media (min-width: 1400px) {
+    .instructions-chef-info {
+        min-height: 430px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .instructions-chef-info {
+        min-height: 390px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .instructions-chef-info {
+        min-height: 340px;
+    }
+}
+
+/* end chef_info page */
