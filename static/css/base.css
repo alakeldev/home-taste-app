@@ -452,4 +452,66 @@ label.form-label.requiredField[for="id_password"]::before {
     }
 }
 
+/* start comments section */
+/* start comment form */
+.comment-box {
+    width: 50%;
+    border: 1px solid #ccc;
+    margin: 50px 0;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-left: 25%;
+    margin-top: 80px;
+    box-shadow: 0px 0px 10px 1px rgb(165,165,165);
+}
+
+@media (max-width: 768px) {
+    .comment-box {
+        margin-left: 5%;
+        width: 85%;
+    }
+}
+
+.comment-box h6 {
+    text-align: left;
+    color: var(--green-color);
+    font-weight: bold;
+    font-size: 25px;
+    padding-bottom: 15px;
+}
+
+.comment-box input, .comment-box textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    outline: none;
+    box-sizing: border-box;
+    font-size: 18px;
+    border: 1px solid var(--green-color);
+    color: var(--main-color);
+}
+
+.comment-box input:focus,
+.comment-box textarea:focus {
+    box-shadow: none;
+    border: 1px solid var(--green-color);
+}
+
+.comment-btn {
+    background-color: var(--green-color);
+    transition: background-color 0.4s, color 0.4s;
+}
+
+.comment-btn:hover { 
+    background-color: var(--main-color);
+    color: #fff;
+}
+/* end comment form */
+
+/* start comments approved section */
+
+
+/* end  comments approved section */
+
+/* end comments section */
 /* end chef_info page */
