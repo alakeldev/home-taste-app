@@ -387,4 +387,38 @@ label.form-label.requiredField[for="id_password"]::before {
     background-color: #f0edef;
     color: var(--main-color);
 }
+
 /* end chefs card */
+
+/* start chef profile page */
+.socail-links-list li {
+    margin-right: 20px !important;
+    /* Here I used !important because it's already styled and i want to over write*/
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .instructions-text-container {
+        min-height: 290px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .instructions-text-container {
+        min-height: 325px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .instructions-text-container {
+        min-height: 385px;
+    }
+}
+
+.instructions-text {
+    text-align: center;
+    padding: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+/* end chef profile page */

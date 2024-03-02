@@ -4,77 +4,172 @@
 
 
 {% block content %}
-<div class="container mt-5">
-    <div class="row justify-content-center">
-        <!-- Chef Profile -->
-        <div class="col-md-12">
-            <div class="card text-center">
-                <div class="card-body text-capitalize">
-                    {% if user.profile.image %}
-                    <img src="{{ user.profile.image.url }}" alt="Chef Image" class="img-fluid mb-3" width="200">
-                    {% else %}
-                    <img src="{% static 'images/default.jpg' %}" alt="Chef Image" class="img-fluid mb-3" width="200">
-                    {% endif %}
-                    <p class="card-title h2 font-weight-bold">
-                        {% if user.profile.name %}
-                        {{ user.profile.name }}
+<section style="background-color: #eee;">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card mb-4">
+                    <div class="card-body text-center">
+                        {% if user.profile.image %}
+                        <img src="{{ user.profile.image.url }}" alt="Chef Image" class="rounded-circle img-fluid"
+                            style="width: 150px;">
                         {% else %}
-                        {{ user.username }}
-                        {% endif %}</p>
-                    <p class="card-text h4 font-weight-bold text-danger">Chef Details:</p>
-                    <p class="card-text font-weight-bold">Region: {{ user.profile.Region }}</p>
-                    <p class="card-text font-weight-bold">Specialization: {{ user.profile.cuisine_specialization }}</p>
-                    <p class="card-text font-weight-bold">Location: {{ user.profile.country }}, {{ user.profile.city }}
-                    </p>
-                    <p class="card-text font-weight-bold">Gender: {{ user.profile.gender }}</p>
-                    <p class="card-text font-weight-bold">Instructions/Schedules: {{ user.profile.instructions|safe }}</p>
-                    <p class="card-text h4 font-weight-bold text-danger">Chef Social Accounts:</p>
-                    <ul class="text-center">
-                        {% if user.profile.facebook_link %}
-                        <li class="list-inline-item pr-2"><a href="{{ user.profile.facebook_link }}"><i
-                                    class="fa fa-facebook fa-2x text-info"></i></a></li>
+                        <img src="{% static 'images/default.jpg' %}" alt="Chef Image" class="rounded-circle img-fluid"
+                            style="width: 150px;">
                         {% endif %}
-                        {% if user.profile.instagram_link %}
-                        <li class="list-inline-item pr-2"><a href="{{ user.profile.instagram_link }}"><i
-                                    class="fa fa-instagram fa-2x text-info"></i></a></li>
-                        {% endif %}
-                        {% if user.profile.tiktok_link %}
-                        <li class="list-inline-item pr-2"><a href="{{ user.profile.tiktok_link }}"><i
-                                    class="fa fa-twitter fa-2x text-info"></i></a></li>
-                        {% endif %}
-                        {% if user.profile.youtube_link %}
-                        <li class="list-inline-item pr-2"><a href="{{ user.profile.youtube_link }}"><i
-                                    class="fa fa-youtube fa-2x text-info"></i></a></li>
-                        {% endif %}
-                        {% if not user.profile.facebook_link and not user.profile.instagram_link and not user.profile.tiktok_link and not user.profile.youtube_link %}
-                        <li class="list-inline-item pr-2">No social media links provided</li>
-                        {% endif %}
-                    </ul>
-                    <p class="card-text h4 font-weight-bold text-danger">Chef's Specials Dishes:</p>
-                    {% if user.profile.dish1 %}
-                    <img src="{{ user.profile.dish1.url }}" alt="Dish 1">
-                    {% endif %}
-                    {% if user.profile.dish2 %}
-                    <img src="{{ user.profile.dish2.url }}" alt="Dish 2">
-                    {% endif %}
-                    {% if user.profile.dish3 %}
-                    <img src="{{ user.profile.dish3.url }}" alt="Dish 3">
-                    {% endif %}
-                    {% if user.profile.dish4 %}
-                    <img src="{{ user.profile.dish4.url }}" alt="Dish 4">
-                    {% endif %}
-                    
-                    <!-- Show a message if no special dishes are provided -->
-                    {% if not user.profile.dish1 and not user.profile.dish2 and not user.profile.dish3 and not user.profile.dish4 %}
-                    <p>No special dishes to show at the moment.</p>
-                    {% endif %}
-
+                        <h5 class="my-3">
+                            {% if user.profile.name %}
+                            {{ user.profile.name }}
+                            {% else %}
+                            {{ user.username }}
+                            {% endif %}
+                        </h5>
+                        <p class="text-muted mb-1">Region: {{ user.profile.Region }}</p>
+                        <p class="text-muted mb-4">Location: {{ user.profile.country }} | {{ user.profile.city }}</p>
+                        <div class="d-flex justify-content-center mb-2">
+                            <button type="button" class="btn btn-primary">Delete Profile</button>
+                            <button type="button" class="btn btn-outline-primary ms-1">Update Profile</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-4 mb-lg-0 instructions-text-container">
+                    <div class="card-body p-3">
+                        <ul class="list-group list-group-flush rounded-3">
+                            <p class="mb-4 text-center m-2"><span class=" me-1">Instructions/Schedules:</span></p>
+                            <div class="instructions-text">{{ user.profile.instructions|safe }}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class="mb-0">Cook Specialization:</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <p class="text-muted mb-0">{{ user.profile.cuisine_specialization }}</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class="mb-0">Gender:</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <p class="text-muted mb-0">{{ user.profile.gender }}</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class="mb-0">Email:</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <p class="text-muted mb-0">alakel@gmail.com</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class="mb-0">Phone:</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <p class="text-muted mb-0">(098) 765-4321</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class="mb-0 d-flex justify-content-between align-items-center pt-3">Social Media
+                                    Links:</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <p class="text-muted mb-0">
+                                <ul class="list-group-item d-flex align-items-center p-3 socail-links-list">
+                                    {% if user.profile.facebook_link %}
+                                    <li class="list-inline-item"><a href="{{ user.profile.facebook_link }}"><i
+                                                class="fab fa-facebook-f fa-lg" style="color: #3b5998;"></i></a></li>
+                                    {% endif %}
+                                    {% if user.profile.instagram_link %}
+                                    <li class="list-inline-item pr-2"><a href="{{ user.profile.instagram_link }}"><i
+                                                class="fab fa-instagram fa-lg" style="color: #ac2bac;"></i></a></li>
+                                    {% endif %}
+                                    {% if user.profile.tiktok_link %}
+                                    <li class="list-inline-item pr-2"><a href="{{ user.profile.tiktok_link }}"><i
+                                                class="fab fa-tiktok fa-lg" style="color: #49d113;"></i></a></li>
+                                    {% endif %}
+                                    {% if user.profile.youtube_link %}
+                                    <li class="list-inline-item pr-2"><a href="{{ user.profile.youtube_link }}"><i
+                                                class="fab fa-youtube fa-lg" style="color: #d11313;"></i></a></li>
+                                    {% endif %}
+                                    {% if not user.profile.facebook_link and not user.profile.instagram_link and not user.profile.tiktok_link and not user.profile.youtube_link %}
+                                    <p class="text-muted mb-0">No social media links provided</p>
+                                    {% endif %}
+                                </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card mb-4 mb-md-0">
+                            <div class="card-body">
+                                {% if user.profile.dish1 %}
+                                <img src="{{ user.profile.dish1.url }}" alt="Chef Image" class="img-fluid dish-img">
+                                {% else %}
+                                <img src="{% static 'images/no-image.jpeg' %}" alt="No Dish Image" class="img-fluid dish-img">
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card mb-4 mb-md-0">
+                            <div class="card-body">
+                                {% if user.profile.dish1 %}
+                                <img src="{{ user.profile.dish2.url }}" alt="Chef Image" class="img-fluid dish-img">
+                                {% else %}
+                                <img src="{% static 'images/no-image.jpeg' %}" alt="No Dish Image" class="img-fluid dish-img">
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div>
-            <a href="{% url 'chefs:delete_profile' %}">Delete My Profile</a>
+    </div>
+</section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 mb-md-0">
+                    <div class="card-body">
+                        {% if user.profile.dish1 %}
+                        <img src="{{ user.profile.dish3.url }}" alt="Chef Image" class="img-fluid dish-img">
+                        {% else %}
+                        <img src="{% static 'images/no-image.jpeg' %}" alt="No Dish Image" class="img-fluid dish-img">
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 mb-md-0">
+                    <div class="card-body">
+                        {% if user.profile.dish1 %}
+                        <img src="{{ user.profile.dish4.url }}" alt="Chef Image" class="img-fluid dish-img">
+                        {% else %}
+                        <img src="{% static 'images/no-image.jpeg' %}" alt="No Dish Image" class="img-fluid dish-img">
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 mb-md-0">
+                    <div class="card-body">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
 {% endblock content %}
