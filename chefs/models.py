@@ -4,6 +4,8 @@ from djrichtextfield.models import RichTextField
 from django_resized import ResizedImageField
 from django.db.models.signals import post_save
 from django.utils.text import slugify
+from phone_field import PhoneField
+
 # Create your models here.
 
 GENDER = (("F", "Female"), ("M", "Male"))
@@ -23,6 +25,8 @@ class Profile(models.Model):
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=30)
+    email = models.EmailField(max_length=50, default='-')
+    phone_number = PhoneField(blank=True, help_text='Contact phone number')
     cuisine_specialization = models.CharField(max_length=50, default='-')
     Region = models.CharField(max_length=25, choices=REGION, default='Asia')
     country = models.CharField(max_length=25, default='-')
@@ -40,6 +44,7 @@ class Profile(models.Model):
     dish2 = ResizedImageField(size=[200, None], quality=75, upload_to='dishes/', force_format='WEBP', blank=True, null=True)
     dish3 = ResizedImageField(size=[200, None], quality=75, upload_to='dishes/', force_format='WEBP', blank=True, null=True)
     dish4 = ResizedImageField(size=[200, None], quality=75, upload_to='dishes/', force_format='WEBP', blank=True, null=True)
+    dish5 = ResizedImageField(size=[200, None], quality=75, upload_to='dishes/', force_format='WEBP', blank=True, null=True)
 
 
     def save(self, *args, **kwargs):

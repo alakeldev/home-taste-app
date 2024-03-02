@@ -66,7 +66,7 @@
                                 <p class="mb-0">Email:</p>
                             </div>
                             <div class="col-sm-9">
-                                <p class="text-muted mb-0">alakel@gmail.com</p>
+                                <p class="text-muted mb-0">{{ user.profile.email }}</p>
                             </div>
                         </div>
                         <hr>
@@ -75,7 +75,7 @@
                                 <p class="mb-0">Phone:</p>
                             </div>
                             <div class="col-sm-9">
-                                <p class="text-muted mb-0">(098) 765-4321</p>
+                                <p class="text-muted mb-0">{{ user.profile.phone_number }}</p>
                             </div>
                         </div>
                         <hr>
@@ -127,7 +127,7 @@
                     <div class="col-md-6">
                         <div class="card mb-4 mb-md-0">
                             <div class="card-body">
-                                {% if user.profile.dish1 %}
+                                {% if user.profile.dish2 %}
                                 <img src="{{ user.profile.dish2.url }}" alt="Chef Image" class="img-fluid dish-img">
                                 {% else %}
                                 <img src="{% static 'images/no-image.jpeg' %}" alt="No Dish Image" class="img-fluid dish-img">
@@ -145,7 +145,7 @@
             <div class="col-md-4">
                 <div class="card mb-4 mb-md-0">
                     <div class="card-body">
-                        {% if user.profile.dish1 %}
+                        {% if user.profile.dish3 %}
                         <img src="{{ user.profile.dish3.url }}" alt="Chef Image" class="img-fluid dish-img">
                         {% else %}
                         <img src="{% static 'images/no-image.jpeg' %}" alt="No Dish Image" class="img-fluid dish-img">
@@ -156,7 +156,7 @@
             <div class="col-md-4">
                 <div class="card mb-4 mb-md-0">
                     <div class="card-body">
-                        {% if user.profile.dish1 %}
+                        {% if user.profile.dish4 %}
                         <img src="{{ user.profile.dish4.url }}" alt="Chef Image" class="img-fluid dish-img">
                         {% else %}
                         <img src="{% static 'images/no-image.jpeg' %}" alt="No Dish Image" class="img-fluid dish-img">
@@ -167,6 +167,11 @@
             <div class="col-md-4">
                 <div class="card mb-4 mb-md-0">
                     <div class="card-body">
+                        {% if user.profile.dish5 %}
+                        <img src="{{ user.profile.dish5.url }}" alt="Chef Image" class="img-fluid dish-img">
+                        {% else %}
+                        <img src="{% static 'images/no-image.jpeg' %}" alt="No Dish Image" class="img-fluid dish-img">
+                        {% endif %}
                     </div>
                 </div>
             </div>

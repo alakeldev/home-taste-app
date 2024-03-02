@@ -7,7 +7,7 @@ from crispy_forms.layout import Layout, Submit
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
-        fields = ['name','cuisine_specialization', 'Region', 'country', 'city', 'gender', 'instructions', 'image', 'facebook_link', 'instagram_link', 'tiktok_link', 'youtube_link', 'dish1', 'dish2','dish3','dish4',]
+        fields = ['name', 'image', 'email', 'phone_number','Region', 'country', 'city', 'gender','cuisine_specialization', 'instructions', 'facebook_link', 'instagram_link', 'tiktok_link', 'youtube_link', 'dish1', 'dish2','dish3','dish4','dish5',]
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
