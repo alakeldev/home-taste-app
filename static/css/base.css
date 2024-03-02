@@ -462,7 +462,7 @@ label.form-label.requiredField[for="id_password"]::before {
     border-radius: 10px;
     margin-left: 25%;
     margin-top: 80px;
-    box-shadow: 0px 0px 10px 1px rgb(165,165,165);
+    box-shadow: 0px 0px 10px 1px rgb(165, 165, 165);
 }
 
 @media (max-width: 768px) {
@@ -480,7 +480,8 @@ label.form-label.requiredField[for="id_password"]::before {
     padding-bottom: 15px;
 }
 
-.comment-box input, .comment-box textarea {
+.comment-box input,
+.comment-box textarea {
     width: 100%;
     padding: 10px;
     margin: 5px 0;
@@ -502,16 +503,43 @@ label.form-label.requiredField[for="id_password"]::before {
     transition: background-color 0.4s, color 0.4s;
 }
 
-.comment-btn:hover { 
+.comment-btn:hover {
     background-color: var(--main-color);
     color: #fff;
 }
+
 /* end comment form */
 
 /* start comments approved section */
+.comments-approved {
+    width: 80%;
+    border: 1px solid #ccc;
+    margin: 50px 0;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-left: 10%;
+    margin-top: 80px;
+    box-shadow: 0px 0px 10px 1px rgb(165, 165, 165);
+}
 
+.comments-approved h6 {
+    text-align: center;
+    color: var(--green-color);
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.comments-approved section .card {
+    box-shadow: 0px 0px 30px 30px rgb(165, 165, 165);
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.comments-approved section .card h6 {
+    color: var(--green-color);
+    text-align: left;
+}
 
 /* end  comments approved section */
-
 /* end comments section */
 /* end chef_info page */
