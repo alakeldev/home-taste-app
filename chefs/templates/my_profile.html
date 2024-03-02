@@ -2,7 +2,6 @@
 {% block title %}My Profile{% endblock %}
 {% load static %}
 
-
 {% block content %}
 <section style="background-color: #eee;">
     <div class="container py-5">
@@ -27,8 +26,8 @@
                         <p class="text-muted mb-1">Region: {{ user.profile.Region }}</p>
                         <p class="text-muted mb-4">Location: {{ user.profile.country }} | {{ user.profile.city }}</p>
                         <div class="d-flex justify-content-center mb-2">
-                            <button type="button" class="btn btn-primary">Delete Profile</button>
-                            <button type="button" class="btn btn-outline-primary ms-1">Update Profile</button>
+                            <button class="btn btn-danger ms-1" onclick="redirectToDeletePage()">Delete Profile</button>
+                            <button class="btn ms-1 update-btn" onclick="redirectToUpdatePage()">Update Profile</button>
                         </div>
                     </div>
                 </div>

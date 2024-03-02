@@ -421,4 +421,14 @@ label.form-label.requiredField[for="id_password"]::before {
     overflow-y: auto;
 }
 
+.update-btn {
+    background-color: var(--green-color);
+    transition: background-color 0.4s, color 0.4s;
+}
+
+.update-btn:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
 /* end chef profile page */
