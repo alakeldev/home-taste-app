@@ -646,3 +646,56 @@ label.form-label.requiredField[for="id_password"]::before {
 }
 
 /* end delete profile confirmation page */
+
+/* start reset password page */
+#reset-pass-div {
+    box-shadow: 0 2px 4px var(--green-color);
+    border: 1px solid var(--green-color);
+    height: 60vh;
+    margin-top: 40px;
+    width: 60%;
+    background-color: var(--green-color);
+}
+
+@media (max-width: 688px) {
+    #reset-pass-div {
+        width: 90%;
+        height: 65vh;
+    }
+}
+
+
+#reset-pass-div h1 {
+    color: var(--main-color);
+    padding-top: 20px;
+}
+
+#reset-pass-div button,
+#reset-pass-div input:not(#id_email) {
+    padding: 8px;
+    border: none;
+    outline: none;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 60px;
+    transition: background-color 0.4s, color 0.4s;
+    margin: 10px;
+}
+
+#reset-pass-div button:hover,
+#reset-pass-div input:not(#id_email):hover {
+    background-color: #f0edef;
+    color: var(--main-color);
+}
+
+#reset-pass-div a {
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+#reset-pass-div a:hover {
+    color: #0a459c;
+}
+
+/* end reset password page */
