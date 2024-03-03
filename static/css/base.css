@@ -699,3 +699,32 @@ label.form-label.requiredField[for="id_password"]::before {
 }
 
 /* end reset password page */
+
+/* start reset done page */
+#reset-done-div {
+    box-shadow: 0 2px 4px var(--green-color);
+    border: 1px solid var(--green-color);
+    height: 40vh;
+    margin-top: 40px;
+    width: 40%;
+    background-color: var(--green-color);
+    padding-top: 50px;
+}
+
+@media (max-width: 550px) {
+    #reset-done-div {
+        width: 70%;
+    }
+}
+
+#reset-done-div a {
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+#reset-done-div a:hover {
+    color: #0a459c;
+}
+
+/* end reset done page */
