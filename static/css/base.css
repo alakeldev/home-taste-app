@@ -814,3 +814,81 @@ label.form-label.requiredField[for="id_password"]::before {
 }
 
 /* end pwd changed done page/key_done */
+
+/* start edit profile form/page */
+
+#edit-profile-form-div {
+    box-shadow: 0 2px 4px var(--green-color);
+    border: 1px solid var(--green-color);
+    min-height: 100;
+    width: 80%;
+    margin-top: 30px;
+    background-color: var(--green-color);
+    border-radius: 5px;
+}
+
+#edit-profile-form-div h1 {
+    color: var(--main-color);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#edit-profile-form-div label {
+    font-weight: bold;
+}
+
+#edit-profile-form-div input,
+#edit-profile-form-div select,
+#edit-profile-form-div input,
+#edit-profile-form-div #cke_id_instructions,
+#edit-profile-form-div div.input-group.mb-2 {
+    width: 60%;
+    transform: translate(33%, 0%);
+    background-color: rgb(236, 236, 236);
+}
+
+div #submit-id-submit {
+    border: none;
+    outline: none;
+    background-color: var(--main-color);
+    border-radius: 60px;
+    margin-top: 10px;
+    transform: translate(-3%, 0);
+    width: 20%;
+    transition: background-color 0.4s, color 0.4s;
+    margin-bottom: 20px;
+    background-color: var(--main-color);
+}
+
+
+div #submit-id-submit:hover {
+    background-color: #f0edef;
+    color: var(--main-color);
+}
+
+@media (max-width: 878px) {
+    #edit-profile-form-div {
+        width: 95%;
+    }
+
+    #edit-profile-form-div input,
+    #edit-profile-form-div select,
+    #edit-profile-form-div input,
+    #edit-profile-form-div #cke_id_instructions,
+    #edit-profile-form-div div.input-group.mb-2 {
+        width: 90%;
+        transform: translate(5%, 0%);
+    }
+
+    div #submit-id-submit {
+        width: 50%;
+    }
+}
+
+#edit-profile-form-div div.input-group.mb-2 input {
+    transform: translate(0px, 0px);
+    background-color: black;
+    width: 18px;
+}
+
+/* end edit profile form/page */

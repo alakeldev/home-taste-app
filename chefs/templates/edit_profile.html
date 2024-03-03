@@ -4,9 +4,11 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<h1>Edit Profile</h1>
-<form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    {% crispy form %}
-</form>
+<div class="container text-center" id="edit-profile-form-div">
+    <h1>Edit Your Profile</h1>
+    <form method="post" enctype="multipart/form-data" class="edit-profile-form">
+        {% csrf_token %}
+        {% crispy form %}
+    </form>
+</div>
 {% endblock %}
