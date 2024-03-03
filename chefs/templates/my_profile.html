@@ -3,6 +3,9 @@
 {% load static %}
 
 {% block content %}
+<div>
+    <a href="{% url 'chefs:chef_info' user.profile.slug %}"><button class="btn ms-1 as-public-btn mt-5">View As Public</button></a>
+</div>
 <section style="background-color: #eee;">
     <div class="container py-5">
         <div class="row">

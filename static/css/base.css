@@ -424,10 +424,24 @@ label.form-label.requiredField[for="id_password"]::before {
 .update-btn {
     background-color: var(--green-color);
     transition: background-color 0.4s, color 0.4s;
+    color: #fff;
 }
 
 .update-btn:hover {
     background-color: var(--main-color);
+    color: #fff;
+}
+
+.as-public-btn {
+    width: 20% !important;   /* important is to over write and style it as targeted */
+    margin-left: 40% !important; /* important is to over write and style it as targeted */
+    background-color: var(--main-color);
+    transition: background-color 0.4s, color 0.4s;
+    color: var(--green-color);
+}
+
+.as-public-btn:hover {
+    background-color: var(--green-color);
     color: #fff;
 }
 
