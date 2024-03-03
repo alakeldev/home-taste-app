@@ -768,3 +768,49 @@ label.form-label.requiredField[for="id_password"]::before {
 }
 
 /* end chage password page/form */
+
+/* start pwd changed done page/key_done */
+#pwd-changed-done-div {
+    box-shadow: 0 2px 4px var(--green-color);
+    border: 1px solid var(--green-color);
+    height: 50vh;
+    margin-top: 40px;
+    width: 45%;
+    background-color: var(--green-color);
+}
+
+@media (max-width: 550px) {
+    #pwd-changed-done-div {
+        width: 70%;
+    }
+}
+
+#pwd-changed-done-div h1 {
+    color: var(--main-color);
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+#pwd-changed-done-div p {
+    font-weight: bold;
+}
+
+#pwd-changed-done-div button {
+    height: 45px;
+    width: 75%;
+    border: none;
+    outline: none;
+    background-color: var(--main-color);
+    font-weight: 700;
+    color: white;
+    border-radius: 60px;
+    transition: background-color 0.4s, color 0.4s;
+    margin-top: 50px;
+}
+
+#pwd-changed-done-div button:hover {
+    background-color: #f0edef;
+    color: var(--main-color);
+}
+
+/* end pwd changed done page/key_done */
