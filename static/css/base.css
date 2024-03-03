@@ -39,6 +39,10 @@ main {
     color: var(--green-color);
 }
 
+.active {
+    color: var(--green-color) !important; /* important to overwrite and set the targeted color to active class */
+}
+
 /* start landing section */
 .landing {
     background: url(../images/landing.jpg) no-repeat;
