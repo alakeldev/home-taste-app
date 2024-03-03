@@ -728,3 +728,43 @@ label.form-label.requiredField[for="id_password"]::before {
 }
 
 /* end reset done page */
+
+/* start chage password page/form */
+#chage-password-form-page-div {
+    box-shadow: 0 2px 4px var(--green-color);
+    border: 1px solid var(--green-color);
+    height: 60vh;
+    margin-top: 40px;
+    width: 45%;
+    background-color: var(--green-color);
+}
+
+@media (max-width: 550px) {
+    #chage-password-form-page-div {
+        width: 70%;
+    }
+}
+
+#chage-password-form-page-div h1 {
+    color: var(--main-color);
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+#chage-password-form-page-div input[value="change password"] {
+    padding: 12px;
+    border: none;
+    outline: none;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 60px;
+    transition: background-color 0.4s, color 0.4s;
+    margin: 10px;
+}
+
+#chage-password-form-page-div input[value="change password"]:hover {
+    background-color: #f0edef;
+    color: var(--main-color);
+}
+
+/* end chage password page/form */
