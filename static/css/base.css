@@ -892,8 +892,13 @@ div #submit-id-submit:hover {
 
 #edit-profile-form-div div.input-group.mb-2 input {
     transform: translate(0px, 0px);
-    background-color: black;
+    background-color: #a29c9c;
     width: 18px;
+}
+
+#id_phone_number_1,
+span.phone-field-ext {
+    display: none;
 }
 
 /* end edit profile form/page */
