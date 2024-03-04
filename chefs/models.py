@@ -24,10 +24,10 @@ REGION = (
 class Profile(models.Model):
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    name = models.CharField(("Name"), max_length=30)
-    email = models.EmailField(("Email Contact"), max_length=50, blank=True, null=True)
-    phone_number = PhoneField(("Mobile Number"), blank=True, null=True)
-    cuisine_specialization = models.CharField(("Kitchen Specialization"), max_length=50, blank=True, null=True)
+    name = models.CharField(("Name"), max_length=30, help_text='You can enter a different name from your username')
+    email = models.EmailField(("Email Contact"), max_length=50, blank=True, null=True, help_text='You can enter a different email from the one used during registration')
+    phone_number = PhoneField(("Phone/Mobile Number"), blank=True, null=True)
+    cuisine_specialization = models.CharField(("Kitchen Specialization"), max_length=50, blank=True, null=True, help_text='Specify your culinary expertise (e.g., Indian, Syrian, Italian)')
     Region = models.CharField(("Please Choose Your Current Region"), choices=REGION, default='Europe')
     country = models.CharField(("Current Country"), max_length=25, blank=True, null=True)
     city = models.CharField(("Current City"), max_length=25, blank=True, null=True)
