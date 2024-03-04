@@ -892,3 +892,76 @@ div #submit-id-submit:hover {
 }
 
 /* end edit profile form/page */
+
+/* start media query for dishes images */
+.dish1-img,
+.dish2-img,
+.dish3-img,
+.dish4-img,
+.dish5-img {
+    width: 100%;
+}
+
+@media (min-width: 1400px) {
+
+    .dish1-img,
+    .dish2-img,
+    .dish3-img,
+    .dish4-img,
+    .dish5-img {
+        min-height: 382.92px;
+        max-height: 382.90px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+
+    .dish1-img,
+    .dish2-img,
+    .dish3-img,
+    .dish4-img,
+    .dish5-img {
+        min-height: 322.4px;
+        max-height: 322.6px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .dish1-img,
+    .dish2-img,
+    .dish3-img,
+    .dish4-img,
+    .dish5-img {
+        min-height: 262.4px;
+        max-height: 262.6px;
+    }
+}
+
+@media (min-width: 676px) and (max-width: 991px) {
+
+    .dish1-img,
+    .dish2-img {
+        min-height: 302.4px;
+        max-height: 302.6px;
+    }
+
+    .dish3-img,
+    .dish4-img,
+    .dish5-img {
+        min-height: 182.39px;
+        max-height: 182.41px;
+    }
+}
+
+@media (min-width: 676px) and (max-width: 767px) {
+
+    .dish3-img,
+    .dish4-img,
+    .dish5-img {
+        min-height: 302.4px;
+        max-height: 302.6px;
+    }
+}
+
+/* end media query for dishes images */

@@ -119,7 +119,7 @@
                         <div class="card mb-4 mb-md-0">
                             <div class="card-body">
                                 {% if user.profile.dish1 %}
-                                <img src="{{ user.profile.dish1.url }}" alt="Chef Image" class="img-fluid dish-img">
+                                <img src="{{ user.profile.dish1.url }}" alt="Chef Image" class="img-fluid dish-img dish1-img">
                                 {% else %}
                                 <img src="{% static 'images/no-image.jpeg' %}" alt="No Dish Image" class="img-fluid dish-img">
                                 {% endif %}
@@ -130,7 +130,7 @@
                         <div class="card mb-4 mb-md-0">
                             <div class="card-body">
                                 {% if user.profile.dish2 %}
-                                <img src="{{ user.profile.dish2.url }}" alt="Chef Image" class="img-fluid dish-img">
+                                <img src="{{ user.profile.dish2.url }}" alt="Chef Image" class="img-fluid dish-img dish2-img">
                                 {% else %}
                                 <img src="{% static 'images/no-image.jpeg' %}" alt="No Dish Image" class="img-fluid dish-img">
                                 {% endif %}
@@ -148,7 +148,7 @@
                 <div class="card mb-4 mb-md-0">
                     <div class="card-body">
                         {% if user.profile.dish3 %}
-                        <img src="{{ user.profile.dish3.url }}" alt="Chef Image" class="img-fluid dish-img">
+                        <img src="{{ user.profile.dish3.url }}" alt="Chef Image" class="img-fluid dish-img dish3-img">
                         {% else %}
                         <img src="{% static 'images/no-image.jpeg' %}" alt="No Dish Image" class="img-fluid dish-img">
                         {% endif %}
@@ -159,7 +159,7 @@
                 <div class="card mb-4 mb-md-0">
                     <div class="card-body">
                         {% if user.profile.dish4 %}
-                        <img src="{{ user.profile.dish4.url }}" alt="Chef Image" class="img-fluid dish-img">
+                        <img src="{{ user.profile.dish4.url }}" alt="Chef Image" class="img-fluid dish-img dish4-img">
                         {% else %}
                         <img src="{% static 'images/no-image.jpeg' %}" alt="No Dish Image" class="img-fluid dish-img">
                         {% endif %}
@@ -170,7 +170,7 @@
                 <div class="card mb-4 mb-md-0">
                     <div class="card-body">
                         {% if user.profile.dish5 %}
-                        <img src="{{ user.profile.dish5.url }}" alt="Chef Image" class="img-fluid dish-img">
+                        <img src="{{ user.profile.dish5.url }}" alt="Chef Image" class="img-fluid dish-img dish5-img">
                         {% else %}
                         <img src="{% static 'images/no-image.jpeg' %}" alt="No Dish Image" class="img-fluid dish-img">
                         {% endif %}

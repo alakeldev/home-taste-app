@@ -25,7 +25,7 @@ class Profile(models.Model):
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=30)
-    email = models.EmailField(max_length=50, default='-')
+    email = models.EmailField(max_length=50, blank=True, null=True)
     phone_number = PhoneField(blank=True, help_text='Contact phone number')
     cuisine_specialization = models.CharField(max_length=50, default='-')
     Region = models.CharField(max_length=25, choices=REGION, default='Asia')
@@ -40,11 +40,11 @@ class Profile(models.Model):
     instagram_link = models.URLField(blank=True, null=True)
     youtube_link = models.URLField(blank=True, null=True)
     tiktok_link = models.URLField(blank=True, null=True)
-    dish1 = ResizedImageField(size=[200, None], quality=75, upload_to='dishes/', force_format='WEBP', blank=True, null=True)
-    dish2 = ResizedImageField(size=[200, None], quality=75, upload_to='dishes/', force_format='WEBP', blank=True, null=True)
-    dish3 = ResizedImageField(size=[200, None], quality=75, upload_to='dishes/', force_format='WEBP', blank=True, null=True)
-    dish4 = ResizedImageField(size=[200, None], quality=75, upload_to='dishes/', force_format='WEBP', blank=True, null=True)
-    dish5 = ResizedImageField(size=[200, None], quality=75, upload_to='dishes/', force_format='WEBP', blank=True, null=True)
+    dish1 = ResizedImageField(size=[600, 600], quality=75, upload_to='dishes/', force_format='WEBP', blank=True, null=True)
+    dish2 = ResizedImageField(size=[600, 600], quality=75, upload_to='dishes/', force_format='WEBP', blank=True, null=True)
+    dish3 = ResizedImageField(size=[600, 600], quality=75, upload_to='dishes/', force_format='WEBP', blank=True, null=True)
+    dish4 = ResizedImageField(size=[600, 600], quality=75, upload_to='dishes/', force_format='WEBP', blank=True, null=True)
+    dish5 = ResizedImageField(size=[600, 600], quality=75, upload_to='dishes/', force_format='WEBP', blank=True, null=True)
 
 
     def save(self, *args, **kwargs):
