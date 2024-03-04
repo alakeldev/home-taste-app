@@ -403,19 +403,19 @@ label.form-label.requiredField[for="id_password"]::before {
 
 @media (min-width: 992px) and (max-width: 1200px) {
     .instructions-text-container {
-        min-height: 290px;
+        min-height: 292px;
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1200px) and (max-width: 1400px) {
     .instructions-text-container {
-        min-height: 325px;
+        min-height: 330px;
     }
 }
 
 @media (min-width: 1400px) {
     .instructions-text-container {
-        min-height: 385px;
+        min-height: 390px;
     }
 }
 
@@ -452,6 +452,11 @@ label.form-label.requiredField[for="id_password"]::before {
     color: #fff;
 }
 
+.chef-profile-img {
+    width: 150px !important;
+    height: 150px !important;
+}
+
 /* end chef profile page */
 
 /* start chef_info page */
@@ -463,7 +468,7 @@ label.form-label.requiredField[for="id_password"]::before {
 
 @media (min-width: 1200px) and (max-width: 1400px) {
     .instructions-chef-info {
-        min-height: 390px;
+        min-height: 375px;
     }
 }
 
@@ -914,7 +919,7 @@ div #submit-id-submit:hover {
     }
 }
 
-@media (min-width: 1200px) and (max-width: 1399px) {
+@media (min-width: 1200px) and (max-width: 1400px) {
 
     .dish1-img,
     .dish2-img,
@@ -926,7 +931,7 @@ div #submit-id-submit:hover {
     }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1200px) {
 
     .dish1-img,
     .dish2-img,
@@ -938,7 +943,7 @@ div #submit-id-submit:hover {
     }
 }
 
-@media (min-width: 676px) and (max-width: 991px) {
+@media (min-width: 676px) and (max-width: 992px) {
 
     .dish1-img,
     .dish2-img {

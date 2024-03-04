@@ -24,7 +24,7 @@
         </div>
         {% for chef in chefs %}
         <div class="col-lg-4 col-md-6 col-sm-12 my-2">
-            <div class="shadow d-flex justify-content-center align-items-center p-3 bg-dark rounded-lg flex-column">
+            <div class="shadow d-flex justify-content-center align-items-center p-3 bg-dark rounded-lg flex-column rounded-3">
                 <div class="person-img">
                     {% if chef.profile.image %}
                     <img src="{{ chef.profile.image.url }}" class="img-fluid rounded-circle p-img" alt="Chef Image" height="200"  width="200">
@@ -47,7 +47,7 @@
                     <h6 class="text-white">Specialization: {{ chef.profile.cuisine_specialization }}</h6>
                 </div>
                 <div class="social-icons my-2">
-                    <h6 class="text-white">Joined Us On: {{ chef.profile.created_on|date:"Y-m-d" }}</h6>
+                    <h6 class="text-white">Joined Us: {{ chef.profile.created_on|date:"Y-m-d" }}</h6>
                 </div>
                 <a href="{% url 'chefs:chef_info' chef.profile.slug %}" class="btn view-btn">View Profile</a>
             </div>
