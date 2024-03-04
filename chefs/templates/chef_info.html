@@ -3,6 +3,18 @@
 {% load static %}
 
 {% block content %}
+
+{% with request.resolver_match.url_name as url_name %}
+{% if request.user.is_authenticated %}
+<div>
+    <a href="{% url 'chefs:my_profile' %}"><button class="btn ms-1 as-public-btn mt-5">Back To My Profile</button></a>
+</div>
+{% else %}
+<div>
+    <a href="{% url 'chefs:chefs_list' %}"><button class="btn ms-1 as-public-btn mt-5">Back To Chefs Page</button></a>
+</div>
+{% endif %}
+{% endwith %}
 <section style="background-color: #eee;">
     <div class="container py-5">
         <div class="row">
