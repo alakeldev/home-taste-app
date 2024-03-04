@@ -5,12 +5,15 @@
 :root {
     --title: 'Oswald', serif;
     --main-font: 'Arimo', serif;
-    --main-color: rgb(33, 37, 41)
+    --main-color: rgb(33, 37, 41);
+    --green-color: #7ab66b;
 }
 
 /* global rules */
-html, body {
+html,
+body {
     height: 100%;
+    background-color: rgb(236, 236, 236);
 }
 
 body {
@@ -19,22 +22,36 @@ body {
     font-family: var(--main-font);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--title);
 }
 
 main {
     flex: 1 0 auto;
-    background-color: white;
+}
+
+.home-word {
+    color: var(--green-color);
+}
+
+.active {
+    color: var(--green-color) !important;
+    /* important to overwrite and set the targeted color to active class */
 }
 
 /* start landing section */
 .landing {
     background: url(../images/landing.jpg) no-repeat;
     background-size: cover;
-    height: 100vh;
+    height: 90vh;
     width: 100%;
-    background-position: 50% 50%;
+    display: flex;
+    align-items: center;
 }
 
 .landing h1 {
@@ -43,7 +60,7 @@ main {
 }
 
 .landing h5 {
-    color: var(--,--main-color);
+    color: var(--, --main-color);
 }
 
 .landing .btn-signup {
@@ -55,5 +72,906 @@ main {
     font-weight: 700;
     color: white;
     border-radius: 60px;
+    transition: background-color 0.4s, color 0.4s;
 }
+
+.btn-signup:hover {
+    background-color: var(--green-color);
+    color: #fff;
+}
+
 /* end landing section */
+
+/* start about section */
+.about-title {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    color: var(--main-color);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.accordion {
+    transform: translate(0%, -10%);
+}
+
+@media (max-width: 992px) {
+    .img {
+        display: none;
+    }
+
+    .accordion {
+        width: 100%;
+    }
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--main-color);
+    background-color: #fff;
+    box-shadow: 0 2px 4px var(--main-color);
+}
+
+.accordion-button:not(.collapsed)::after,
+.accordion-button:not(.collapsed)::before {
+    color: #7ab66b;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-button:hover {
+    box-shadow: 0 2px 4px var(--main-color);
+}
+
+.accordion-item {
+    color: #FFF;
+    background-color: var(--main-color);
+}
+
+.div-chefs-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-chefs {
+    height: 45px;
+    width: 35%;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    font-weight: 700;
+    color: var(--main-color);
+    border-radius: 60px;
+    align-items: center;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+.btn-chefs:hover {
+    background-color: var(--green-color);
+    color: #fff;
+}
+
+.span-title {
+    color: #7ab66b;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.accordion-header .accordion-button {
+    font-family: var(--title);
+    font-weight: 500;
+    color: var(--main-color);
+}
+
+/* end about section */
+
+/* start sign in form */
+#sign-in-div {
+    box-shadow: 0 2px 4px var(--green-color);
+    border: 1px solid var(--green-color);
+    height: 70vh;
+    margin-top: 30px;
+    width: 50%;
+    background-color: var(--green-color);
+}
+
+@media (max-width: 992px) {
+    #sign-in-div {
+        width: 90%;
+    }
+}
+
+#sign-in-div h1 {
+    color: var(--main-color);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#sign-in-div a {
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+#sign-in-div a:hover {
+    color: #0a459c;
+}
+
+div#div_id_remember.mb-3.form-check {
+    display: none;
+}
+
+#signin {
+    height: 45px;
+    width: 35%;
+    border: none;
+    outline: none;
+    background-color: var(--main-color);
+    font-weight: 700;
+    color: white;
+    border-radius: 60px;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+#signin:hover {
+    background-color: #f0edef;
+    color: var(--main-color);
+}
+
+label.form-label.requiredField[for="id_login"] {
+    visibility: hidden;
+}
+
+label.form-label.requiredField[for="id_login"]::before {
+    content: 'Username*';
+    visibility: visible;
+    display: block;
+    position: absolute;
+    transform: translate(-20%, 0%);
+    font-weight: bold;
+}
+
+label.form-label.requiredField[for="id_password"] {
+    visibility: hidden;
+}
+
+label.form-label.requiredField[for="id_password"]::before {
+    content: 'Password*';
+    visibility: visible;
+    display: block;
+    position: absolute;
+    transform: translate(1%, 0%);
+    font-weight: bold;
+}
+
+/* end sign in form */
+
+/* start sign up form */
+#sign-up-div {
+    box-shadow: 0 2px 4px var(--green-color);
+    border: 1px solid var(--green-color);
+    min-height: 100;
+    width: 80%;
+    margin-top: 30px;
+    background-color: var(--green-color);
+}
+
+@media (min-width: 992px) {
+    #sign-up-div {
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}
+
+#sign-up-div h1 {
+    color: var(--main-color);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#sign-up-div a {
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+#sign-up-div a:hover {
+    color: #0a459c;
+}
+
+#sign-up-div label.form-label.requiredField {
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+#signup {
+    height: 45px;
+    width: 35%;
+    border: none;
+    outline: none;
+    background-color: var(--main-color);
+    font-weight: 700;
+    color: white;
+    border-radius: 60px;
+    margin-top: 10px;
+    transition: background-color 0.4s, color 0.4s;
+    margin-bottom: 20px;
+}
+
+#signup:hover {
+    background-color: #f0edef;
+    color: var(--main-color);
+}
+
+#hint_id_password1 ul {
+    color: #fff;
+    padding-top: 15px;
+    list-style: none;
+    font-weight: bold;
+    width: 60%;
+    transform: translate(26%, 0%);
+}
+
+#singup-notice {
+    color: #fff;
+    list-style: none;
+    font-weight: bold;
+    font-size: 15px;
+    padding-top: 10px;
+    overflow: visible;
+    white-space: wrap;
+}
+
+
+#sign-up-div .textinput {
+    width: 60%;
+    transform: translate(30%, 0%);
+}
+
+#sign-up-div .passwordinput {
+    width: 60%;
+    transform: translate(30%, 0%);
+}
+
+/* end sign up form */
+
+/* start search bar */
+.search-bar-container .btn {
+    transform: translate(-7px, 0px);
+    background-color: var(--main-color);
+    color: #fff;
+    transition: background-color 0.4s, color 0.4s;
+    border-color: var(--main-color);
+}
+
+.search-bar-container .btn:hover {
+    background-color: var(--green-color);
+    color: var(--main-color);
+    border-color: var(--green-color);
+}
+
+.search-bar-container input:focus {
+    box-shadow: none;
+    border-color: var(--main-color);
+    color: var(--green-color);
+}
+
+@media (min-width: 992px) {
+    .search-bar-container {
+        transform: translate(25%, 50%);
+        min-width: 100%;
+    }
+}
+
+/* end search bar */
+
+/* start chefs card */
+
+.p-img {
+    max-width: 100%;
+    height: 200px;
+}
+
+.view-btn {
+    height: 35px;
+    width: 70%;
+    border: none;
+    outline: none;
+    background-color: var(--green-color);
+    color: white;
+    border-radius: 60px;
+    margin-top: 10px;
+    transition: background-color 0.4s, color 0.4s;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.view-btn:hover {
+    background-color: #f0edef;
+    color: var(--main-color);
+}
+
+/* end chefs card */
+
+/* start chef profile page */
+.socail-links-list li {
+    margin-right: 20px !important;
+    /* Here I used !important because it's already styled and i want to over write*/
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .instructions-text-container {
+        min-height: 292px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .instructions-text-container {
+        min-height: 330px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .instructions-text-container {
+        min-height: 390px;
+    }
+}
+
+.instructions-text {
+    text-align: center;
+    padding: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.update-btn {
+    background-color: var(--green-color);
+    transition: background-color 0.4s, color 0.4s;
+    color: #fff;
+}
+
+.update-btn:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.as-public-btn {
+    width: 20% !important;
+    /* important is to over write and style it as targeted */
+    margin-left: 40% !important;
+    /* important is to over write and style it as targeted */
+    background-color: var(--main-color);
+    transition: background-color 0.4s, color 0.4s;
+    color: var(--green-color);
+}
+
+.as-public-btn:hover {
+    background-color: var(--green-color);
+    color: #fff;
+}
+
+.chef-profile-img {
+    width: 150px !important;
+    height: 150px !important;
+}
+
+/* end chef profile page */
+
+/* start chef_info page */
+@media (min-width: 1400px) {
+    .instructions-chef-info {
+        min-height: 430px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .instructions-chef-info {
+        min-height: 375px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .instructions-chef-info {
+        min-height: 340px;
+    }
+}
+
+/* start comments section */
+/* start comment form */
+.comment-box {
+    width: 50%;
+    border: 1px solid #ccc;
+    margin: 50px 0;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-left: 25%;
+    margin-top: 80px;
+    box-shadow: 0px 0px 10px 1px rgb(165, 165, 165);
+}
+
+@media (max-width: 768px) {
+    .comment-box {
+        margin-left: 5%;
+        width: 85%;
+    }
+}
+
+.comment-box h6 {
+    text-align: left;
+    color: var(--green-color);
+    font-weight: bold;
+    font-size: 25px;
+    padding-bottom: 15px;
+}
+
+.comment-box input,
+.comment-box textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    outline: none;
+    box-sizing: border-box;
+    font-size: 18px;
+    border: 1px solid var(--green-color);
+    color: var(--main-color);
+}
+
+.comment-box input:focus,
+.comment-box textarea:focus {
+    box-shadow: none;
+    border: 1px solid var(--green-color);
+}
+
+.comment-btn {
+    background-color: var(--green-color);
+    transition: background-color 0.4s, color 0.4s;
+}
+
+.comment-btn:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+/* end comment form */
+
+/* start comments approved section */
+.comments-approved {
+    width: 80%;
+    border: 1px solid #ccc;
+    margin: 50px 0;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-left: 10%;
+    margin-top: 80px;
+    box-shadow: 0px 0px 10px 1px rgb(165, 165, 165);
+}
+
+.comments-approved h6 {
+    text-align: center;
+    color: var(--green-color);
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.comments-approved section .card {
+    box-shadow: 0px 0px 30px 30px rgb(165, 165, 165);
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.comments-approved section .card h6 {
+    color: var(--green-color);
+    text-align: left;
+}
+
+/* end  comments approved section */
+/* end comments section */
+/* end chef_info page */
+
+/* start sign out page */
+#sign-out-div {
+    box-shadow: 0 2px 4px var(--green-color);
+    border: 1px solid var(--green-color);
+    height: 40vh;
+    margin-top: 40px;
+    width: 50%;
+    background-color: var(--green-color);
+}
+
+#sign-out-div h1 {
+    color: var(--main-color);
+    padding-top: 20px;
+}
+
+#sign-out-div button {
+    padding: 15px;
+    border: none;
+    outline: none;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 60px;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+#sign-out-div button:hover {
+    background-color: #f0edef;
+    color: var(--main-color);
+}
+
+/* end sign out page */
+
+/* start delete profile confirmation page */
+#delete-form-div {
+    box-shadow: 0 2px 4px var(--green-color);
+    border: 1px solid var(--green-color);
+    height: 40vh;
+    margin-top: 40px;
+    width: 60%;
+    background-color: var(--green-color);
+}
+
+#delete-form-div h2 {
+    color: var(--main-color);
+    padding-top: 40px;
+}
+
+#delete-form-div span {
+    font-weight: bold;
+}
+
+#delete-form-div button.cancel-btn {
+    padding: 15px;
+    border: none;
+    outline: none;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 60px;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+#delete-form-div button.cancel-btn:hover {
+    background-color: #f0edef;
+    color: var(--main-color);
+}
+
+#delete-confirm {
+    padding: 15px;
+    border: none;
+    outline: none;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 60px;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+#delete-confirm:hover {
+    background-color: rgb(209, 28, 28);
+}
+
+/* end delete profile confirmation page */
+
+/* start reset password page */
+#reset-pass-div {
+    box-shadow: 0 2px 4px var(--green-color);
+    border: 1px solid var(--green-color);
+    height: 60vh;
+    margin-top: 40px;
+    width: 60%;
+    background-color: var(--green-color);
+}
+
+@media (max-width: 688px) {
+    #reset-pass-div {
+        width: 90%;
+        height: 65vh;
+    }
+}
+
+
+#reset-pass-div h1 {
+    color: var(--main-color);
+    padding-top: 20px;
+}
+
+#reset-pass-div button,
+#reset-pass-div input:not(#id_email) {
+    padding: 8px;
+    border: none;
+    outline: none;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 60px;
+    transition: background-color 0.4s, color 0.4s;
+    margin: 10px;
+}
+
+#reset-pass-div button:hover,
+#reset-pass-div input:not(#id_email):hover {
+    background-color: #f0edef;
+    color: var(--main-color);
+}
+
+#reset-pass-div a {
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+#reset-pass-div a:hover {
+    color: #0a459c;
+}
+
+/* end reset password page */
+
+/* start reset done page */
+#reset-done-div {
+    box-shadow: 0 2px 4px var(--green-color);
+    border: 1px solid var(--green-color);
+    height: 40vh;
+    margin-top: 40px;
+    width: 40%;
+    background-color: var(--green-color);
+    padding-top: 50px;
+}
+
+@media (max-width: 550px) {
+    #reset-done-div {
+        width: 70%;
+    }
+}
+
+#reset-done-div a {
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+#reset-done-div a:hover {
+    color: #0a459c;
+}
+
+/* end reset done page */
+
+/* start chage password page/form */
+#chage-password-form-page-div {
+    box-shadow: 0 2px 4px var(--green-color);
+    border: 1px solid var(--green-color);
+    height: 60vh;
+    margin-top: 40px;
+    width: 45%;
+    background-color: var(--green-color);
+}
+
+@media (max-width: 550px) {
+    #chage-password-form-page-div {
+        width: 70%;
+    }
+}
+
+#chage-password-form-page-div h1 {
+    color: var(--main-color);
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+#chage-password-form-page-div input[value="change password"] {
+    padding: 12px;
+    border: none;
+    outline: none;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 60px;
+    transition: background-color 0.4s, color 0.4s;
+    margin: 10px;
+}
+
+#chage-password-form-page-div input[value="change password"]:hover {
+    background-color: #f0edef;
+    color: var(--main-color);
+}
+
+/* end chage password page/form */
+
+/* start pwd changed done page/key_done */
+#pwd-changed-done-div {
+    box-shadow: 0 2px 4px var(--green-color);
+    border: 1px solid var(--green-color);
+    height: 50vh;
+    margin-top: 40px;
+    width: 45%;
+    background-color: var(--green-color);
+}
+
+@media (max-width: 550px) {
+    #pwd-changed-done-div {
+        width: 70%;
+    }
+}
+
+#pwd-changed-done-div h1 {
+    color: var(--main-color);
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+#pwd-changed-done-div p {
+    font-weight: bold;
+}
+
+#pwd-changed-done-div button {
+    height: 45px;
+    width: 75%;
+    border: none;
+    outline: none;
+    background-color: var(--main-color);
+    font-weight: 700;
+    color: white;
+    border-radius: 60px;
+    transition: background-color 0.4s, color 0.4s;
+    margin-top: 50px;
+}
+
+#pwd-changed-done-div button:hover {
+    background-color: #f0edef;
+    color: var(--main-color);
+}
+
+/* end pwd changed done page/key_done */
+
+/* start edit profile form/page */
+
+#edit-profile-form-div {
+    box-shadow: 0 2px 4px var(--green-color);
+    border: 1px solid var(--green-color);
+    min-height: 100;
+    width: 80%;
+    margin-top: 30px;
+    background-color: var(--green-color);
+    border-radius: 5px;
+}
+
+#edit-profile-form-div h1 {
+    color: var(--main-color);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#edit-profile-form-div label {
+    font-weight: bold;
+}
+
+#edit-profile-form-div input,
+#edit-profile-form-div select,
+#edit-profile-form-div input,
+#edit-profile-form-div #cke_id_instructions,
+#edit-profile-form-div div.input-group.mb-2 {
+    width: 60%;
+    transform: translate(33%, 0%);
+    background-color: rgb(236, 236, 236);
+}
+
+div #submit-id-submit {
+    border: none;
+    outline: none;
+    background-color: var(--main-color);
+    border-radius: 60px;
+    margin-top: 10px;
+    transform: translate(-3%, 0);
+    width: 20%;
+    transition: background-color 0.4s, color 0.4s;
+    margin-bottom: 20px;
+    background-color: var(--main-color);
+}
+
+
+div #submit-id-submit:hover {
+    background-color: #f0edef;
+    color: var(--main-color);
+}
+
+@media (max-width: 878px) {
+    #edit-profile-form-div {
+        width: 95%;
+    }
+
+    #edit-profile-form-div input,
+    #edit-profile-form-div select,
+    #edit-profile-form-div input,
+    #edit-profile-form-div #cke_id_instructions,
+    #edit-profile-form-div div.input-group.mb-2 {
+        width: 90%;
+        transform: translate(5%, 0%);
+    }
+
+    div #submit-id-submit {
+        width: 50%;
+    }
+}
+
+#edit-profile-form-div div.input-group.mb-2 input {
+    transform: translate(0px, 0px);
+    background-color: #a29c9c;
+    width: 18px;
+}
+
+#id_phone_number_1,
+span.phone-field-ext {
+    display: none;
+}
+
+/* end edit profile form/page */
+
+/* start media query for dishes images */
+.dish1-img,
+.dish2-img,
+.dish3-img,
+.dish4-img,
+.dish5-img {
+    width: 100%;
+}
+
+@media (min-width: 1400px) {
+
+    .dish1-img,
+    .dish2-img,
+    .dish3-img,
+    .dish4-img,
+    .dish5-img {
+        min-height: 382.92px;
+        max-height: 382.90px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+
+    .dish1-img,
+    .dish2-img,
+    .dish3-img,
+    .dish4-img,
+    .dish5-img {
+        min-height: 322.4px;
+        max-height: 322.6px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+
+    .dish1-img,
+    .dish2-img,
+    .dish3-img,
+    .dish4-img,
+    .dish5-img {
+        min-height: 262.4px;
+        max-height: 262.6px;
+    }
+}
+
+@media (min-width: 676px) and (max-width: 992px) {
+
+    .dish1-img,
+    .dish2-img {
+        min-height: 302.4px;
+        max-height: 302.6px;
+    }
+
+    .dish3-img,
+    .dish4-img,
+    .dish5-img {
+        min-height: 182.39px;
+        max-height: 182.41px;
+    }
+}
+
+@media (min-width: 676px) and (max-width: 767px) {
+
+    .dish3-img,
+    .dish4-img,
+    .dish5-img {
+        min-height: 302.4px;
+        max-height: 302.6px;
+    }
+}
+
+/* end media query for dishes images */
