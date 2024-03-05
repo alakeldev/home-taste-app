@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}404! Page Not Found{% endblock %}
+{% load static %}
+
+{% block content %}
+<div class="container text-center py-5">
+    <h1>Oops!! This Page Doesn't Exist!</h1>
+    <h5>Kindly utilize the navigation bar to access the desired page, or click <a href="{% url 'home' %}">HERE</a> to return to the home page</h5>
+</div>
+{% endblock %}
