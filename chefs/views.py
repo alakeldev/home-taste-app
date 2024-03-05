@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -24,7 +24,7 @@ def chefs_list(request):
 
 
 def chef_info(request, slug):
-    chef_info = Profile.objects.get(slug=slug)
+    chef_info = get_object_or_404(Profile, slug=slug)
     comments = Comment.objects.filter(chef=chef_info, is_approved=True)
     if request.method == 'POST':
         form = CommentForm(request.POST)
