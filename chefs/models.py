@@ -8,7 +8,7 @@ from phone_field import PhoneField
 
 # Create your models here.
 
-GENDER = (("F", "Female"), ("M", "Male"))
+GENDER = (("Female", "Female"), ("Male", "Male"))
 
 REGION = (
     ("Africa", "Africa"),
