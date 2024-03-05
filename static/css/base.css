@@ -406,7 +406,7 @@ label.form-label.requiredField[for="id_password"]::before {
         min-height: 292px;
     }
     .instructions-text {
-        min-height: 240px;
+        min-height: 205px;
     }
 }
 
@@ -415,7 +415,7 @@ label.form-label.requiredField[for="id_password"]::before {
         min-height: 330px;
     }
     .instructions-text {
-        min-height: 265px;
+        min-height: 240px;
     }
 }
 
@@ -424,7 +424,7 @@ label.form-label.requiredField[for="id_password"]::before {
         min-height: 390px;
     }
     .instructions-text {
-        min-height: 325px;
+        min-height: 300px;
     }
 }
 
