@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.models import User
-from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import Profile, Comment
 from .forms import UserProfileForm
@@ -50,7 +49,6 @@ def my_profile(request):
 @login_required(login_url='/accounts/login/')
 def edit_profile(request):
     profile, created = Profile.objects.get_or_create(user=request.user)
-
     if request.method == 'POST':
         form = UserProfileForm(request.POST, request.FILES, instance=profile)
         if form.is_valid():
@@ -58,7 +56,6 @@ def edit_profile(request):
             return redirect('chefs:my_profile')
     else:
         form = UserProfileForm(instance=profile)
-
     return render(request, 'edit_profile.html', {'form': form})
 
 
@@ -67,6 +64,5 @@ def delete_profile(request):
     if request.method == 'POST':
         user = request.user
         user.delete()
-        messages.success(request, "Your profile has been deleted successfully.")
         return redirect('home') 
     return render(request, 'delete_profile.html')
