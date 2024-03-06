@@ -23,6 +23,7 @@
             <h2 class="text-center my-5">Meet Our Chefs</h2>
         </div>
         {% for chef in chefs %}
+        {% if not chef.profile.slug == "admin" %}
         <div class="col-lg-4 col-md-6 col-sm-12 my-2">
             <div class="shadow d-flex justify-content-center align-items-center p-3 bg-dark rounded-lg flex-column rounded-3">
                 <div class="person-img">
@@ -52,6 +53,7 @@
                 <a href="{% url 'chefs:chef_info' chef.profile.slug %}" class="btn view-btn">View Profile</a>
             </div>
         </div>
+        {% endif %}
         {% endfor %}
     </div>
 </section>
