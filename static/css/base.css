@@ -327,12 +327,12 @@ label.form-label.requiredField[for="id_password"]::before {
 
 #sign-up-div .textinput {
     width: 80%;
-    transform: translate(10%, 0%);
+    transform: translate(12%, 0%);
 }
 
 #sign-up-div .passwordinput {
     width: 80%;
-    transform: translate(10%, 0%);
+    transform: translate(12%, 0%);
 }
 
 /* end sign up form */
