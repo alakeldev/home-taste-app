@@ -31,7 +31,11 @@ DEBUG = False
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['http://127.0.0.1:8000/', '127.0.0.1', '.herokuapp.com', 'https://ui.dev/amiresponsive', 'ui.dev/amiresponsive', 'https://amiresponsive.co.uk', "amiresponsive.co.uk"]
+ALLOWED_HOSTS = ['home-taste-2aece88c850a.herokuapp.com', '127.0.0.1:8000', '127.0.0.1']
+
+RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 
 # Application definition
