@@ -29,6 +29,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+PORT = os.environ.get("PORT")
 ALLOWED_HOSTS = ['*']
 
 
