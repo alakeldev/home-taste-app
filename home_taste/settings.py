@@ -29,8 +29,9 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-PORT = os.environ.get("PORT")
-ALLOWED_HOSTS = ['*']
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+
+ALLOWED_HOSTS = ['http://127.0.0.1:8000/', '127.0.0.1', 'home-taste-2aece88c850a.herokuapp.com']
 
 
 # Application definition
