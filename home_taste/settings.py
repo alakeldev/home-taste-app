@@ -31,7 +31,7 @@ DEBUG = False
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['http://127.0.0.1:8000/', '127.0.0.1', 'home-taste-2aece88c850a.herokuapp.com']
+ALLOWED_HOSTS = ['http://127.0.0.1:8000/', '127.0.0.1', '.herokuapp.com', 'https://ui.dev/amiresponsive', 'ui.dev/amiresponsive', 'https://amiresponsive.co.uk', "amiresponsive.co.uk"]
 
 
 # Application definition
