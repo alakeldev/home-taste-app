@@ -4,7 +4,6 @@ from djrichtextfield.models import RichTextField
 from django_resized import ResizedImageField
 from django.db.models.signals import post_save
 from django.utils.text import slugify
-from phone_field import PhoneField
 
 # Create your models here.
 
@@ -26,7 +25,7 @@ class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.CharField(("Name"), max_length=20, help_text='You can enter a different name from your username.')
     email = models.EmailField(("Contact Email"), max_length=50, blank=True, null=True, help_text='You can enter a different email from the one used during registration.')
-    phone_number = PhoneField(("Phone Number"), max_length=25, blank=True, null=True, help_text='Please provide your contact phone/mobile number.')
+    phone_number = models.CharField(("Phone Number"), max_length=25, blank=True, null=True, help_text='Please provide your contact phone/mobile number.')
     cuisine_specialization = models.CharField(("Cuisine Type"), max_length=25, blank=True, null=True, help_text='Specify your cuisine & culinary expertise (e.g., Indian, Syrian, Italian).')
     Region = models.CharField(("Region"), choices=REGION, default='Europe', help_text='Please specify your region.')
     country = models.CharField(("Country"), max_length=12, blank=True, null=True, help_text='Please enter your country of residence (use abbreviations if its long).')
