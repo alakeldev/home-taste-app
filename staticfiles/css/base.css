@@ -7,13 +7,14 @@
     --main-font: 'Arimo', serif;
     --main-color: rgb(33, 37, 41);
     --green-color: #7ab66b;
+    --white-color: rgb(236, 236, 236);
 }
 
 /* global rules */
 html,
 body {
     height: 100%;
-    background-color: rgb(236, 236, 236);
+    background-color: var(--white-color);
 }
 
 body {
@@ -60,7 +61,7 @@ main {
 }
 
 .landing h5 {
-    color: var(--, --main-color);
+    color: var(--main-color);
 }
 
 .landing .btn-signup {
@@ -70,14 +71,14 @@ main {
     outline: none;
     background-color: var(--main-color);
     font-weight: 700;
-    color: white;
+    color: var(--white-color);
     border-radius: 60px;
     transition: background-color 0.4s, color 0.4s;
 }
 
 .btn-signup:hover {
     background-color: var(--green-color);
-    color: #fff;
+    color: var(--main-color);
 }
 
 /* end landing section */
@@ -108,7 +109,7 @@ main {
 
 .accordion-button:not(.collapsed) {
     color: var(--main-color);
-    background-color: #fff;
+    background-color: #FFF;
     box-shadow: 0 2px 4px var(--main-color);
 }
 
@@ -140,7 +141,7 @@ main {
     width: 35%;
     border: none;
     outline: none;
-    background-color: #fff;
+    background-color: var(--white-color);
     font-weight: 700;
     color: var(--main-color);
     border-radius: 60px;
@@ -150,7 +151,7 @@ main {
 
 .btn-chefs:hover {
     background-color: var(--green-color);
-    color: #fff;
+    color: var(--white-color);
 }
 
 .span-title {
@@ -190,7 +191,7 @@ main {
 }
 
 #sign-in-div a {
-    color: white;
+    color: var(--white-color);
     text-decoration: none;
     transition: background-color 0.4s, color 0.4s;
 }
@@ -210,13 +211,13 @@ div#div_id_remember.mb-3.form-check {
     outline: none;
     background-color: var(--main-color);
     font-weight: 700;
-    color: white;
+    color: var(--white-color);
     border-radius: 60px;
     transition: background-color 0.4s, color 0.4s;
 }
 
 #signin:hover {
-    background-color: #f0edef;
+    background-color: var(--white-color);
     color: var(--main-color);
 }
 
@@ -272,7 +273,7 @@ label.form-label.requiredField[for="id_password"]::before {
 }
 
 #sign-up-div a {
-    color: white;
+    color: var(--white-color);
     text-decoration: none;
     transition: background-color 0.4s, color 0.4s;
 }
@@ -293,7 +294,7 @@ label.form-label.requiredField[for="id_password"]::before {
     outline: none;
     background-color: var(--main-color);
     font-weight: 700;
-    color: white;
+    color: var(--white-color);
     border-radius: 60px;
     margin-top: 10px;
     transition: background-color 0.4s, color 0.4s;
@@ -301,12 +302,12 @@ label.form-label.requiredField[for="id_password"]::before {
 }
 
 #signup:hover {
-    background-color: #f0edef;
+    background-color: var(--white-color);
     color: var(--main-color);
 }
 
 #hint_id_password1 ul {
-    color: #fff;
+    color: #FFF;
     padding-top: 15px;
     list-style: none;
     font-weight: bold;
@@ -315,7 +316,7 @@ label.form-label.requiredField[for="id_password"]::before {
 }
 
 #singup-notice {
-    color: #fff;
+    color: #FFF;
     list-style: none;
     font-weight: bold;
     font-size: 15px;
@@ -341,7 +342,7 @@ label.form-label.requiredField[for="id_password"]::before {
 .search-bar-container .btn {
     transform: translate(-7px, 0px);
     background-color: var(--main-color);
-    color: #fff;
+    color: var(--white-color);
     transition: background-color 0.4s, color 0.4s;
     border-color: var(--main-color);
 }
@@ -380,7 +381,7 @@ label.form-label.requiredField[for="id_password"]::before {
     border: none;
     outline: none;
     background-color: var(--green-color);
-    color: white;
+    color: var(--white-color);
     border-radius: 60px;
     margin-top: 10px;
     transition: background-color 0.4s, color 0.4s;
@@ -389,7 +390,7 @@ label.form-label.requiredField[for="id_password"]::before {
 }
 
 .view-btn:hover {
-    background-color: #f0edef;
+    background-color: var(--white-color);
     color: var(--main-color);
 }
 
@@ -405,6 +406,7 @@ label.form-label.requiredField[for="id_password"]::before {
     .instructions-text-container {
         min-height: 292px;
     }
+
     .instructions-text {
         min-height: 205px;
     }
@@ -414,6 +416,7 @@ label.form-label.requiredField[for="id_password"]::before {
     .instructions-text-container {
         min-height: 330px;
     }
+
     .instructions-text {
         min-height: 240px;
     }
@@ -423,6 +426,7 @@ label.form-label.requiredField[for="id_password"]::before {
     .instructions-text-container {
         min-height: 390px;
     }
+
     .instructions-text {
         min-height: 300px;
     }
@@ -438,12 +442,11 @@ label.form-label.requiredField[for="id_password"]::before {
 .update-btn {
     background-color: var(--green-color);
     transition: background-color 0.4s, color 0.4s;
-    color: #fff;
+    color: var(--white-color);
 }
 
 .update-btn:hover {
     background-color: var(--main-color);
-    color: #fff;
 }
 
 .as-public-btn {
@@ -567,7 +570,7 @@ label.form-label.requiredField[for="id_password"]::before {
 .comments-approved section .card {
     box-shadow: 0px 0px 30px 30px rgb(165, 165, 165);
     background-color: var(--main-color);
-    color: #fff;
+    color: #FFF;
 }
 
 .comments-approved section .card h6 {
@@ -599,13 +602,13 @@ label.form-label.requiredField[for="id_password"]::before {
     border: none;
     outline: none;
     background-color: var(--main-color);
-    color: white;
+    color: var(--white-color);
     border-radius: 60px;
     transition: background-color 0.4s, color 0.4s;
 }
 
 #sign-out-div button:hover {
-    background-color: #f0edef;
+    background-color: var(--white-color);
     color: var(--main-color);
 }
 
@@ -635,13 +638,13 @@ label.form-label.requiredField[for="id_password"]::before {
     border: none;
     outline: none;
     background-color: var(--main-color);
-    color: white;
+    color: var(--white-color);
     border-radius: 60px;
     transition: background-color 0.4s, color 0.4s;
 }
 
 #delete-form-div button.cancel-btn:hover {
-    background-color: #f0edef;
+    background-color: var(--white-color);
     color: var(--main-color);
 }
 
@@ -650,7 +653,7 @@ label.form-label.requiredField[for="id_password"]::before {
     border: none;
     outline: none;
     background-color: var(--main-color);
-    color: white;
+    color: var(--white-color);
     border-radius: 60px;
     transition: background-color 0.4s, color 0.4s;
 }
@@ -690,7 +693,7 @@ label.form-label.requiredField[for="id_password"]::before {
     border: none;
     outline: none;
     background-color: var(--main-color);
-    color: white;
+    color: var(--white-color);
     border-radius: 60px;
     transition: background-color 0.4s, color 0.4s;
     margin: 10px;
@@ -698,12 +701,12 @@ label.form-label.requiredField[for="id_password"]::before {
 
 #reset-pass-div button:hover,
 #reset-pass-div input:not(#id_email):hover {
-    background-color: #f0edef;
+    background-color: var(--white-color);
     color: var(--main-color);
 }
 
 #reset-pass-div a {
-    color: white;
+    color: var(--white-color);
     text-decoration: none;
     transition: background-color 0.4s, color 0.4s;
 }
@@ -732,7 +735,7 @@ label.form-label.requiredField[for="id_password"]::before {
 }
 
 #reset-done-div a {
-    color: white;
+    color: var(--white-color);
     text-decoration: none;
     transition: background-color 0.4s, color 0.4s;
 }
@@ -770,14 +773,14 @@ label.form-label.requiredField[for="id_password"]::before {
     border: none;
     outline: none;
     background-color: var(--main-color);
-    color: white;
+    color: var(--white-color);
     border-radius: 60px;
     transition: background-color 0.4s, color 0.4s;
     margin: 10px;
 }
 
 #chage-password-form-page-div input[value="change password"]:hover {
-    background-color: #f0edef;
+    background-color: var(--white-color);
     color: var(--main-color);
 }
 
@@ -816,14 +819,14 @@ label.form-label.requiredField[for="id_password"]::before {
     outline: none;
     background-color: var(--main-color);
     font-weight: 700;
-    color: white;
+    color: var(--white-color);
     border-radius: 60px;
     transition: background-color 0.4s, color 0.4s;
     margin-top: 50px;
 }
 
 #pwd-changed-done-div button:hover {
-    background-color: #f0edef;
+    background-color: var(--white-color);
     color: var(--main-color);
 }
 
@@ -837,12 +840,12 @@ label.form-label.requiredField[for="id_password"]::before {
     min-height: 100;
     width: 80%;
     margin-top: 30px;
-    background-color: var(--green-color);
+    background-color: var(--main-color);
     border-radius: 5px;
 }
 
 #edit-profile-form-div h1 {
-    color: var(--main-color);
+    color: var(--white-color);
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -858,25 +861,27 @@ label.form-label.requiredField[for="id_password"]::before {
 #edit-profile-form-div div.input-group.mb-2 {
     width: 60%;
     transform: translate(33%, 0%);
-    background-color: rgb(236, 236, 236);
+    background-color: var(--white-color);
 }
 
 div #submit-id-submit {
     border: none;
     outline: none;
-    background-color: var(--main-color);
+    background-color: var(--green-color);
     border-radius: 60px;
     margin-top: 10px;
     transform: translate(-3%, 0);
     width: 20%;
     transition: background-color 0.4s, color 0.4s;
     margin-bottom: 20px;
-    background-color: var(--main-color);
 }
 
+div.form-control label.form-check-label {
+    color: var(--main-color) !important;
+}
 
 div #submit-id-submit:hover {
-    background-color: #f0edef;
+    background-color: var(--white-color);
     color: var(--main-color);
 }
 
