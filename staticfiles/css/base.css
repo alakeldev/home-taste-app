@@ -381,7 +381,7 @@ label.form-label.requiredField[for="id_password"]::before {
     border: none;
     outline: none;
     background-color: var(--green-color);
-    color: var(--white-color);
+    color: #FFF;
     border-radius: 60px;
     margin-top: 10px;
     transition: background-color 0.4s, color 0.4s;
@@ -390,7 +390,7 @@ label.form-label.requiredField[for="id_password"]::before {
 }
 
 .view-btn:hover {
-    background-color: var(--white-color);
+    background-color: #FFF;
     color: var(--main-color);
 }
 
@@ -442,11 +442,12 @@ label.form-label.requiredField[for="id_password"]::before {
 .update-btn {
     background-color: var(--green-color);
     transition: background-color 0.4s, color 0.4s;
-    color: var(--white-color);
+    color: #FFF;
 }
 
 .update-btn:hover {
     background-color: var(--main-color);
+    color: var(--green-color)
 }
 
 .as-public-btn {
@@ -461,7 +462,7 @@ label.form-label.requiredField[for="id_password"]::before {
 
 .as-public-btn:hover {
     background-color: var(--green-color);
-    color: #fff;
+    color: #FFF;
 }
 
 .chef-profile-img {
@@ -852,6 +853,7 @@ label.form-label.requiredField[for="id_password"]::before {
 
 #edit-profile-form-div label {
     font-weight: bold;
+    color: var(--white-color);
 }
 
 #edit-profile-form-div input,
