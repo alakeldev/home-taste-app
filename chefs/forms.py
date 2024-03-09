@@ -8,7 +8,7 @@ class UserProfileForm(forms.ModelForm):
 
     class Meta:
         model = Profile
-        fields = ['name', 'image', 'email', 'phone_number','Region', 'country', 'city', 'gender','cuisine_specialization', 'instructions', 'facebook_link', 'instagram_link', 'tiktok_link', 'youtube_link', 'dish1', 'dish2','dish3','dish4','dish5',]
+        fields = ['name', 'image', 'email', 'phone_number','gender', 'Region', 'country', 'city','cuisine_specialization', 'instructions', 'facebook_link', 'instagram_link', 'tiktok_link', 'youtube_link', 'dish1', 'dish2','dish3','dish4','dish5']
 
     def clean(self):
         cleaned_data = super().clean()
@@ -17,7 +17,6 @@ class UserProfileForm(forms.ModelForm):
         country = cleaned_data.get('country')
         cuisine = cleaned_data.get('cuisine_specialization')
         phone_number = cleaned_data.get('phone_number')
-        email = cleaned_data.get('email')
         url_fields = ['facebook_link', 'instagram_link', 'youtube_link', 'tiktok_link']
 
         valid_characters1 = set("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ")
@@ -39,13 +38,6 @@ class UserProfileForm(forms.ModelForm):
         if phone_number and not all(char in valid_characters3 for char in phone_number):
             self.add_error('phone_number', "Phone Number should contain only digits, (-), (+) and ().")
 
-        if email:
-            email_validator = forms.EmailValidator()
-            try:
-                email_validator(email)
-            except forms.ValidationError:
-                self.add_error('email', "Invalid Email address!.")
-
         for field_name in url_fields:
             field_value = cleaned_data.get(field_name)
             if field_value:
@@ -64,3 +56,12 @@ class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         fields = ['name', 'email', 'comment']
+
+    def clean(self):
+        cleaned_data = super().clean()
+        name = cleaned_data.get('name')
+
+        valid_characters = set("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ")
+
+        if name and not all(char in valid_characters for char in name):
+            self.add_error('name', "Name should contain only letters.")

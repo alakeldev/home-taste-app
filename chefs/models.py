@@ -34,7 +34,7 @@ class Profile(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     slug = models.SlugField(blank=True, null=True)
     gender = models.CharField(choices = GENDER, blank=True, null=True, help_text='Please specify your gender.')
-    instructions = RichTextField(("Please Share Below Your Instructions/Cook Schedules"), max_length=20000, blank=True, null=True)
+    instructions = RichTextField(("Please Share Below Your Cook Instructions/Schedules"), max_length=20000, blank=True, null=True)
     facebook_link = models.URLField(("Facebook URL"), blank=True, null=True, help_text='Please enter the URL of your Facebook account.')
     instagram_link = models.URLField(("Instagram URL"), blank=True, null=True, help_text='Please enter the URL of your Instagram account.')
     youtube_link = models.URLField(("Youtube URL"), blank=True, null=True, help_text='Please enter the URL of your Youtube channel.')
