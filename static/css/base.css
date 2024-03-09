@@ -559,6 +559,8 @@ label.form-label.requiredField[for="id_password"]::before {
     margin-left: 10%;
     margin-top: 80px;
     box-shadow: 0px 0px 10px 1px rgb(165, 165, 165);
+    max-height: 600px;
+    overflow-y: auto;
 }
 
 .comments-approved h6 {
