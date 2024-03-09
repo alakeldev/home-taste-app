@@ -1,5 +1,6 @@
 from django.contrib import admin
 from .models import Profile, Comment
+from django.utils.html import format_html
 # Register your models here.
 
 @admin.register(Profile)
@@ -26,9 +27,21 @@ class ProfileAdmin(admin.ModelAdmin):
         'dish3',
         'dish4',
         'dish5',
-        'instructions'
+        'formatted_instructions'
     )
     list_filter = ('Region',)
+
+    # control instrunctions/schedules field to don't damage the view in admin panel if it's long
+    # format_html to remove html tags
+    def formatted_instructions(self, obj):
+        full_instructions = obj.instructions
+        max_summary_length = 75
+        summary = full_instructions[:max_summary_length]
+        if len(full_instructions) > max_summary_length:
+            summary += "..."
+        return format_html(summary)
+    
+    formatted_instructions.short_description = 'Instructions/Schedules'
 
 @admin.register(Comment)
 class ProfileAdmin(admin.ModelAdmin):
