@@ -63,7 +63,6 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',
     'cloudinary',
     'cloudinary_storage',
-    'phone_field',
 ]
 
 SITE_ID = 1

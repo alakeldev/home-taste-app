@@ -24,6 +24,7 @@ class Profile(models.Model):
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.CharField(("Name"), max_length=20, help_text='You can enter a different name from your username.')
+    image = ResizedImageField(("Profile Picture"), size=[400, None], quality=75, upload_to='profile/', force_format='WEBP', blank=True, null=True, help_text='Please upload your profile picture.')
     email = models.EmailField(("Contact Email"), max_length=50, blank=True, null=True, help_text='You can enter a different email from the one used during registration.')
     phone_number = models.CharField(("Phone Number"), max_length=25, blank=True, null=True, help_text='Please provide your contact phone/mobile number.')
     cuisine_specialization = models.CharField(("Cuisine Type"), max_length=25, blank=True, null=True, help_text='Specify your cuisine & culinary expertise (e.g., Indian, Syrian, Italian).')
@@ -34,7 +35,6 @@ class Profile(models.Model):
     slug = models.SlugField(blank=True, null=True)
     gender = models.CharField(choices = GENDER, blank=True, null=True, help_text='Please specify your gender.')
     instructions = RichTextField(("Please Share Below Your Instructions/Cook Schedules"), max_length=20000, blank=True, null=True)
-    image = ResizedImageField(("Profile Picture"), size=[400, None], quality=75, upload_to='profile/', force_format='WEBP', blank=True, null=True, help_text='Please upload your profile picture.')
     facebook_link = models.URLField(("Facebook URL"), blank=True, null=True, help_text='Please enter the URL of your Facebook account.')
     instagram_link = models.URLField(("Instagram URL"), blank=True, null=True, help_text='Please enter the URL of your Instagram account.')
     youtube_link = models.URLField(("Youtube URL"), blank=True, null=True, help_text='Please enter the URL of your Youtube channel.')

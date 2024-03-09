@@ -7,13 +7,26 @@ class ProfileAdmin(admin.ModelAdmin):
     list_display = (
         'user',
         'name',
+        'email',
+        'phone_number',
+        'cuisine_specialization',
         'Region',
         'country',
-        'cuisine_specialization',
         'city',
-        'instructions',
+        'created_on',
+        'slug',
         'gender',
-        'image'
+        'image',
+        'facebook_link',
+        'instagram_link',
+        'youtube_link',
+        'tiktok_link',
+        'dish1',
+        'dish2',
+        'dish3',
+        'dish4',
+        'dish5',
+        'instructions'
     )
     list_filter = ('Region',)
 
