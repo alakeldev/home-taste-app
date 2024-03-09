@@ -34,7 +34,7 @@
                     {% endif %}
                 </div>
                 <div class="person-name my-2">
-                    <h3 class="text-white">Chef: 
+                    <h3 class="text-white chefs-card-name">Chef: 
                         {% if chef.profile.name %}
                         {{ chef.profile.name }}
                         {% else %}
@@ -45,7 +45,7 @@
                 <div class="info text-center">
                     <h6 class="text-white">Region: {{ chef.profile.Region }}</h6>
                     <h6 class="text-white">Location: {{ chef.profile.country }}, {{ chef.profile.city }}</h6>
-                    <h6 class="text-white">Specialization: {{ chef.profile.cuisine_specialization }}</h6>
+                    <h6 class="text-white">Cook-Exp: {{ chef.profile.cuisine_specialization }}</h6>
                 </div>
                 <div class="social-icons my-2">
                     <h6 class="text-white">Joined Us: {{ chef.profile.created_on|date:"Y-m-d" }}</h6>

@@ -394,6 +394,12 @@ label.form-label.requiredField[for="id_password"]::before {
     color: var(--main-color);
 }
 
+@media (min-width: 676px) and (max-width: 1200px) {
+    .chefs-card-name {
+        font-size: 21px;
+    }
+}
+
 /* end chefs card */
 
 /* start chef profile page */
@@ -483,11 +489,17 @@ label.form-label.requiredField[for="id_password"]::before {
     .instructions-chef-info {
         min-height: 375px;
     }
+    .location-info {
+        font-size: 14px;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
     .instructions-chef-info {
         min-height: 340px;
+    }
+    .location-info {
+        font-size: 12px;
     }
 }
 

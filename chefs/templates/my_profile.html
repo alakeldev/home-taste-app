@@ -25,7 +25,7 @@
                             {% endif %}
                         </h5>
                         <p class="text-muted mb-1">Region: {{ user.profile.Region }}</p>
-                        <p class="text-muted mb-4">Location: {{ user.profile.country }} | {{ user.profile.city }}</p>
+                        <p class="text-muted mb-4 location-info">Location: {{ user.profile.country }} | {{ user.profile.city }}</p>
                         <div class="d-flex justify-content-center mb-2">
                             <button class="btn btn-danger ms-1" onclick="redirectToDeletePage()">Delete Profile</button>
                             <button class="btn ms-1 update-btn" onclick="redirectToUpdatePage()">Update Profile</button>

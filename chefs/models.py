@@ -27,7 +27,7 @@ class Profile(models.Model):
     image = ResizedImageField(("Profile Picture"), size=[400, None], quality=75, upload_to='profile/', force_format='WEBP', blank=True, null=True, help_text='Please upload your profile picture.')
     email = models.EmailField(("Contact Email"), max_length=50, blank=True, null=True, help_text='You can enter a different email from the one used during registration.')
     phone_number = models.CharField(("Phone Number"), max_length=25, blank=True, null=True, help_text='Please provide your contact phone/mobile number.')
-    cuisine_specialization = models.CharField(("Cuisine Type"), max_length=25, blank=True, null=True, help_text='Specify your cuisine & culinary expertise (e.g., Indian, Syrian, Italian).')
+    cuisine_specialization = models.CharField(("Cuisine Type"), max_length=25, blank=True, null=True, help_text='Please specify one or two cuisines from your culinary expertise (e.g., Indian, Syrian, Italian)')
     Region = models.CharField(("Region"), choices=REGION, default='Europe', help_text='Please specify your region.')
     country = models.CharField(("Country"), max_length=12, blank=True, null=True, help_text='Please enter your country of residence (use abbreviations if its long).')
     city = models.CharField(("City"), max_length=12, blank=True, null=True, help_text='Please enter your city of residence (use abbreviations if its long).')
