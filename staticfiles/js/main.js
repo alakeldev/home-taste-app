@@ -17,13 +17,3 @@ window.addEventListener('DOMContentLoaded', () => {
         })
     }
 });
-
-// related with the delete profile button inside the chef profile 'my_profile.html'
-function redirectToDeletePage() {
-    window.location.href = '/chefs/deleteprofile/';
-}
-
-// related with the update profile button inside the chef profile 'my_profile.html'
-function redirectToUpdatePage() {
-    window.location.href = '/chefs/editprofile/';
-}

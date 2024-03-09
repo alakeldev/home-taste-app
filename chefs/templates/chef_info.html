@@ -15,7 +15,7 @@
 </div>
 {% endif %}
 {% endwith %}
-<section style="background-color: #eee;">
+<section class="section-bg-white">
     <div class="container py-5">
         <div class="row">
             <div class="col-lg-4">
@@ -93,20 +93,16 @@
                                 <p class="text-muted mb-0">
                                 <ul class="list-group-item d-flex align-items-center p-3 socail-links-list">
                                     {% if chef_info.facebook_link %}
-                                    <li class="list-inline-item"><a href="{{ chef_info.facebook_link }}"><i
-                                                class="fab fa-facebook-f fa-lg" style="color: #3b5998;"></i></a></li>
+                                    <li class="list-inline-item"><a href="{{ chef_info.facebook_link }}" rel="noopener" target="_blank" aria-label="Facebook - Opens in a new tab"><i class="fab fa-facebook-f fa-lg facebook-icon"></i></a></li>
                                     {% endif %}
                                     {% if chef_info.instagram_link %}
-                                    <li class="list-inline-item pr-2"><a href="{{ chef_info.instagram_link }}"><i
-                                                class="fab fa-instagram fa-lg" style="color: #ac2bac;"></i></a></li>
+                                    <li class="list-inline-item pr-2"><a href="{{ chef_info.instagram_link }}" rel="noopener" target="_blank" aria-label="Instagram - Opens in a new tab"><i class="fab fa-instagram fa-lg instagram-icon"></i></a></li>
                                     {% endif %}
                                     {% if chef_info.tiktok_link %}
-                                    <li class="list-inline-item pr-2"><a href="{{ chef_info.tiktok_link }}"><i
-                                                class="fab fa-tiktok fa-lg" style="color: #49d113;"></i></a></li>
+                                    <li class="list-inline-item pr-2"><a href="{{ chef_info.tiktok_link }}" rel="noopener" target="_blank" aria-label="Tiktok - Opens in a new tab"><i class="fab fa-tiktok fa-lg tiktok-icon"></i></a></li>
                                     {% endif %}
                                     {% if chef_info.youtube_link %}
-                                    <li class="list-inline-item pr-2"><a href="{{ chef_info.youtube_link }}"><i
-                                                class="fab fa-youtube fa-lg" style="color: #d11313;"></i></a></li>
+                                    <li class="list-inline-item pr-2"><a href="{{ chef_info.youtube_link }}" rel="noopener" target="_blank" aria-label="Youtube - Opens in a new tab"><i class="fab fa-youtube fa-lg youtube-icon"></i></a></li>
                                     {% endif %}
                                     {% if not chef_info.facebook_link and not chef_info.instagram_link and not chef_info.tiktok_link and not chef_info.youtube_link %}
                                     <p class="text-muted mb-0">No social media links provided</p>
@@ -190,7 +186,7 @@
         <h6>Comments</h6>
         {% for comment in comments %}
         {% if comment.is_approved %}
-        <section style="background-color: #eee;">
+        <section class="section-bg-white">
             <div class="container my-5">
                 <div class="row d-flex justify-content-center">
                     <div class="col-md-12 col-lg-10 col-xl-8">

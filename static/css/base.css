@@ -503,6 +503,10 @@ label.form-label.requiredField[for="id_password"]::before {
     }
 }
 
+.section-bg-white {
+    background-color: #eee;
+}
+
 /* start comments section */
 /* start comment form */
 .comment-box {
@@ -1005,3 +1009,21 @@ span.phone-field-ext {
 }
 
 /* end media query for dishes images */
+
+/* start socail media networks icons */
+.facebook-icon {
+    color: #3b5998;
+}
+
+.instagram-icon {
+    color: #ac2bac;
+}
+
+.tiktok-icon {
+    color: #49d113;
+}
+
+.youtube-icon {
+    color: #d11313;
+}
+/* end socail media networks icons */

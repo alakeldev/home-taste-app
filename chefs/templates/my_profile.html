@@ -6,7 +6,7 @@
 <div>
     <a href="{% url 'chefs:chef_info' user.profile.slug %}"><button class="btn ms-1 as-public-btn mt-5">View As Public</button></a>
 </div>
-<section style="background-color: #eee;">
+<section class="section-bg-white">
     <div class="container py-5">
         <div class="row">
             <div class="col-lg-4">
@@ -27,8 +27,8 @@
                         <p class="text-muted mb-1">Region: {{ user.profile.Region }}</p>
                         <p class="text-muted mb-4 location-info">Location: {{ user.profile.country }} | {{ user.profile.city }}</p>
                         <div class="d-flex justify-content-center mb-2">
-                            <button class="btn btn-danger ms-1" onclick="redirectToDeletePage()">Delete Profile</button>
-                            <button class="btn ms-1 update-btn" onclick="redirectToUpdatePage()">Update Profile</button>
+                            <a class="btn btn-danger ms-1" href="{% url 'chefs:delete_profile' %}" aria-label="Delete profile page - Opens in a new tab">Delete Profile</a>
+                            <a class="btn ms-1 update-btn" href="{% url 'chefs:edit_profile' %}" aria-label="Update profile page - Opens in a new tab">Update Profile</a>
                         </div>
                     </div>
                 </div>
@@ -88,20 +88,16 @@
                                 <p class="text-muted mb-0">
                                 <ul class="list-group-item d-flex align-items-center p-3 socail-links-list">
                                     {% if user.profile.facebook_link %}
-                                    <li class="list-inline-item"><a href="{{ user.profile.facebook_link }}"><i
-                                                class="fab fa-facebook-f fa-lg" style="color: #3b5998;"></i></a></li>
+                                    <li class="list-inline-item"><a href="{{ user.profile.facebook_link }}" rel="noopener" target="_blank" aria-label="Facebook - Opens in a new tab"><i class="fab fa-facebook-f fa-lg facebook-icon"></i></a></li>
                                     {% endif %}
                                     {% if user.profile.instagram_link %}
-                                    <li class="list-inline-item pr-2"><a href="{{ user.profile.instagram_link }}"><i
-                                                class="fab fa-instagram fa-lg" style="color: #ac2bac;"></i></a></li>
+                                    <li class="list-inline-item pr-2"><a href="{{ user.profile.instagram_link }}" rel="noopener" target="_blank" aria-label="Instagram - Opens in a new tab"><i class="fab fa-instagram fa-lg instagram-icon"></i></a></li>
                                     {% endif %}
                                     {% if user.profile.tiktok_link %}
-                                    <li class="list-inline-item pr-2"><a href="{{ user.profile.tiktok_link }}"><i
-                                                class="fab fa-tiktok fa-lg" style="color: #49d113;"></i></a></li>
+                                    <li class="list-inline-item pr-2"><a href="{{ user.profile.tiktok_link }}" rel="noopener" target="_blank" aria-label="Tiktok - Opens in a new tab"><i class="fab fa-tiktok fa-lg tiktok-icon"></i></a></li>
                                     {% endif %}
                                     {% if user.profile.youtube_link %}
-                                    <li class="list-inline-item pr-2"><a href="{{ user.profile.youtube_link }}"><i
-                                                class="fab fa-youtube fa-lg" style="color: #d11313;"></i></a></li>
+                                    <li class="list-inline-item pr-2"><a href="{{ user.profile.youtube_link }}" rel="noopener" target="_blank" aria-label="Youtube - Opens in a new tab"><i class="fab fa-youtube fa-lg youtube-icon"></i></a></li>
                                     {% endif %}
                                     {% if not user.profile.facebook_link and not user.profile.instagram_link and not user.profile.tiktok_link and not user.profile.youtube_link %}
                                     <p class="text-muted mb-0">No social media links provided</p>
