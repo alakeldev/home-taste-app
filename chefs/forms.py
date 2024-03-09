@@ -17,11 +17,13 @@ class UserProfileForm(forms.ModelForm):
         country = cleaned_data.get('country')
         cuisine = cleaned_data.get('cuisine_specialization')
         phone_number = cleaned_data.get('phone_number')
+        instructions = cleaned_data.get('instructions')
         url_fields = ['facebook_link', 'instagram_link', 'youtube_link', 'tiktok_link']
 
         valid_characters1 = set("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ")
         valid_characters2 = set("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ,-/ ")
         valid_characters3 = set("0123456789 -()+")
+        instrunctions_max_length = 5000
 
         if name and not all(char in valid_characters1 for char in name):
             self.add_error('name', "Name should contain only letters.")
@@ -37,6 +39,11 @@ class UserProfileForm(forms.ModelForm):
 
         if phone_number and not all(char in valid_characters3 for char in phone_number):
             self.add_error('phone_number', "Phone Number should contain only digits, (-), (+) and ().")
+
+        if len(instructions) > instrunctions_max_length:
+            raise forms.ValidationError(
+                f"Instrunctions/Schedules field exceeds the maximum limit of {instrunctions_max_length} characters."
+            )
 
         for field_name in url_fields:
             field_value = cleaned_data.get(field_name)
