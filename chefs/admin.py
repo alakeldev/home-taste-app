@@ -28,7 +28,7 @@ class ProfileAdmin(admin.ModelAdmin):
         'dish4',
         'dish5',
         'formatted_instructions'
-    )
+        )
     list_filter = ('Region',)
 
     # control instrunctions/schedules field to don't damage the view in admin panel if it's long
@@ -36,6 +36,10 @@ class ProfileAdmin(admin.ModelAdmin):
     def formatted_instructions(self, obj):
         full_instructions = obj.instructions
         max_summary_length = 75
+
+        if not full_instructions or len(full_instructions) == 0:
+            return "-"
+    
         summary = full_instructions[:max_summary_length]
         if len(full_instructions) > max_summary_length:
             summary += "..."

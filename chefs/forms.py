@@ -67,8 +67,14 @@ class CommentForm(forms.ModelForm):
     def clean(self):
         cleaned_data = super().clean()
         name = cleaned_data.get('name')
+        comment = cleaned_data.get('comment')
 
         valid_characters = set("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ")
 
         if name and not all(char in valid_characters for char in name):
             self.add_error('name', "Name should contain only letters.")
+
+        if comment:
+            letter_count = sum(char.isalpha() for char in comment)
+            if letter_count < 10:
+                self.add_error('comment', "Comment must contain words not only symbols and numbers please!.")
