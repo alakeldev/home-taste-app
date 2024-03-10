@@ -7,11 +7,11 @@
 {% with request.resolver_match.url_name as url_name %}
 {% if request.user.is_authenticated %}
 <div>
-    <a href="{% url 'chefs:my_profile' %}"><button class="btn ms-1 as-public-btn mt-5">Back To My Profile</button></a>
+    <a href="{% url 'chefs:my_profile' %}" class="btn ms-1 as-public-btn mt-5" aria-label="Button to back to my profile page">Back To My Profile</a>
 </div>
 {% else %}
 <div>
-    <a href="{% url 'chefs:chefs_list' %}"><button class="btn ms-1 as-public-btn mt-5">Back To Chefs Page</button></a>
+    <a href="{% url 'chefs:chefs_list' %}" class="btn ms-1 as-public-btn mt-5" aria-label="Button to back to all chefs cards page">Back To Chefs Cards</a>
 </div>
 {% endif %}
 {% endwith %}
@@ -34,14 +34,26 @@
                             {% endif %}
                         </h5>
                         <p class="text-muted mb-1">Region: {{ chef_info.Region }}</p>
+                        {% if chef_info.country and chef_info.city %}
                         <p class="text-muted mb-4 location-info">Location: {{ chef_info.country }} | {{ chef_info.city }}</p>
+                        {% elif not chef_info.country and chef_info.city %}
+                        <p class="text-muted mb-4 location-info">Location: Country Not Set | {{ chef_info.city }}</p>
+                        {% elif chef_info.country and not chef_info.city %}
+                        <p class="text-muted mb-4 location-info">Location: {{ chef_info.country }} | City Not Set</p>
+                        {% elif not chef_info.country and not chef_info.city %}
+                        <p class="text-muted mb-4 location-info">Location: Not Set | Not Set</p>
+                        {% endif %}
                     </div>
                 </div>
                 <div class="card mb-4 mb-lg-0 instructions-text-container instructions-chef-info">
                     <div class="card-body p-3">
                         <ul class="list-group list-group-flush rounded-3">
                             <p class="mb-4 text-center m-2"><span class=" me-1">Instructions/Schedules:</span></p>
+                            {% if chef_info.instructions %}
                             <div class="instructions-text">{{ chef_info.instructions|safe }}</div>
+                            {% elif not chef_info.instructions %}
+                            <div class="instructions-text">Not Provided By The Chef</div>
+                            {% endif %}
                     </div>
                 </div>
             </div>
@@ -53,7 +65,11 @@
                                 <p class="mb-0">Cook Specialization:</p>
                             </div>
                             <div class="col-sm-9">
+                                {% if chef_info.cuisine_specialization %}
                                 <p class="text-muted mb-0">{{ chef_info.cuisine_specialization }}</p>
+                                {% elif not chef_info.cuisine_specialization %}
+                                <p class="text-muted mb-0">Not Set</p>
+                                {% endif %}
                             </div>
                         </div>
                         <hr>
@@ -71,7 +87,11 @@
                                 <p class="mb-0">Email:</p>
                             </div>
                             <div class="col-sm-9">
+                                {% if chef_info.email %}
                                 <p class="text-muted mb-0">{{ chef_info.email }}</p>
+                                {% elif not chef_info.email %}
+                                <p class="text-muted mb-0">Not Set</p>
+                                {% endif %}
                             </div>
                         </div>
                         <hr>
@@ -80,7 +100,11 @@
                                 <p class="mb-0">Phone:</p>
                             </div>
                             <div class="col-sm-9">
+                                {% if chef_info.phone_number %}
                                 <p class="text-muted mb-0">{{ chef_info.phone_number }}</p>
+                                {% elif not chef_info.phone_number %}
+                                <p class="text-muted mb-0">Not Set</p>
+                                {% endif %}
                             </div>
                         </div>
                         <hr>
