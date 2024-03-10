@@ -17,9 +17,11 @@ def chefs_list(request):
             Q(profile__country__icontains=search_query) | 
             Q(profile__city__icontains=search_query) 
         )
-    return render(request, 'chefs.html', {
-        'chefs': queryset,
-    })
+    if not queryset:
+        context = {'message': 'Sorry! no match found.'}
+    else:
+        context = {'chefs': queryset}
+    return render(request, 'chefs.html', context)
 
 
 def chef_info(request, slug):

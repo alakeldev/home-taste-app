@@ -14,6 +14,7 @@
         </form>
     </div>
 </div>
+
 <!-- end search section -->
 
 <!-- Chef Card -->
@@ -21,6 +22,10 @@
     <div class="row">
         <div class="col-md-12">
             <h2 class="text-center my-5">Meet Our Chefs</h2>
+            {% if message %}
+            <div class="text-center my-5">{{ message }}</div>
+            <div class="text-center my-5">To reload all Chefs Cards again please click <a href="{% url 'chefs:chefs_list' %}">HERE</a>.</div>
+            {% endif %}
         </div>
         {% for chef in chefs %}
         {% if not chef.profile.slug == "admin" %}
