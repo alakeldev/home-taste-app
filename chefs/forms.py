@@ -34,8 +34,9 @@ class UserProfileForm(forms.ModelForm):
         if country and not all(char in valid_characters1 for char in country):
             self.add_error('country', "Country should contain only letters.")
 
-        if cuisine and not all(char in valid_characters2 for char in cuisine):
-            self.add_error('cuisine_specialization', "Cuisine Type should contain only letters, (,), (-), and (/).")
+        if cuisine:
+            if len([char for char in cuisine if char.isalpha()]) < 3 or not all(char in valid_characters2 for char in cuisine):
+                self.add_error('cuisine_specialization', "The cuisine type should consist of letters and may include these valid symbols (,), -, and /.")
 
         if phone_number and not all(char in valid_characters3 for char in phone_number):
             self.add_error('phone_number', "Phone Number should contain only digits, (-), (+) and ().")
