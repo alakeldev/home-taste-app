@@ -11,16 +11,22 @@ Home Taste is a global culinary hub where home chefs from diverse backgrounds co
 
 - [Table of Contents](#table-of-contents)
 - [UX](#ux)
-  - [App Purpose](#app-purpose)
-  - [App Goals](#app-goals)
+  - [Site Purpose](#site-purpose)
+  - [Site Goals](#site-goals)
   - [Audience](#audience)
   - [Communication](#communication)
   - [Current User Goals](#current-user-goals)
   - [New User Goals](#new-user-goals)
   - [Future Goals](#future-goals)
-- [Logic](#logic)
-  - [Diagrams-App](#diagrams-app)
+- [User-Stories](#user-stories)
+  - [Admin Stories](#admin-stories)
+  - [Registered Chef Stories](#registered-chef-stories)
+  - [General Visitor Stories](#general-visitor-stories)
+- [Agile Methodology](#agile-methodology)
 - [Design](#design)
+  - [Wireframes](#wireframes)
+  - [Site Navigation:](#site-navigation)
+  - [Database Schema:](#database-schema)
   - [Colour](#colour)
   - [Existing Features](#existing-features)
   - [Hidden Features](#hidden-features)
@@ -102,7 +108,7 @@ Not all stories have been implemented. Some have been left for future implementa
 - I possess administrative privileges to a list of all comments (approved/not approved).
 - I possess administrative privileges to approve or reject the public comments before they become visible on chefs' profiles.
 
-### Registered User (Chef) Stories
+### Registered Chef Stories
 
 - I have the capability to easy login to my registered account.
 - I have the capability to logout of my registered account.
@@ -117,7 +123,7 @@ Not all stories have been implemented. Some have been left for future implementa
 - I have the capability to view other chefs' profiles while logged in.
 - I have the capability to leave comments on other chefs' profiles or even on my profile too while logged in.
 
-### General User (Visitor) Stories
+### General Visitor Stories
 
 - I have the capability to register for an account as a chef then i can login after registration.
 - I have the capability to easy navigate and understand the structure of the website.
@@ -148,6 +154,48 @@ Sprint Planning with totla (5) Milestones:
 To review the Kanban board for the project, please click [HERE](https://github.com/users/alakeldev/projects/3)
 
 ## Design
+
+### Wireframes
+
+##### Home Page
+
+![Desktop Home](static/images/readme/wf-home.png)
+
+##### Chefs Page
+
+![Desktop Chefs](static/images/readme/wf-chefs.png)
+
+##### Login Page
+
+![Desktop Login](static/images/readme/wf-login.png)
+
+##### Register Page
+
+![Desktop Register](static/images/readme/wf-register.png)
+
+##### My Profile Page
+
+![Desktop My Profile](static/images/readme/wf-my-profile.png)
+
+##### Edit Profile Page
+
+![Desktop Edit Profile](static/images/readme/wf-update-profile.png)
+
+##### Chefs Profiles Public View Page
+
+![Desktop Chef Profile Public View](static/images/readme/wf-chef-profile-pv.png)
+
+##### (Logout - Reset Password - Reset Password Done - Set New Password Form - Password Reset Key Done) Pages
+
+![Desktop 5 pages](static/images/readme/wf-5pages.png)
+
+### Site Navigation
+
+![Site Navigation](static/images/readme/site-navigation.png)
+
+### Database Schema
+
+![Site Database Schema](static/images/readme/database-schema.png)
 
 ### Colour
 
