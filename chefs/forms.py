@@ -38,8 +38,9 @@ class UserProfileForm(forms.ModelForm):
             if len([char for char in cuisine if char.isalpha()]) < 3 or not all(char in valid_characters2 for char in cuisine):
                 self.add_error('cuisine_specialization', "The cuisine type should consist of letters and may include these valid symbols (,), -, and /.")
 
-        if phone_number and not all(char in valid_characters3 for char in phone_number):
-            self.add_error('phone_number', "Phone Number should contain only digits, (-), (+) and ().")
+        if phone_number:
+            if len([char for char in phone_number if char.isdigit()]) < 6 or not all(char in valid_characters3 for char in phone_number):
+                self.add_error('phone_number', "Phone Number should consist of digits and may use these valid symbols (-), +, and ().")
 
         if len(instructions) > instrunctions_max_length:
             raise forms.ValidationError(
