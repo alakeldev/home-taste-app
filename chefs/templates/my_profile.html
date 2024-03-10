@@ -25,7 +25,15 @@
                             {% endif %}
                         </h5>
                         <p class="text-muted mb-1">Region: {{ user.profile.Region }}</p>
+                        {% if user.profile.country and user.profile.city %}
                         <p class="text-muted mb-4 location-info">Location: {{ user.profile.country }} | {{ user.profile.city }}</p>
+                        {% elif not user.profile.country and user.profile.city %}
+                        <p class="text-muted mb-4 location-info">Location: Country Not Set | {{ user.profile.city }}</p>
+                        {% elif user.profile.country and not user.profile.city %}
+                        <p class="text-muted mb-4 location-info">Location: {{ user.profile.country }} | City Not Set</p>
+                        {% elif not user.profile.country and not user.profile.city %}
+                        <p class="text-muted mb-4 location-info">Location: Not Set | Not Set</p>
+                        {% endif %}
                         <div class="d-flex justify-content-center mb-2">
                             <a class="btn btn-danger ms-1" href="{% url 'chefs:delete_profile' %}" aria-label="Delete profile page - Opens in a new tab">Delete Profile</a>
                             <a class="btn ms-1 update-btn" href="{% url 'chefs:edit_profile' %}" aria-label="Update profile page - Opens in a new tab">Update Profile</a>
@@ -36,7 +44,11 @@
                     <div class="card-body p-3">
                         <ul class="list-group list-group-flush rounded-3">
                             <p class="mb-4 text-center m-2"><span class=" me-1">Instructions/Schedules:</span></p>
+                            {% if user.profile.instructions %}
                             <div class="instructions-text">{{ user.profile.instructions|safe }}</div>
+                            {% elif not user.profile.instructions %}
+                            <div class="instructions-text">Not Provided By The Chef</div>
+                            {% endif %}
                     </div>
                 </div>
             </div>
@@ -48,7 +60,11 @@
                                 <p class="mb-0">Cook Specialization:</p>
                             </div>
                             <div class="col-sm-9">
+                                {% if user.profile.cuisine_specialization %}
                                 <p class="text-muted mb-0">{{ user.profile.cuisine_specialization }}</p>
+                                {% elif not user.profile.cuisine_specialization %}
+                                <p class="text-muted mb-0">Not Set</p>
+                                {% endif %}
                             </div>
                         </div>
                         <hr>
@@ -66,7 +82,11 @@
                                 <p class="mb-0">Email:</p>
                             </div>
                             <div class="col-sm-9">
+                                {% if user.profile.email %}
                                 <p class="text-muted mb-0">{{ user.profile.email }}</p>
+                                {% elif not user.profile.email %}
+                                <p class="text-muted mb-0">Not Set</p>
+                                {% endif %}
                             </div>
                         </div>
                         <hr>
@@ -75,7 +95,11 @@
                                 <p class="mb-0">Phone:</p>
                             </div>
                             <div class="col-sm-9">
+                                {% if user.profile.phone_number %}
                                 <p class="text-muted mb-0">{{ user.profile.phone_number }}</p>
+                                {% elif not user.profile.phone_number %}
+                                <p class="text-muted mb-0">Not Set</p>
+                                {% endif %}
                             </div>
                         </div>
                         <hr>
