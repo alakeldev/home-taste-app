@@ -19,18 +19,18 @@
                         {% endif %}
                         <h5 class="my-3">
                             {% if user.profile.name %}
-                            {{ user.profile.name }}
+                            {{ user.profile.name|title }}
                             {% else %}
-                            {{ user.username }}
+                            {{ user.username|title }}
                             {% endif %}
                         </h5>
                         <p class="text-muted mb-1">Region: {{ user.profile.Region }}</p>
                         {% if user.profile.country and user.profile.city %}
-                        <p class="text-muted mb-4 location-info">Location: {{ user.profile.country }} | {{ user.profile.city }}</p>
+                        <p class="text-muted mb-4 location-info">Location: {{ user.profile.country|title }} | {{ user.profile.city|title }}</p>
                         {% elif not user.profile.country and user.profile.city %}
-                        <p class="text-muted mb-4 location-info">Location: Country Not Set | {{ user.profile.city }}</p>
+                        <p class="text-muted mb-4 location-info">Location: Country Not Set | {{ user.profile.city|title }}</p>
                         {% elif user.profile.country and not user.profile.city %}
-                        <p class="text-muted mb-4 location-info">Location: {{ user.profile.country }} | City Not Set</p>
+                        <p class="text-muted mb-4 location-info">Location: {{ user.profile.country|title }} | City Not Set</p>
                         {% elif not user.profile.country and not user.profile.city %}
                         <p class="text-muted mb-4 location-info">Location: Not Set | Not Set</p>
                         {% endif %}
@@ -61,7 +61,7 @@
                             </div>
                             <div class="col-sm-9">
                                 {% if user.profile.cuisine_specialization %}
-                                <p class="text-muted mb-0">{{ user.profile.cuisine_specialization }}</p>
+                                <p class="text-muted mb-0">{{ user.profile.cuisine_specialization|title }}</p>
                                 {% elif not user.profile.cuisine_specialization %}
                                 <p class="text-muted mb-0">Not Set</p>
                                 {% endif %}
@@ -83,7 +83,7 @@
                             </div>
                             <div class="col-sm-9">
                                 {% if user.profile.email %}
-                                <p class="text-muted mb-0">{{ user.profile.email }}</p>
+                                <p class="text-muted mb-0">{{ user.profile.email|lower }}</p>
                                 {% elif not user.profile.email %}
                                 <p class="text-muted mb-0">Not Set</p>
                                 {% endif %}
