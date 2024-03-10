@@ -28,18 +28,18 @@
                         {% endif %}
                         <h5 class="my-3">
                             {% if chef_info.name %}
-                            {{ chef_info.name }}
+                            {{ chef_info.name|title }}
                             {% else %}
-                            {{ chef_info.slug }}
+                            {{ chef_info.slug|title }}
                             {% endif %}
                         </h5>
                         <p class="text-muted mb-1">Region: {{ chef_info.Region }}</p>
                         {% if chef_info.country and chef_info.city %}
-                        <p class="text-muted mb-4 location-info">Location: {{ chef_info.country }} | {{ chef_info.city }}</p>
+                        <p class="text-muted mb-4 location-info">Location: {{ chef_info.country|title }} | {{ chef_info.city|title }}</p>
                         {% elif not chef_info.country and chef_info.city %}
-                        <p class="text-muted mb-4 location-info">Location: Country Not Set | {{ chef_info.city }}</p>
+                        <p class="text-muted mb-4 location-info">Location: Country Not Set | {{ chef_info.city|title }}</p>
                         {% elif chef_info.country and not chef_info.city %}
-                        <p class="text-muted mb-4 location-info">Location: {{ chef_info.country }} | City Not Set</p>
+                        <p class="text-muted mb-4 location-info">Location: {{ chef_info.country|title }} | City Not Set</p>
                         {% elif not chef_info.country and not chef_info.city %}
                         <p class="text-muted mb-4 location-info">Location: Not Set | Not Set</p>
                         {% endif %}
@@ -66,7 +66,7 @@
                             </div>
                             <div class="col-sm-9">
                                 {% if chef_info.cuisine_specialization %}
-                                <p class="text-muted mb-0">{{ chef_info.cuisine_specialization }}</p>
+                                <p class="text-muted mb-0">{{ chef_info.cuisine_specialization|title }}</p>
                                 {% elif not chef_info.cuisine_specialization %}
                                 <p class="text-muted mb-0">Not Set</p>
                                 {% endif %}
@@ -88,7 +88,7 @@
                             </div>
                             <div class="col-sm-9">
                                 {% if chef_info.email %}
-                                <p class="text-muted mb-0">{{ chef_info.email }}</p>
+                                <p class="text-muted mb-0">{{ chef_info.email|lower }}</p>
                                 {% elif not chef_info.email %}
                                 <p class="text-muted mb-0">Not Set</p>
                                 {% endif %}
@@ -218,7 +218,7 @@
                             <div class="card-body">
                                 <div class="d-flex flex-start align-items-center">
                                     <div>
-                                        <h6 class="fw-bold mb-1">{{ comment.name }}</h6>
+                                        <h6 class="fw-bold mb-1">{{ comment.name|title }}</h6>
                                         <p class="text-muted small mb-0">
                                             Shared publicly - {{ comment.created_at|date:"Y-m-d" }}
                                         </p>
