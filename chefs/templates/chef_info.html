@@ -24,7 +24,7 @@
                         {% if chef_info.image %}
                         <img src="{{ chef_info.image.url }}" alt="Chef Image" class="img-fluid rounded-3 chef-profile-img">
                         {% else %}
-                        <img src="{% static 'images/default.jpg' %}" alt="Chef Image" class="rounded-3 img-fluid chef-profile-img">
+                        <img src="{% static 'images/default.jpg' %}" alt="Chef Image Not Set" class="rounded-3 img-fluid chef-profile-img">
                         {% endif %}
                         <h5 class="my-3">
                             {% if chef_info.name %}
