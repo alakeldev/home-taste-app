@@ -28,9 +28,9 @@
             <div class="shadow d-flex justify-content-center align-items-center p-3 bg-dark rounded-lg flex-column rounded-3">
                 <div class="person-img">
                     {% if chef.profile.image %}
-                    <img src="{{ chef.profile.image.url }}" class="img-fluid rounded-circle p-img" alt="Chef Image" height="200"  width="200">
+                    <img src="{{ chef.profile.image.url }}" class="img-fluid rounded-circle p-img img-200-size" alt="Chef Image">
                     {% else %}
-                    <img src="{% static 'images/default.jpg' %}" class="img-fluid rounded-circle" alt="No Photo" height="200"  width="200">
+                    <img src="{% static 'images/default.jpg' %}" class="img-fluid rounded-circle img-200-size" alt="Chef Image Not Set">
                     {% endif %}
                 </div>
                 <div class="person-name my-2">
@@ -48,7 +48,7 @@
                     <h6 class="text-white">Cook-Exp: {{ chef.profile.cuisine_specialization }}</h6>
                 </div>
                 <div class="social-icons my-2">
-                    <h6 class="text-white">Joined Us: {{ chef.profile.created_on|date:"Y-m-d" }}</h6>
+                    <h6 class="text-white">Member Since: {{ chef.profile.created_on|date:"Y-m-d" }}</h6>
                 </div>
                 <a href="{% url 'chefs:chef_info' chef.profile.slug %}" class="btn view-btn">View Profile</a>
             </div>
@@ -58,5 +58,4 @@
     </div>
 </section>
 <!-- Chef Card -->
-
 {% endblock content %}

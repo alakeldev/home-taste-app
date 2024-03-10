@@ -400,6 +400,11 @@ label.form-label.requiredField[for="id_password"]::before {
     }
 }
 
+.img-200-size {
+    height: 200px;
+    width: 200px;
+}
+
 /* end chefs card */
 
 /* start chef profile page */
@@ -489,6 +494,7 @@ label.form-label.requiredField[for="id_password"]::before {
     .instructions-chef-info {
         min-height: 375px;
     }
+
     .location-info {
         font-size: 14px;
     }
@@ -498,6 +504,7 @@ label.form-label.requiredField[for="id_password"]::before {
     .instructions-chef-info {
         min-height: 340px;
     }
+
     .location-info {
         font-size: 12px;
     }
@@ -1026,4 +1033,5 @@ span.phone-field-ext {
 .youtube-icon {
     color: #d11313;
 }
+
 /* end socail media networks icons */
