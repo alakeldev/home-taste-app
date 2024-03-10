@@ -4,7 +4,7 @@
 
 {% block content %}
 <div>
-    <a href="{% url 'chefs:chef_info' user.profile.slug %}"><button class="btn ms-1 as-public-btn mt-5">View As Public</button></a>
+    <a href="{% url 'chefs:chef_info' user.profile.slug %}" class="btn ms-1 as-public-btn mt-5" aria-label="Button to view chef profile as public">View As Public</a>
 </div>
 <section class="section-bg-white">
     <div class="container py-5">
@@ -35,8 +35,8 @@
                         <p class="text-muted mb-4 location-info">Location: Not Set | Not Set</p>
                         {% endif %}
                         <div class="d-flex justify-content-center mb-2">
-                            <a class="btn btn-danger ms-1" href="{% url 'chefs:delete_profile' %}" aria-label="Delete profile page - Opens in a new tab">Delete Profile</a>
-                            <a class="btn ms-1 update-btn" href="{% url 'chefs:edit_profile' %}" aria-label="Update profile page - Opens in a new tab">Update Profile</a>
+                            <a class="btn btn-danger ms-1" href="{% url 'chefs:delete_profile' %}" aria-label="Button to open delete profile page">Delete Profile</a>
+                            <a class="btn ms-1 update-btn" href="{% url 'chefs:edit_profile' %}" aria-label="Button to open update profile page">Update Profile</a>
                         </div>
                     </div>
                 </div>
@@ -105,8 +105,7 @@
                         <hr>
                         <div class="row">
                             <div class="col-sm-3">
-                                <p class="mb-0 d-flex justify-content-between align-items-center pt-3">Social Media
-                                    Links:</p>
+                                <p class="mb-0 d-flex justify-content-between align-items-center pt-3">Social Media Links:</p>
                             </div>
                             <div class="col-sm-9">
                                 <p class="text-muted mb-0">
