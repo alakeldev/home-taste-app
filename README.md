@@ -32,6 +32,7 @@ Home Taste is a global culinary hub where home chefs from diverse backgrounds co
   - [Imagery](#imagery)
 - [Features](#features)
   - [Existing Features](#existing-features)
+  - [C.R.U.D](#crud)
   - [Features Left to Implement](#features-left-to-implement)
 - [Testing](TESTING.md)
 - [Technologies Used](#technologies-used)
@@ -315,41 +316,55 @@ You can navigate to the ‘Password Reset’ page by forgot password link locate
 
 You can navigate to the ‘Password Reset’ page by filling the email field and click on ‘reset my password’ button located within password reset page.
 
-![Password reset page](static/images/readme/pwd-reset-email-sent.png)
+![Password reset done page](static/images/readme/pwd-reset-email-sent.png)
 
 ### Change Password Page (Forgot Password)
 
 To access this page, please await an email from us at the address you provided during the password reset process. If the email is registered in our database, it will contain a secure link enabling you to change and set your new password.
 
-![Password reset page](static/images/readme/pwd-change.png)
+![Change Password page](static/images/readme/pwd-change.png)
 
-### Password Changed/Confirmed (Forgot Password)
+### Password Changed/Confirmed Page (Forgot Password)
 
 At this stage of the password reset process, you have already set your new password. You can now log in to your account using your updated password.
 
-![Password reset page](static/images/readme/pwd-changed.png)
+![Password Changed page](static/images/readme/pwd-changed.png)
 
-### Who gives a C.R.U.D
+### 404 Page
 
-#### Create (button)
+![404! page](static/images/readme/404.png)
 
-- The button to invite you to submit a new artwork will be found on the **"Prints"** page.
-- It is only visible to users who are signed in.
-![CRUD - create button](static/images-readme/readme-c-in-crud.png)
 
-#### Create (form)
+### C.R.U.D
 
-- This page may only be accessed from the button on the **"Prints"** page.
-![CRUD - create form](static/images-readme/readme-c-form.png)
+#### Create (C)
 
-#### Read
+- Upon registration, a chef’s profile is automatically generated, including essential information such as the chef’s name. Additionally, certain fields are set with displayed default values like 'Not Set'. This approach ensures clarity for general users, especially in scenarios where a chef leaves their profile without inserting specific information immediately and coming back later to set up, with that i'm preventing any potential confusion.
 
-![CRUD - read](static/images-readme/readme-printspage.png)
+- General users (visitors) and chefs have the ability to create comments on chefs’ profiles.
 
-#### Update & Delete
+#### Read (R)
 
-- The update & delete feature is only available to the user who who directly submitted the artwork.
-![CRUD - update & delete](static/images-readme/readme-u-d-in-crud.png)
+- Chefs can access their profile, review their data/information, and observe how it appears to general users. The profile showcases photos, including the chef’s profile picture and images of their dishes.
+
+- General users (visitors) and chefs have the ability to read comments on chefs’ profiles.
+
+#### Update (U)
+
+- Registered chefs have the flexibility to modify their information at any time. Even if certain fields are left empty, a default value is displayed to ensure clarity for general users (visitors), minimizing any potential misunderstandings and confusion.
+
+- General users (visitors) and chefs do NOT have the ability to update existing comments on chefs’ profiles.
+
+#### Delete (D)
+
+- Chefs can delete their own profiles, along with all associated data. Once deleted, the profile becomes inaccessible.
+
+- General users (visitors) and chefs do NOT have the ability to delete existing comments on chefs’ profiles.
+
+#### C.R.U.D Summary In My Project
+
+- Registered users (Chefs) and Admin have full C.R.U.D functionality over the Chefs’ profiles.
+- Admin possesses full C.R.U.D functionality over the Chefs’ profile comments, while Registered users (Chefs) and General users (visitors) have access only to C.R (Create and Read).
 
 ### Features Left to Implement
 
