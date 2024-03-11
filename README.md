@@ -32,8 +32,7 @@ Home Taste is a global culinary hub where home chefs from diverse backgrounds co
   - [Imagery](#imagery)
 - [Features](#features)
   - [Existing Features](#existing-features)
-  - [Hidden Features](#hidden-features)
-  - [Future Features](#future-features)
+  - [Features Left to Implement](#features-left-to-implement)
 - [Testing](TESTING.md)
 - [Technologies Used](#technologies-used)
   - [Main Languages Used](#main-languages-used)
@@ -214,7 +213,7 @@ All fonts used on the website were sourced from the Google Fonts library. I sele
 
 ### Imagery
 
-The captivating visuals featured on our home page have been thoughtfully curated from [PEXELS](https://www.pexels.com/search/home%20chef/), a reputable platform for high-quality stock photos, royalty-free images, and videos shared by talented creators.
+The captivating visuals featured on our home page have been thoughtfully curated from [Pexels](https://www.pexels.com/search/home%20chef/),it's a reputable platform for high-quality stock photos, royalty-free images, and videos shared by talented creators.
 
 1. [Landing Image](https://www.pexels.com/photo/a-woman-cooking-on-the-table-8176610/): The revamped landing section image now exudes a sense of tranquility and approachability. The soft color palette and gentle gradients create a soothing ambiance, inviting users to explore further. The central focal point subtly hints at our website’s core purpose, while maintaining a balance that won’t overwhelm visitors. The overlaid text remains legible, ensuring a seamless reading experience.
 2. [About Us Image](https://www.pexels.com/photo/sliced-bread-on-brown-wooden-board-349610/): The carefully chosen image in our “About” section serves as a visual embodiment of our website’s core identity. in addition to The color palette of the image harmonizes seamlessly with our overall website color identity.
@@ -223,13 +222,19 @@ The captivating visuals featured on our home page have been thoughtfully curated
 
 ### Existing Features
 
-### Hidden Features
+### Features Left to Implement
 
-### Future Features
+- Enhance User Trust with Clear and Informative Alert and Success Messages during various interactions on the website.
+- Establish User Profiles for Visitors/General Users to Interact with Chef’s Dishes and Implement a Rating System.
+- Implement Real-Time Chat Functionality for Seamless Communication Between All Registered Users.
+- Create Contact Us Page.
+- Develop an Online Ordering and Payment System.
+- Implement Social Media Sign-Up/Sign-In Functionality.
+- Enable Password Change Functionality Within User Profile Pages.
 
 ## Testing
 
-All testing results can be found [here](TESTING.md)
+All testing results can be found [HERE](TESTING.md)
 
 ## Technologies Used
 
@@ -243,7 +248,7 @@ All testing results can be found [here](TESTING.md)
 
 ### Frameworks, libraries and programs
 
-- [VS-code](https://code.visualstudio.com/) - IDE to write code, create new files and folders for my project before pushing the project to Github.
+- [VS-Code](https://code.visualstudio.com/) - IDE to write code, create new files and folders for my project before pushing the project to Github.
 - [Git](https://git-scm.com/): was used for version control by utilizing the VS-code terminal to commit to Git and push to GitHub.
 - [GitHub](https://github.com/): was used to store the projects code after being pushed from Git.
 - [Heroku](https://id.heroku.com): was used to deploy my live project.
@@ -260,11 +265,14 @@ All testing results can be found [here](TESTING.md)
 - [Dj_database_url](https://pypi.org/project/dj-database-url/0.5.0/): to parse the database URL from the environment variables in Heroku.
 - [Psycopg2](https://pypi.org/project/psycopg2/): as an adaptor for Python and PostgreSQL databases.
 - [Allauth](https://allauth.org/): for authentication, registration, account management.
-- [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/): to style the forms.
+- [Crispy Forms & Crispy Bootstrap5](https://django-crispy-forms.readthedocs.io/en/latest/): to style the forms.
 - [djrichtextfield](https://pypi.org/project/django-richtextfield/): for handling rich text content.
+- [django resized](https://pypi.org/project/django-resized/): Resizes image origin to specified size and save it in 'WEBP' format.
 - [dj-cloudinary-storage](https://pypi.org/project/django-cloudinary-storage/): to facilitates integration with Cloudinary.
 - [Django](https://www.djangoproject.com/start/): as a main python framework for my project.
+- [Jinja2 - templating language](https://jinja.palletsprojects.com/en/3.1.x/): was used to simplify dynamic content generation, enhance security, and promote code organization in project templates.
 - [App.diagram-online](https://app.diagrams.net/): was used to create the database schema.
+- [Microsoft Outlook - SMTP settings](https://support.microsoft.com/en-us/office/pop-imap-and-smtp-settings-for-outlook-com-d088b986-291d-42b8-9564-9c414e2aa040): was used to send email to user (scenario: forgot password).
 - [Miro-online](https://miro.com/): was used to create the plan of the site navigation.
 - [Elephant-sql](https://www.elephantsql.com/): was used to create and access my PostgreSQL databases seamlessly. In addition to write sql commands to get tables and data inside of its SQL browser.
 
@@ -337,7 +345,24 @@ In the Deploy tab:
 
 ## Credits
 
-
+- [Code-Institute-Curriculum](https://codeinstitute.net/de/) - Full Stack Software Development Curriculum - [I blog 'new content' + Hello Django] Projects.
+- [Django-Doc](https://docs.djangoproject.com/en/5.0/) - Was my main source if I stuck in django.
+- [Django-CheatSheet](https://github.com/lucrae/django-cheat-sheet) - Cheat sheet on github was a very good and fast source for me.
+- [W3Schools-Django](https://www.w3schools.com/django/django_views.php) - Was a very help source of information.
+- [Django-Signals](https://docs.djangoproject.com/en/5.0/ref/signals/) - Was used to get more understanding of signals such as post_save, pre_save.
+- [Jinja2-Doc](https://jinja.palletsprojects.com/en/3.1.x/) - Was my main source if i stuck with jinja language.
+- [Jinja2-Blog](https://ultraconfig.com.au/blog/jinja2-a-crash-course-for-beginners/) - Was a good help source of information.
+- [Jinja2-Python-Tutorial](https://www.youtube.com/watch?v=NR-BGPhDICA) - Was a very helpful tutorial to more understand the jinja2 language.
+- [Bootstrap5-Doc](https://getbootstrap.com/docs/5.3/getting-started/introduction/) - Was my main guide while building my frontend project.
+- [Bootstrap5-CheatSheet](https://bootstrap-cheatsheet.themeselection.com/) - Was fast help full source.
+- [CSS-CheatSheet](https://htmlcheatsheet.com/css/) - Was a very help full source to know how target elements and set properties.
+- [Udemy-Python-Django](https://www.udemy.com/certificate/UC-aefd5c77-88d7-4a4e-a6f6-d9390bad39ab/) - In April 2022, I attended the Python Mega Course, which helped me to smoothly understand basic Python concepts. Additionally, I was able to learn some advanced material such as Django & Flask.
+- [Stackoverflow](https://stackoverflow.com/) - Was used to check and read about any bug and error faced me during my project.
+- [DeeMc-Tutorial](https://www.youtube.com/watch?v=sBjbty691eI&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy) - I watched the part 1 of this tutorial and it was very helpful source, to set and understand some settings inside my project settings.py.
+- [W3Schools-PostgresSQL](https://www.w3schools.com/postgresql/postgresql_create_table.php) - Was my main source to learn SQL statments.
+- [Python-Doc](https://docs.python.org/3/tutorial/index.html) - Was a very help source of information.
+- [W3Schools-Python](https://www.w3schools.com/python/default.asp) - Was a very help source of information.
+- [CI-Slack-Channels](https://code-institute-room.slack.com/) - I relied on the Code-Institute Slack community channels to increase my knowledge and to check for previous problems with the Heroku cloud platform and some errors that other students have faced through PP4.
 
 ## Acknowledgements
 
