@@ -1,5 +1,5 @@
 <h1 align="center">👩‍🍳 HOME TASTE 👨‍🍳</h1>
-Home Taste is a global culinary hub where home chefs from diverse backgrounds converge to showcase their passion for food. The website facilitates home chef registration and login via the frontend user interface (UI). Upon successful registration and login, home chefs gain access to profile features and can share their culinary schedules, social network profiles, current locations, contact details, specialties, and captivating dish photos. Visitors (general users) can easy to navigate the website and explore chefs based on location (region, country, city), making it simple to find and connect with local talent. Additionally, visitors can share their experiences and feedbacks by leaving comments on chefs’ profiles. Whether you’re seeking to find home chef to order home-cooked meals, planning for events or simply appreciating home culinary artistry, Home Taste invites you to join this flavorful journey.
+Home Taste is a global culinary hub where home chefs from diverse backgrounds converge to showcase their passion for food. The website facilitates home chef registration and login via the frontend user interface (UI). Upon successful registration and login, home chefs gain access to profile features and can share their culinary schedules, social network profiles, current locations, contact details, specialties, and captivating dish photos. Visitors (general users) can easy to navigate the website and explore chefs based on location (region, country, city), making it simple to find and connect with local talent. Additionally, visitors can share their experiences and feedbacks by leaving comments on chefs’ profiles. Whether you’re seeking to find home chef to order home-cooked meals, planning for events or simply appreciating home culinary artistry, Home Taste invites you to join this flavorful journey.<br></br>
 
 ![Site view across devices](static/images/readme/amiresponsive.png)
 
@@ -25,23 +25,25 @@ Home Taste is a global culinary hub where home chefs from diverse backgrounds co
 - [Agile Methodology](#agile-methodology)
 - [Design](#design)
   - [Wireframes](#wireframes)
-  - [Site Navigation:](#site-navigation)
-  - [Database Schema:](#database-schema)
+  - [Site Navigation](#site-navigation)
+  - [Database Schema](#database-schema)
   - [Colour](#colour)
+  - [Typography](#typography)
+  - [Imagery](#imagery)
+- [Features](#features)
   - [Existing Features](#existing-features)
   - [Hidden Features](#hidden-features)
   - [Future Features](#future-features)
-- [Testing](#testing)
-  - [Validator Testing](#validator-testing)
-  - [Fixed Bugs](#fixed-bugs)
-  - [Unfixed Bugs](#unfixed-bugs)
+- [Testing](TESTING.md)
 - [Technologies Used](#technologies-used)
   - [Main Languages Used](#main-languages-used)
-  - [Python Packages-Modules](#python-packages-modules)
-  - [Tools](#tools)
+  - [Frameworks, libraries and programs](#frameworks-libraries-and-programs)
 - [Deployment](#deployment)
-  - [How to deploy](#how-to-deploy)
-  - [How to clone](#how-to-clone)
+  - [Forking](#forking)
+  - [Cloning the repo & Running the project locally](#cloning-the-repo--running-the-project-locally)
+  - [Deploying with Heroku](#deploying-with-heroku)
+    - [Heroku Settings](#heroku-settings)
+    - [Heroku Deployment](#heroku-deployment)
 - [Credits](#credits)
 - [Acknowledgements](#acknowledgements)
 
@@ -199,153 +201,139 @@ To review the Kanban board for the project, please click [HERE](https://github.c
 
 ### Colour
 
+The color scheme has been meticulously curated to enhance the user experience. The chosen colors prioritize cleanliness, reliability, readability, stability, and depth, all while avoiding any overwhelming elements.
 
+![Site colour Schema](static/images/readme/color-schema.png)
+
+### Typography
+
+All fonts used on the website were sourced from the Google Fonts library. I selected the following fonts for different purposes:
+
+1. Oswald: This font is specifically designed for headers and serves as the title font.
+2. Arimo: I’ve chosen Arimo as the main font for the website.
+
+### Imagery
+
+The captivating visuals featured on our home page have been thoughtfully curated from [PEXELS](https://www.pexels.com/search/home%20chef/), a reputable platform for high-quality stock photos, royalty-free images, and videos shared by talented creators.
+
+1. [Landing Image](https://www.pexels.com/photo/a-woman-cooking-on-the-table-8176610/): The revamped landing section image now exudes a sense of tranquility and approachability. The soft color palette and gentle gradients create a soothing ambiance, inviting users to explore further. The central focal point subtly hints at our website’s core purpose, while maintaining a balance that won’t overwhelm visitors. The overlaid text remains legible, ensuring a seamless reading experience.
+2. [About Us Image](https://www.pexels.com/photo/sliced-bread-on-brown-wooden-board-349610/): The carefully chosen image in our “About” section serves as a visual embodiment of our website’s core identity. in addition to The color palette of the image harmonizes seamlessly with our overall website color identity.
+
+## Features
 
 ### Existing Features
 
-- Landing Page + Passwords Generator App Start:
-
-
-- Get Full-Name + Welcome Message:
-
-![Welcome Message](assets/readme-images/welcome-msg-app.png)
-
-- Passwords Generator Run Full-Path:
-
-![Passwords Generator Normal Path](assets/readme-images/pwd-generator-app.png)
-
-- Passwords Generator Run "Exit" Path:
-
-![Passwords Generator Exit Path](assets/readme-images/pwd-generator-app-exit.png)
-
-- Passwords Manager App Start + Welcome Message:
-
-![Passwords Manager start + Msg](assets/readme-images/pwd-manager-start.png)
-
-- Passwords Manager App - "Save" Path:
-
-![Passwords Manager - Save Path](assets/readme-images/pwd-manager-save-path.png)
-
-- Passwords Manager App - "View" Path => There are saved previous Passwords:
-
-![Passwords Manager - View Path](assets/readme-images/pwd-manager-view-path.png)
-
-- Passwords Manager App - "View" Path => No previous Saved Passwords:
-
-![Passwords Manager - View Path](assets/readme-images/pwd-manager-view-no-previous-pwds.png)
-
-- Passwords Manager App - "Exit" Path => Yes Ask: There are saved previous Passwords:
-
-![Passwords Manager - Exit & Delete](assets/readme-images/pwd-manager-exit-delete-saved-data-path.png)
-
-- Passwords Manager App - "Exit" Path => No Ask: No Previous Saved Passwords:
-
-![Passwords Manager - Exit](assets/readme-images/pwd-manager-exit-no-saved-data.png)
-
-- Passwords Generator + Manager Apps => The Shortest "Exit" Path:
-
-![Passwords Generator and Manager Apps 'Exit'](assets/readme-images/exit-all-path.png)
-
 ### Hidden Features
-
-- Passwords Manager App Start:<br>
-When the user answer ‘yes’ to the question: ‘Do you want to start the Passwords Manager Application for the first time?’, a new file named ‘the-security-key.key’ will be created, and a symmetric key will be generated and stored inside that file.
-
-- Passwords Manager App - "Save" Path:<br>
-When the user chooses the 'save' path and enters a username and password fields (without leaving any fields empty or with only one character), these entries will be saved inside ‘my-passwords.txt’. Then, a function will run to retrieve the data from ‘my-passwords.txt’ and will encrypt the retrieved data with the symmetric key that was stored inside ‘the-security-key.key’. The encrypted data will then be stored inside a new file named ‘my-encrypted-data.txt’.
-
-- Passwords Manager App - "View" Path:<br>
-When the user chooses the 'view' path and there are previously saved passwords inside ‘my-passwords.txt’, a function will run to retrieve the data from this file and will encrypt the retrieved data with the symmetric key that is stored inside ‘the-security-key.key’. The encrypted data will then be stored inside a new file named ‘my-encrypted-data.txt’. Then, another function will run to decrypt the data from ‘my-encrypted-data.txt’ file with the same key and print it out on the terminal.
-
-- Passwords Manager App - "Exit" Path:<br>
-When the user chooses to exit the Passwords Manager Application and there is previously saved data, a function will run and ask if they want to remove the previously saved data. If the user enters ‘yes’, a new function will run that will delete all of the data inside the files ‘my-passwords.txt’ and ‘my-encrypted-data.txt’.
 
 ### Future Features
 
-- Create an account for each user that shows only their passwords and requires a master password and username to access.
-- Remove and edit a specific saved username or password inside the file without affecting any other saved data.
-- Password expiration reminders, two-factor authentication.
-- Create a simple and beautiful GUI for the application.
-
 ## Testing
 
-- Extensive testing was completed to review each possible path/scenario a user might take. This was to ensure looping back to the specific and related point, error messages that can be understood by the user were shown to them and finally no dead ends were encountered.
-- Check the project flowchart to get each path detail by clicking [HERE](https://alakeldev.github.io/pp3-diagram/).
-
-### Validator Testing
-
-- The code has been tested by using [PEP8-CI Heroku-App](https://pep8ci.herokuapp.com/):<br>
-As shown in the photo below, there is an error on line 127 that says “invalid escape sequence ‘\d’”. After conducting extensive searches and consulting with CI tutor support, I was unable to avoid this error as it is related to a “Regular Expression”.
-
-![PEP8-CI Validation](assets/readme-images/pep8-ci.png)
-
-### Fixed Bugs
-
-- 
-
-![Bug-codecs](assets/readme-images/bug-utf-8.png)
-
-- 
-
-![Bug-Fernet1-cryptography](assets/readme-images/bug-fernet1.png)
-
-![Bug-Fernet2-cryptography](assets/readme-images/bug-fernet2.png)
-
-- 
-
-### Unfixed Bugs
-
-- None currently found.
+All testing results can be found [here](TESTING.md)
 
 ## Technologies Used
 
 ### Main Languages Used
 
-- [Python](https://www.python.org/)
+- HTML5
+- CSS3
+- Javascript
+- Python
+- SQL
 
-### Python Packages-Modules
+### Frameworks, libraries and programs
 
-
-### Tools
-
-- [Heroku](https://id.heroku.com) was used to deploy the live project.
-- [PEP8-CI](https://pep8ci.herokuapp.com/) online was used to validate Python code.
-- [Diagrams.net](https://app.diagrams.net/) was used to create the Flowchart.
-- [GitHub](https://github.com/) GitHub is used to store the projects code after being pushed from Git.
-- [VS-code](https://code.visualstudio.com/) - IDE to write Python code, create new files and folders for the project.
+- [VS-code](https://code.visualstudio.com/) - IDE to write code, create new files and folders for my project before pushing the project to Github.
+- [Git](https://git-scm.com/): was used for version control by utilizing the VS-code terminal to commit to Git and push to GitHub.
+- [GitHub](https://github.com/): was used to store the projects code after being pushed from Git.
+- [Heroku](https://id.heroku.com): was used to deploy my live project.
+- [Am I Responsive](http://ami.responsivedesign.is/): was used to create the multi-device mock-up you can see at the start of this README.md file.
+- [Favicon.io](https://favicon.io/): was used for making the site favicon.
+- [WC3 Validator](https://validator.w3.org/), [Jigsaw W3 Validator](https://jigsaw.w3.org/css-validator/), [JS validator](https://jshint.com/) and [PEP8](https://pep8ci.herokuapp.com/): were all used to validate the website.
+- [os](https://docs.python.org/3/library/os.html): python built-in modules.
+- [Bootstrap5](https://getbootstrap.com/docs/5.0/getting-started/introduction/): was used to create the front-end design.
+- [figma-wireframe-online](https://www.figma.com/templates/wireframe-kits/): was used to create wireframes.
+- [Coloors](https://coolors.co/): was used to create the color scheme.
+- [Djecrety](https://djecrety.ir/): was used to create a secret key.
+- [Cloudinary](https://cloudinary.com/): was used to host the static files and media.
+- [Gunicorn](https://gunicorn.org/): as the server for Heroku.
+- [Dj_database_url](https://pypi.org/project/dj-database-url/0.5.0/): to parse the database URL from the environment variables in Heroku.
+- [Psycopg2](https://pypi.org/project/psycopg2/): as an adaptor for Python and PostgreSQL databases.
+- [Allauth](https://allauth.org/): for authentication, registration, account management.
+- [Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/): to style the forms.
+- [djrichtextfield](https://pypi.org/project/django-richtextfield/): for handling rich text content.
+- [dj-cloudinary-storage](https://pypi.org/project/django-cloudinary-storage/): to facilitates integration with Cloudinary.
+- [Django](https://www.djangoproject.com/start/): as a main python framework for my project.
+- [App.diagram-online](https://app.diagrams.net/): was used to create the database schema.
+- [Miro-online](https://miro.com/): was used to create the plan of the site navigation.
+- [Elephant-sql](https://www.elephantsql.com/): was used to create and access my PostgreSQL databases seamlessly. In addition to write sql commands to get tables and data inside of its SQL browser.
 
 ## Deployment
 
-- The application was deployed successfully on the Heroku Cloud Platform.
-- I used VS Code IDE to write the Python code, and it was easy to use its terminal to commit my files and push them to my repository on GitHub.
-- It’s very important to install all necessary Python modules/packages and import them into your project. Open the VS Code terminal and write: “pip freeze > requirements.txt” then commit and push this change to your GitHub repo before starting the deployment process on Heroku.
+1. A new repository was created using 'Code-Instutute-Org/ci-full-template'.
+2. A meaningful name was given to my new repository and I selected 'Create Repository'.
+3. inside the created repo select the 'Code' button above the file list on the right hand side.
+4. Ensure HTTPS is selected and click the clipboard on the right of the URL to copy it.
+5. Open VS-code, creat new project folder, open the terminal, On the terminal type "git clone", then paste the copied url and press 'Enter'.
+6. Version control was used throughout the project using the following commands in the terminal:
+    - git add . <strong>OR</strong> git add "file name" - to stage the changes and get them ready for being committed to the local repo.
+    - git commit -m "Description of the update" - to save the change and commit the change to the local repo
+    - git push origin main - to push all committed changes to the GitHub repo.
 
-### How to deploy
+### Forking
 
-- The deployment on Heroku was done through the following steps:
-  - log in to Heroku.
-  - Create a new app in Heroku.
-  - Select "New" and "Create new app".
-  - Name the new app & Choose a region then click "Create app".
-  - Click on the "Settings" tab at the top of the page.
-  - Open the "Reveal Config Vars" section and input the following information:
-    - KEY: PORT, VALUE: 8000.
-  - Go to buildpacks section and press on add buildpack.
-  - Select Python and Nodejs, Make sure they are in this order.
-  - Click on the "Deploy" tab at the top of the page.
-  - In "Deployment Method" click on "GitHub" to connect them.
-  - Select "connect" to the target Repo on Github.
-  - Enable Automatic Deploys" or "Deploy Branch".
-  - Heroku will start the process to deploy your App.
+1. Go to [the project repository](https://github.com/alakeldev/home-taste-pp4).
+2. In the right most top menu, click the "Fork" button.
+3. There will now be a copy of the repository in your own GitHub account.
 
-### How to clone
+### Cloning the repo & Running the project locally
 
-- Go to the following repository on GitHub: <https://github.com/alakeldev/passwords-generator-and-manager-pp3>
-- At the top right of the screen, click the 'Code' button, and then click 'HTTPs'.
-- Copy the link in this field.
-- Open VS-code, creat new project folder, open the terminal.
-- On the terminal type "git clone", then paste the copied url and press 'Enter'.
-- The clone process should now begin.
+1. Go to the following repository on GitHub: <https://github.com/alakeldev/home-taste-pp4>.
+2. At the top right of the screen, click the 'Code' button, and then click 'HTTPs'.
+3. Copy the link in this field.
+4. Open VS-code, creat new project folder, open the terminal.
+5. On the terminal type "git clone", then paste the copied url and press 'Enter'.
+6. The clone process should now begin.
+
+### Deploying with Heroku
+
+I followed the below steps using the [Code Institute tutorial](https://docs.google.com/document/d/1CncA1F2JClME2S_K0w4XoV3edMjOl_HrOQoEs3h9LOo/edit#heading=h.hvy9tw74f1o0):
+
+The following command in the IDE will create the relevant files needed for Heroku to install your project dependencies `pip3 freeze --local > requirements.txt`.
+
+1. Go to [Heroku.com](https://dashboard.heroku.com/apps) and login, if you do not already have an account then you will need to create one.
+2. Click the `New` dropdown and select `Create New App`.
+3. Enter a name for your new project, all Heroku apps need to have a unique name, you will be prompted if you need to change it.
+4. Select the region you are working in.
+
+#### Heroku Settings  
+
+You will need to set your Environment Variables - this is a key step to ensuring your application is deployed properly.
+
+1. In the Settings tab, click on `Reveal Config Vars` and set the following variables:
+    - Add key: `PORT` & value `8000`. This can be delete for final deployment.
+    - Add key: DATABASE_URL and the value as your ElephantSQL database URL e.g.
+    - Add key: CLOUDINARY_URL and the value as your cloudinary API Environment variable e.g.
+    - Add key: SECRET_KEY and the value as a complex string which will be used to provide cryptographic signing.
+    - Add `DISABLE_COLLECTSTATIC = 1` if you are still working on the project. This can be delete for final deployment.
+
+2. In your project:
+    - Create a file `env.py` and put it into `.gitignore`.
+    - Add your settings, like DATABASE_URL, CLOUDINARY_URL and SECRET_KEY to `env.py`.
+    - Comment out the original DATABASE settings from `settings.py` and add default Database code.
+    - Run your migrations.
+
+#### Heroku Deployment
+
+In the Deploy tab:
+
+1. Connect your Heroku account to your Github Repository following these steps:
+    - Click on the `Deploy` tab and choose `Github-Connect to Github`.
+    - Enter the GitHub repository name and click on `Search`.
+    - Choose the correct repository for your application and click on `Connect`.
+2. You can then choose to deploy the project manually or automatically, automatic deployment will generate a new application every time you push a change to Github, whereas manual deployment requires you to push the `Deploy Branch` button whenever you want a change made.
+3. Once you have chosen your deployment method and have clicked `Deploy Branch` your application will be built and you should now see the `View` button, click this to open your application.
+4. Be sure to delete settings in Heroku like `PORT` and `DISABLE_COLLECTSTATIC`, set `DEBUG` to `False` in your `settings.py` and add `X_FRAME_OPTIONS` there.
 
 ## Credits
 
