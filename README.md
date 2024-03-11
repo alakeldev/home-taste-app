@@ -252,47 +252,82 @@ The captivating visuals featured on our home page have been thoughtfully curated
 
 ![Navbar mobile opened](static/images/readme/nav-m-opened.png)
 
-#### Footer
+#### Footer and Social Media Icons
 
 ![Footer](static/images/readme/footer.png)
 
-#### About Page
+### Chefs Page
 
-![About page](static/images-readme/readme-aboutpage.png)
+![Chefs page](static/images/readme/chefs-page.png)
 
-#### Prints Page
+##### Search Bar in Chefs Page 
+The search functionality has been successfully implemented for the following Chef data fields: Region and Location(Country and City).
 
-![Prints Page](static/images-readme/readme-printspage.png)
+![Search bar in chefs page](static/images/readme/search-chefs-page.png)
 
-#### Print Details Page
+### Chefs Public Profiles Page
 
-![Print Details Page](static/images-readme/readme-print-details.png)
+Navigate to the ‘Chefs Public Profiles’ page by clicking the ‘View Profile’ button located within each chefs' cards inside chefs page.
 
-#### Blog Page
+![Chefs profiles part1](static/images/readme/view-chefs-profiles-part1.png)![Chefs profiles part2](static/images/readme/view-chefs-profiles-part2.png)![Chefs profiles part3](static/images/readme/view-chefs-profiles-part3.png)
 
-![Blog Page](static/images-readme/readme-blog.png)
+### Login Page
 
-#### Blog Post Details
+![Login page](static/images/readme/login-page.png)
 
-![Blog Post Details](static/images-readme/readme-blog-post.png)
+### Register Page
 
-#### Log in, Log out & Sign up
+![Register page](static/images/readme/register-page.png)
 
-##### Login
+### My Profile Page (Must be Registered/Logged in)
 
-![Login](static/images-readme/readme-signin.png)
+![My profile page](static/images/readme/myProfile-part1.png)![My profile page](static/images/readme/myProfile-part2.png)
 
-##### Logout
+### View My Profile Page As Public (Must be Registered/Logged in)
 
-![Logout](static/images-readme/readme-signout.png)
+You can navigate to the ‘View My Profile Page As Public’ by clicking the ‘View As Public’ button located within My Profile Page. Here there is a distinct behavior based on the user's authentication status. When a user(chef) is logged in, they have access to a specific view that includes a button leading back to my profile page. However, if a public user(Visitor) arrives at the same profile page from the chefs page through ‘View Profile’ button (without being Registered/logged in), they encounter a different button that directs them back to the chefs page again that displaying all chefs’ cards.
 
-##### Sign-up
+![My profile As Public View](static/images/readme/p-as-p-view-part1.png)![My profile As Public View](static/images/readme/p-as-p-view-part2.png)![My profile As Public View](static/images/readme/p-as-p-view-part3.png)
 
-![Sign-up](static/images-readme/readme-signup.png)
+### Edit/Update Profile Page (Must be Registered/Logged in)
 
-#### Social Links
+You can navigate to the ‘Update/Edit Profile’ page through the ‘Edit Profile’ element in the navigation bar. Alternatively, you can click the ‘Update Profile’ button located within my profile page.
 
-![Social Links](static/images-readme/readme-sociallinks.png)
+![Edit/Update profile page](static/images/readme/edit-profile-part1.png)![Edit/Update profile page](static/images/readme/edit-profile-part2.png)![Edit/Update profile page](static/images/readme/edit-profile-part3.png)
+
+### Delete Profile Page (Must be Registered/Logged in)
+
+You can navigate to the ‘Delete Profile’ page by clicking the ‘Delete Profile’ button located within my profile page.
+
+![Delete my profile page](static/images/readme/delete-profile.png)
+
+### Logout (Must be Registered/Logged in)
+
+![Logout page](static/images/readme/logout.png)
+
+### Password Reset Page (Forgot Password)
+
+You can navigate to the ‘Password Reset’ page by forgot password link located within login page.
+
+![Password reset page](static/images/readme/pwd-reset.png)
+
+### Password Reset Done Page (Forgot Password)
+
+You can navigate to the ‘Password Reset’ page by filling the email field and click on ‘reset my password’ button located within password reset page.
+
+![Password reset page](static/images/readme/pwd-reset-email-sent.png)
+
+### Change Password Page (Forgot Password)
+
+To access this page, please await an email from us at the address you provided during the password reset process. If the email is registered in our database, it will contain a secure link enabling you to change and set your new password.
+
+![Password reset page](static/images/readme/pwd-change.png)
+
+### Password Changed/Confirmed (Forgot Password)
+
+At this stage of the password reset process, you have already set your new password. You can now log in to your account using your updated password.
+
+![Password reset page](static/images/readme/pwd-changed.png)
 
 ### Who gives a C.R.U.D
 
