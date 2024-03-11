@@ -222,6 +222,100 @@ The captivating visuals featured on our home page have been thoughtfully curated
 
 ### Existing Features
 
+#### Home Page
+
+##### Landing Section Desktop
+
+![Home page landing-desktop](static/images/readme/home-landing-dt.png)
+
+##### Landing Section Mobile
+
+![Home page landing-mobile](static/images/readme/home-landing-m.png)
+
+##### About Us Section Desktop
+
+![Home page about us-desktop](static/images/readme/home-aboutus-dt.png)
+
+##### About Us Section Mobile
+
+![Home page about us-mobile](static/images/readme/home-aboutus-m.png)
+
+#### Navigation Bar
+
+##### Desktop
+
+![Navbar desktop](static/images/readme/nav-dt.png)
+
+##### Mobile
+
+![Navbar mobile closed](static/images/readme/nav-m-closed.png)
+
+![Navbar mobile opened](static/images/readme/nav-m-opened.png)
+
+#### Footer
+
+![Footer](static/images/readme/footer.png)
+
+#### About Page
+
+![About page](static/images-readme/readme-aboutpage.png)
+
+#### Prints Page
+
+![Prints Page](static/images-readme/readme-printspage.png)
+
+#### Print Details Page
+
+![Print Details Page](static/images-readme/readme-print-details.png)
+
+#### Blog Page
+
+![Blog Page](static/images-readme/readme-blog.png)
+
+#### Blog Post Details
+
+![Blog Post Details](static/images-readme/readme-blog-post.png)
+
+#### Log in, Log out & Sign up
+
+##### Login
+
+![Login](static/images-readme/readme-signin.png)
+
+##### Logout
+
+![Logout](static/images-readme/readme-signout.png)
+
+##### Sign-up
+
+![Sign-up](static/images-readme/readme-signup.png)
+
+#### Social Links
+
+![Social Links](static/images-readme/readme-sociallinks.png)
+
+### Who gives a C.R.U.D
+
+#### Create (button)
+
+- The button to invite you to submit a new artwork will be found on the **"Prints"** page.
+- It is only visible to users who are signed in.
+![CRUD - create button](static/images-readme/readme-c-in-crud.png)
+
+#### Create (form)
+
+- This page may only be accessed from the button on the **"Prints"** page.
+![CRUD - create form](static/images-readme/readme-c-form.png)
+
+#### Read
+
+![CRUD - read](static/images-readme/readme-printspage.png)
+
+#### Update & Delete
+
+- The update & delete feature is only available to the user who who directly submitted the artwork.
+![CRUD - update & delete](static/images-readme/readme-u-d-in-crud.png)
+
 ### Features Left to Implement
 
 - Enhance User Trust with Clear and Informative Alert and Success Messages during various interactions on the website.

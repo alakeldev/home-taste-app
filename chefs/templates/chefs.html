@@ -6,9 +6,9 @@
 {% block content %}
 <!-- start search section -->
 <div class="container mt-4 search-bar-container">
-    <div class="col-lg-6">
+    <div class="col-sm4">
         <form class="d-flex input-group" action="{% url 'chefs:chefs_list' %}">
-            <input class="form-control me-2" type="text" name="search" placeholder="Search by location"
+            <input class="form-control" type="text" name="search" placeholder="Search by location"
                 aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
