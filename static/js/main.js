@@ -1,5 +1,9 @@
-// alert message that appear for 5 seconds on a different user interactions
-setTimeout(function () {
+// event listener for alert messages if exists, set a timeout to hide it after 5 seconds
+document.addEventListener('DOMContentLoaded', function () {
     var messageElement = document.getElementById('msg-show');
-    messageElement.style.display = 'none';
-}, 5000);
+    if (messageElement) {
+        setTimeout(function () {
+            messageElement.style.display = 'none';
+        }, 5000);
+    }
+});
