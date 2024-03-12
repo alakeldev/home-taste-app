@@ -1,10 +1,11 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
+from django.db.models import Q
 from .models import Profile, Comment
 from .forms import UserProfileForm
 from .forms import CommentForm
-from django.db.models import Q
 
 # Create your views here.
 
@@ -33,7 +34,13 @@ def chef_info(request, slug):
             comment = form.save(commit=False)
             comment.chef = chef_info
             comment.save()
+            messages.success(request, 'Your comment has been submitted successfully.')
             return redirect(request.path)
+        else:
+            messages.success(request, 'Your comment submission has failed!.')
+            return render(request, 'chef_info.html', {
+                'chef_info' : chef_info, 'comments': comments, 'form': form 
+            })
     else:
         form = CommentForm()
     return render(request, 'chef_info.html', {
@@ -55,7 +62,11 @@ def edit_profile(request):
         form = UserProfileForm(request.POST, request.FILES, instance=profile)
         if form.is_valid():
             form.save()
+            messages.success(request, 'Your profile has been updated successfully.')
             return redirect('chefs:my_profile')
+        else:
+            messages.success(request, 'Your profile update was unsuccessful!.')
+            return render(request, 'edit_profile.html', {'form': form})
     else:
         form = UserProfileForm(instance=profile)
     return render(request, 'edit_profile.html', {'form': form})
@@ -66,5 +77,6 @@ def delete_profile(request):
     if request.method == 'POST':
         user = request.user
         user.delete()
+        messages.success(request, 'Your profile has been deleted successfully.')
         return redirect('home') 
     return render(request, 'delete_profile.html')

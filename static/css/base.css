@@ -1033,3 +1033,13 @@ span.phone-field-ext {
 }
 
 /* end socail media networks icons */
+
+/* start message.html page */
+#msg-show {
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+/* end message.html page */
