@@ -21,7 +21,8 @@
 | chefs app - models.py | [PEP8 - CI](https://pep8ci.herokuapp.com/) | [No issues found](static/images/readme/chefs-models-file.png) | ✅ |
 | chefs app - forms.py | [PEP8 - CI](https://pep8ci.herokuapp.com/) | [No issues found](static/images/readme/chefs-forms-file.png) | ✅ |
 | chefs app - admin.py | [PEP8 - CI](https://pep8ci.herokuapp.com/) | [No issues found](static/images/readme/chefs-admin-file.png) | ✅ |
-| style.css | [W3C - Jigsaw](https://jigsaw.w3.org/css-validator/) validator | [No issues found](static/images-readme/readme-w3c-css.png) | ✅ |
+| main.js | [JSHint](https://jshint.com/) | [No issues found](static/images/readme/jshint-main-js-file.png) | ✅ |
+| base.css | [W3C - Jigsaw CSS](https://jigsaw.w3.org/css-validator/) | [No issues found](static/images/readme/css-w3c.png) | ✅ |
 | Home page - html | [W3C - URI](https://validator.w3.org/) | [No issues found](static/images/readme/w3c-home.png) | ✅ |
 | Chefs page - html | [W3C - URI](https://validator.w3.org/) | [No issues found](static/images/readme/w3c-chefs.png) | ✅ |
 | Chef Information page - html | [W3C - URI](https://validator.w3.org/) | [No issues found](static/images/readme/w3c-chef-information.png) | ✅ |
@@ -35,8 +36,6 @@
 | Edit/Update Profile page - html | [W3C - Direct Input](https://validator.w3.org/) | [No issues found](static/images/readme/w3c-edit-profile-page.png) | ✅ |
 | Logout page - html | [W3C - Direct Input](https://validator.w3.org/) | [No issues found](static/images/readme/w3c-logout-page.png) | ✅ |
 | Delete profile page - html | [W3C - Direct Input](https://validator.w3.org/) | [No issues found](static/images/readme/w3c-delete-profile-page.png) | ✅ |
-| Logout page - html | [W3C](https://validator.w3.org/) validator - Source code | No issues found | ✅ |
-| Delete Profile page - html | [W3C](https://validator.w3.org/) validator - Source code | No issues found | ✅ |
 | Home page - html | lighthouse | [Acceptable scores](static/images-readme/readme-lighthouse.png) | ✅ |
 | About page - html | lighthouse | Acceptable scores | ✅ |
 | Blog page - html | lighthouse | Acceptable scores | ✅ |
