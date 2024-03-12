@@ -712,7 +712,8 @@ label.form-label.requiredField[for="id_password"]::before {
 }
 
 #reset-pass-div button,
-#reset-pass-div input:not(#id_email) {
+#reset-pass-div input:not(#id_email),
+.bk-login-1 {
     padding: 8px;
     border: none;
     outline: none;
@@ -724,7 +725,8 @@ label.form-label.requiredField[for="id_password"]::before {
 }
 
 #reset-pass-div button:hover,
-#reset-pass-div input:not(#id_email):hover {
+#reset-pass-div input:not(#id_email):hover,
+.bk-login-1:hover{
     background-color: var(--white-color);
     color: var(--main-color);
 }
@@ -792,7 +794,8 @@ label.form-label.requiredField[for="id_password"]::before {
     padding-bottom: 10px;
 }
 
-#chage-password-form-page-div input[value="change password"] {
+#chage-password-form-page-div input[value="change password"],
+.bk-login {
     padding: 12px;
     border: none;
     outline: none;
@@ -803,7 +806,8 @@ label.form-label.requiredField[for="id_password"]::before {
     margin: 10px;
 }
 
-#chage-password-form-page-div input[value="change password"]:hover {
+#chage-password-form-page-div input[value="change password"]:hover,
+.bk-login:hover {
     background-color: var(--white-color);
     color: var(--main-color);
 }

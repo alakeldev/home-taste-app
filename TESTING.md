@@ -22,10 +22,12 @@
 | chefs app - forms.py | [PEP8 - CI](https://pep8ci.herokuapp.com/) | [No issues found](static/images/readme/chefs-forms-file.png) | ✅ |
 | chefs app - admin.py | [PEP8 - CI](https://pep8ci.herokuapp.com/) | [No issues found](static/images/readme/chefs-admin-file.png) | ✅ |
 | style.css | [W3C - Jigsaw](https://jigsaw.w3.org/css-validator/) validator | [No issues found](static/images-readme/readme-w3c-css.png) | ✅ |
-| Home page - html | [W3C](https://validator.w3.org/) validator - URI | No issues found | ✅ |
-| Chefs page - html | [W3C](https://validator.w3.org/) validator - URI | No issues found | ✅ |
+| Home page - html | [W3C - URI](https://validator.w3.org/) | [No issues found](static/images/readme/w3c-home.png) | ✅ |
+| Chefs page - html | [W3C - URI](https://validator.w3.org/) | [No issues found](static/images/readme/w3c-chefs.png) | ✅ |
+| Chef Information page - html | [W3C - URI](https://validator.w3.org/) | [No issues found](static/images/readme/w3c-chef-information.png) | ✅ |
+| Login page - html | [W3C - URI](https://validator.w3.org/) | [No issues found](static/images/readme/w3c-login.png) | ✅ |
+| Register page - html | [W3C - URI](https://validator.w3.org/) | [No issues found](static/images/readme/w3c-register.png) | ✅ |
 | Chef_info page - html | [W3C](https://validator.w3.org/) validator - URI | No issues found | ✅ |
-| Sign-in page - html | [W3C](https://validator.w3.org/) validator - URI | No issues found | ✅ |
 | My Profile page - html | [W3C](https://validator.w3.org/) validator - Source code | No issues found | ✅ |
 | Edit Profile page - html | [W3C](https://validator.w3.org/) validator - Source code | No issues found | ✅ |
 | Delete Profile page - html | [W3C](https://validator.w3.org/) validator - Source code | No issues found | ✅ |
