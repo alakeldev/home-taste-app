@@ -1,10 +1,14 @@
 from django.contrib import admin
-from .models import Profile, Comment
 from django.utils.html import format_html
+from .models import Profile, Comment
 # Register your models here.
 
 @admin.register(Profile)
 class ProfileAdmin(admin.ModelAdmin):
+    """
+    Customizes the admin panel interface for the Profile model.
+    Set the filter on region field.
+    """
     list_display = (
         'user',
         'name',
@@ -31,9 +35,11 @@ class ProfileAdmin(admin.ModelAdmin):
         )
     list_filter = ('Region',)
 
-    # control instrunctions/schedules field to don't damage the view in admin panel if it's long
-    # format_html to remove html tags
     def formatted_instructions(self, obj):
+        """
+        control instrunctions/schedules field to don't damage the view in admin panel if it's long.
+        format_html to remove html tags
+        """
         full_instructions = obj.instructions
         max_summary_length = 75
 
@@ -49,6 +55,10 @@ class ProfileAdmin(admin.ModelAdmin):
 
 @admin.register(Comment)
 class ProfileAdmin(admin.ModelAdmin):
+    """
+    Customizes the admin panel interface for the comment model.
+    Set the filter on is_approved field.
+    """
     list_display = (
         'name',
         'comment',

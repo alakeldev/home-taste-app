@@ -1,11 +1,16 @@
 from django import forms
-from .models import Profile, Comment
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit
+from .models import Profile, Comment
 
 
 class UserProfileForm(forms.ModelForm):
 
+    """
+    - user profile form to update and set chef profile.
+    - clean() Custom validation logic for form fields.
+
+    """
     class Meta:
         model = Profile
         fields = ['name', 'image', 'email', 'phone_number','gender', 'Region', 'country', 'city','cuisine_specialization', 'instructions', 'facebook_link', 'instagram_link', 'tiktok_link', 'youtube_link', 'dish1', 'dish2','dish3','dish4','dish5']
@@ -62,6 +67,10 @@ class UserProfileForm(forms.ModelForm):
 
 
 class CommentForm(forms.ModelForm):
+    """
+    - comment form to submit a new comment on chef profile.
+    - clean() Custom validation logic for form fields.
+    """
     class Meta:
         model = Comment
         fields = ['name', 'email', 'comment']
