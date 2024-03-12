@@ -37,7 +37,7 @@ def chef_info(request, slug):
             messages.success(request, 'Your comment has been submitted successfully.')
             return redirect(request.path)
         else:
-            messages.success(request, 'Your comment submission has failed!.')
+            messages.error(request, 'Your comment submission has failed!.')
             return render(request, 'chef_info.html', {
                 'chef_info' : chef_info, 'comments': comments, 'form': form 
             })
@@ -65,7 +65,7 @@ def edit_profile(request):
             messages.success(request, 'Your profile has been updated successfully.')
             return redirect('chefs:my_profile')
         else:
-            messages.success(request, 'Your profile update was unsuccessful!.')
+            messages.error(request, 'Your profile update encountered an error.')
             return render(request, 'edit_profile.html', {'form': form})
     else:
         form = UserProfileForm(instance=profile)

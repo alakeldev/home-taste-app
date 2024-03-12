@@ -2,8 +2,14 @@
 
 {% if messages %}
 {% for message in messages %}
-<div class="alert alert-dismissible alert-success text-center" id="msg-show">
+{% if message.tags == 'success' %}
+<div class="alert alert-success alert-dismissible text-center" id="msg-show">
     <strong>{{ message }}</strong>
 </div>
+{% elif message.tags == 'error' %}
+<div class="alert alert-danger alert-dismissible text-center" id="msg-show">
+    <strong>{{ message }}</strong>
+</div>
+{% endif %}
 {% endfor %}
 {% endif %}
