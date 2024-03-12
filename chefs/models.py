@@ -21,6 +21,10 @@ REGION = (
 )
 
 class Profile(models.Model):
+    """
+    Represents profile table inside the DB.
+    and the fields within this model define the columns of profile table
+    """
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.CharField(("Name"), max_length=20, help_text='You can enter a different name from your username.')
@@ -47,6 +51,12 @@ class Profile(models.Model):
 
 
     def save(self, *args, **kwargs):
+        """
+        If the 'slug' field is not set, generate it by 
+        slugifying the user's username.
+        super => save = to save the profile instance.
+        """
+
         if not self.slug:
             self.slug = slugify(self.user.username)
         super(Profile, self).save(*args, **kwargs)
@@ -56,9 +66,13 @@ class Profile(models.Model):
 
     def __str__(self):
         return '%s' %(self.user.username)
-    
+
 
 def create_profile(sender, **kwargs):
+    """
+    Creates profile when a new user is created.
+    connect create function to user model using signal post_save
+    """
     if kwargs['created']:
         Profile.objects.create(user=kwargs['instance'])
 
@@ -66,6 +80,10 @@ post_save.connect(create_profile, sender=User)
 
 
 class Comment(models.Model):
+    """
+    Represents comment table inside the DB.
+    and the fields within this model define the columns of comment table
+    """
     chef = models.ForeignKey(Profile, on_delete=models.CASCADE)
     name = models.CharField(max_length=20, help_text='Please Enter Your Name.')
     email = models.EmailField(max_length=50, help_text='Please Enter Your Email.')
