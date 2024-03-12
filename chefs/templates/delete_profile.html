@@ -12,7 +12,7 @@
         {% csrf_token %}
         {{ form|crispy }}
         <button type="submit" id="delete-confirm">Delete</button>
-        <a href="{% url 'chefs:my_profile' %}"><button type="button" class="cancel-btn">Cancel</button></a>
+        <a href="{% url 'chefs:my_profile' %}" class="logout-cancel">Cancel</a>
     </form>
 </div>
 
