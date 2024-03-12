@@ -253,7 +253,6 @@ label.form-label.requiredField[for="id_password"]::before {
 #sign-up-div {
     box-shadow: 0 2px 4px var(--green-color);
     border: 1px solid var(--green-color);
-    min-height: 100;
     width: 80%;
     margin-top: 30px;
     background-color: var(--green-color);
@@ -322,7 +321,7 @@ label.form-label.requiredField[for="id_password"]::before {
     font-size: 15px;
     padding-top: 10px;
     overflow: visible;
-    white-space: wrap;
+    white-space: pre-wrap;
 }
 
 
@@ -733,7 +732,7 @@ label.form-label.requiredField[for="id_password"]::before {
 
 #reset-pass-div button:hover,
 #reset-pass-div input:not(#id_email):hover,
-.bk-login-1:hover{
+.bk-login-1:hover {
     background-color: var(--white-color);
     color: var(--main-color);
 }
@@ -872,7 +871,6 @@ label.form-label.requiredField[for="id_password"]::before {
 #edit-profile-form-div {
     box-shadow: 0 2px 4px var(--green-color);
     border: 1px solid var(--green-color);
-    min-height: 100;
     width: 80%;
     margin-top: 30px;
     background-color: var(--main-color);
@@ -1053,4 +1051,5 @@ span.phone-field-ext {
     transform: translate(-50%, -50%);
     z-index: 9999;
 }
+
 /* end message.html page */
