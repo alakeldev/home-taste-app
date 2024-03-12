@@ -11,24 +11,24 @@
 
 | **TEST** | **ACTION** | **EXPECTATION** | **RESULT** |
 | ----------------------------- | ----------------------- | --------------------------- | ---------- |
-| printstatements - settings.py | PEP8 validator | [No issues found](static/images-readme/readme-pep8.png) | ✅ |
-| printstatements - urls.py | PEP8 validator | No issues found | ✅ |
-| blog app - forms.py | PEP8 validator | No issues found | ✅ |
-| blog app - models.py | PEP8 validator | No issues found | ✅ |
-| blog app - views.py | PEP8 validator | No issues found | ✅ |
-| blog app - urls.py | PEP8 validator | No issues found | ✅ |
-| blog app - admin.py | PEP8 validator | No issues found | ✅ |
-| artprint app - forms.py | PEP8 validator | No issues found | ✅ |
-| artprint app - models.py | PEP8 validator | No issues found | ✅ |
-| artprint app - views.py | PEP8 validator | No issues found | ✅ |
-| artprint app - urls.py | PEP8 validator | No issues found | ✅ |
-| artprint app - admin.py | PEP8 validator | No issues found | ✅ |
+| manage.py | [PEP8 - CI](https://pep8ci.herokuapp.com/) | [No issues found](static/images/readme/manage-py-file.png) | ✅ |
+| home_taste - urls.py | [PEP8 - CI](https://pep8ci.herokuapp.com/) | [No issues found](static/images/readme/home_taste-urls.png) | ✅ |
+| home_taste - settings.py | [PEP8 - CI](https://pep8ci.herokuapp.com/) | [Issues found](static/images/readme/home-taste-settings.png) | ( E501 line too long : AUTH_PASSWORD_VALIDATORS - STATICFILES_STORAGE) |
+| home app - views.py | [PEP8 - CI](https://pep8ci.herokuapp.com/) | [No issues found](static/images/readme/home-views-file.png) | ✅ |
+| home app - urls.py | [PEP8 - CI](https://pep8ci.herokuapp.com/) | [No issues found](static/images/readme/home-urls-file.png) | ✅ |
+| chefs app - views.py | [PEP8 - CI](https://pep8ci.herokuapp.com/) | [No issues found](static/images/readme/chefs-views-file.png) | ✅ |
+| chefs app - urls.py | [PEP8 - CI](https://pep8ci.herokuapp.com/) | [No issues found](static/images/readme/chefs-urls-file.png) | ✅ |
+| chefs app - models.py | [PEP8 - CI](https://pep8ci.herokuapp.com/) | [No issues found](static/images/readme/chefs-models-file.png) | ✅ |
+| chefs app - forms.py | [PEP8 - CI](https://pep8ci.herokuapp.com/) | [No issues found](static/images/readme/chefs-forms-file.png) | ✅ |
+| chefs app - admin.py | [PEP8 - CI](https://pep8ci.herokuapp.com/) | [No issues found](static/images/readme/chefs-admin-file.png) | ✅ |
 | style.css | [W3C - Jigsaw](https://jigsaw.w3.org/css-validator/) validator | [No issues found](static/images-readme/readme-w3c-css.png) | ✅ |
-| Home page - html | [W3C](https://validator.w3.org/) validator - source code | No issues found | ✅ |
-| About page - html | W3C validator - source code | No issues found | ✅ |
-| Blog page - html | W3C validator - source code | No issues found | ✅ |
-| Prints page - html | W3C validator - source code | No issues found | ✅ |
-| Sign-in page - html | W3C validator - source code | No issues found | ✅ |
+| Home page - html | [W3C](https://validator.w3.org/) validator - URI | No issues found | ✅ |
+| Chefs page - html | [W3C](https://validator.w3.org/) validator - URI | No issues found | ✅ |
+| Chef_info page - html | [W3C](https://validator.w3.org/) validator - URI | No issues found | ✅ |
+| Sign-in page - html | [W3C](https://validator.w3.org/) validator - URI | No issues found | ✅ |
+| My Profile page - html | [W3C](https://validator.w3.org/) validator - Source code | No issues found | ✅ |
+| Edit Profile page - html | [W3C](https://validator.w3.org/) validator - Source code | No issues found | ✅ |
+| Delete Profile page - html | [W3C](https://validator.w3.org/) validator - Source code | No issues found | ✅ |
 | Home page - html | lighthouse | [Acceptable scores](static/images-readme/readme-lighthouse.png) | ✅ |
 | About page - html | lighthouse | Acceptable scores | ✅ |
 | Blog page - html | lighthouse | Acceptable scores | ✅ |
