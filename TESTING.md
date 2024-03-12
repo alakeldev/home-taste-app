@@ -13,7 +13,7 @@
 | ----------------------------- | ----------------------- | --------------------------- | ---------- |
 | manage.py | [PEP8 - CI](https://pep8ci.herokuapp.com/) | [No issues found](static/images/readme/manage-py-file.png) | ✅ |
 | home_taste - urls.py | [PEP8 - CI](https://pep8ci.herokuapp.com/) | [No issues found](static/images/readme/home_taste-urls.png) | ✅ |
-| home_taste - settings.py | [PEP8 - CI](https://pep8ci.herokuapp.com/) | [Issues found](static/images/readme/home-taste-settings.png) | ( E501 line too long : AUTH_PASSWORD_VALIDATORS - STATICFILES_STORAGE) |
+| home_taste - settings.py | [PEP8 - CI](https://pep8ci.herokuapp.com/) | No issues found | [E501 line too long: AUTH_PASSWORD_VALIDATORS - STATICFILES_STORAGE](static/images/readme/home-taste-settings.png) |
 | home app - views.py | [PEP8 - CI](https://pep8ci.herokuapp.com/) | [No issues found](static/images/readme/home-views-file.png) | ✅ |
 | home app - urls.py | [PEP8 - CI](https://pep8ci.herokuapp.com/) | [No issues found](static/images/readme/home-urls-file.png) | ✅ |
 | chefs app - views.py | [PEP8 - CI](https://pep8ci.herokuapp.com/) | [No issues found](static/images/readme/chefs-views-file.png) | ✅ |
@@ -36,12 +36,8 @@
 | Edit/Update Profile page - html | [W3C - Direct Input](https://validator.w3.org/) | [No issues found](static/images/readme/w3c-edit-profile-page.png) | ✅ |
 | Logout page - html | [W3C - Direct Input](https://validator.w3.org/) | [No issues found](static/images/readme/w3c-logout-page.png) | ✅ |
 | Delete profile page - html | [W3C - Direct Input](https://validator.w3.org/) | [No issues found](static/images/readme/w3c-delete-profile-page.png) | ✅ |
-| Home page - html | lighthouse | [Acceptable scores](static/images-readme/readme-lighthouse.png) | ✅ |
-| About page - html | lighthouse | Acceptable scores | ✅ |
-| Blog page - html | lighthouse | Acceptable scores | ✅ |
-| Prints page - html | lighthouse | Acceptable scores | ✅ |
-| Sign-in page - html | lighthouse | Acceptable scores | ✅ |
-| Brave browser | Launch site | Site opens without issue | ✅ |
+| Home page - html | lighthouse | [Acceptable scores](static/images/readme/light-house-overall.png) | ✅ |
+| MS-Edge browser | Launch site | Site opens without issue | ✅ |
 | Chrome browser | Launch site | Site opens without issue | ✅ |
 | Safari browser | Launch site | Site opens without issue | ✅ |
 
@@ -49,16 +45,26 @@
 
 | **TEST**                      | **ACTION**              | **EXPECTATION**             | **RESULT** |
 | ----------------------------- | ----------------------- | --------------------------- | ---------- |
-| Home page - responsiveness    | Size site down to 320px | all elements stay on screen | ✅         |
-| Home page - responsiveness    | Size site up to 1920ox  | all elements stay on screen | ✅         |
-| About page - responsiveness   | Size site down to 320px | all elements stay on screen | ✅         |
-| About page - responsiveness   | Size site up to 1920ox  | all elements stay on screen | ✅         |
-| Prints page - responsiveness  | Size site down to 320px | all elements stay on screen | ✅         |
-| Prints page - responsiveness  | Size site up to 1920ox  | all elements stay on screen | ✅         |
-| Blog page - responsiveness    | Size site down to 320px | all elements stay on screen | ✅         |
-| Blog page - responsiveness    | Size site up to 1920ox  | all elements stay on screen | ✅         |
-| Sign-in page - responsiveness | Size site down to 320px | all elements stay on screen | ✅         |
-| Sign-in page - responsiveness | Size site up to 1920ox  | all elements stay on screen | ✅         |
+| Home page - responsiveness    | Size site down to 370px | all elements stay on screen | ✅         |
+| Home page - responsiveness    | Size site up to 1920px  | all elements stay on screen | ✅         |
+| Chefs page - responsiveness   | Size site down to 370px | all elements stay on screen | ✅         |
+| Chefs page - responsiveness   | Size site up to 1920px  | all elements stay on screen | ✅         |
+| Chef-Info Profile page - responsiveness  | Size site down to 370px | all elements stay on screen | ✅         |
+| Chef-Info Profile page - responsiveness  | Size site up to 1920px  | all elements stay on screen | ✅         |
+| Login page - responsiveness    | Size site down to 370px | all elements stay on screen | ✅         |
+| Login page - responsiveness    | Size site up to 1920px  | all elements stay on screen | ✅         |
+| Register page - responsiveness | Size site down to 370px | all elements stay on screen | ✅         |
+| Register page - responsiveness | Size site up to 1920px  | all elements stay on screen | ✅         |
+| My Profile page - responsiveness | Size site down to 370px | all elements stay on screen | ✅         |
+| My Profile page - responsiveness | Size site up to 1920px  | all elements stay on screen | ✅         |
+| Update Profile page - responsiveness | Size site down to 370px | all elements stay on screen | ✅         |
+| Update Profile page - responsiveness | Size site up to 1920px  | all elements stay on screen | ✅         |
+| Logout page - responsiveness | Size site down to 370px | all elements stay on screen | ✅         |
+| Logout page - responsiveness | Size site up to 1920px  | all elements stay on screen | ✅         |
+| Delete Profile page - responsiveness | Size site down to 370px | all elements stay on screen | ✅         |
+| Delete Profile page - responsiveness | Size site up to 1920px  | all elements stay on screen | ✅         |
+| Forgot Password process (4-pages) - responsiveness | Size site down to 370px | all elements stay on screen | ✅         |
+| Forgot Password process (4-pages) - responsiveness | Size site up to 1920px  | all elements stay on screen | ✅         |
 
 ## C.R.U.D Testing
 
