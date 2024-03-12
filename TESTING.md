@@ -27,9 +27,14 @@
 | Chef Information page - html | [W3C - URI](https://validator.w3.org/) | [No issues found](static/images/readme/w3c-chef-information.png) | ✅ |
 | Login page - html | [W3C - URI](https://validator.w3.org/) | [No issues found](static/images/readme/w3c-login.png) | ✅ |
 | Register page - html | [W3C - URI](https://validator.w3.org/) | [No issues found](static/images/readme/w3c-register.png) | ✅ |
-| Chef_info page - html | [W3C](https://validator.w3.org/) validator - URI | No issues found | ✅ |
-| My Profile page - html | [W3C](https://validator.w3.org/) validator - Source code | No issues found | ✅ |
-| Edit Profile page - html | [W3C](https://validator.w3.org/) validator - Source code | No issues found | ✅ |
+| password/reset page - html | [W3C - URI](https://validator.w3.org/) | [No issues found](static/images/readme/w3c-password-reset-page.png) | ✅ |
+| password/reset/done Email sent page - html | [W3C - URI](https://validator.w3.org/) | [No issues found](static/images/readme/w3c-password-reset-done-email-sent.png) | ✅ |
+| password/reset/key page opened from the received email - html | [W3C - URI](https://validator.w3.org/) | [No issues found](static/images/readme/w3c-password-reset-key.png) | ✅ |
+| password/reset/key/done page password changed - html | [W3C - URI](https://validator.w3.org/) | [No issues found](static/images/readme/w3c-password-key-done.png) | ✅ |
+| My Profile page - html | [W3C - Direct Input](https://validator.w3.org/) | [No issues found](static/images/readme/w3c-my_profile-page.png) | ✅ |
+| Edit/Update Profile page - html | [W3C - Direct Input](https://validator.w3.org/) | [No issues found](static/images/readme/w3c-edit-profile-page.png) | ✅ |
+| Update Profile page - html | [W3C](https://validator.w3.org/) validator - URI | No issues found | ✅ |
+| Logout page - html | [W3C](https://validator.w3.org/) validator - Source code | No issues found | ✅ |
 | Delete Profile page - html | [W3C](https://validator.w3.org/) validator - Source code | No issues found | ✅ |
 | Home page - html | lighthouse | [Acceptable scores](static/images-readme/readme-lighthouse.png) | ✅ |
 | About page - html | lighthouse | Acceptable scores | ✅ |

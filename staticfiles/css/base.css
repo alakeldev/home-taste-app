@@ -621,7 +621,8 @@ label.form-label.requiredField[for="id_password"]::before {
     padding-top: 20px;
 }
 
-#sign-out-div button {
+#sign-out-div button,
+.logout-cancel {
     padding: 15px;
     border: none;
     outline: none;
@@ -631,7 +632,13 @@ label.form-label.requiredField[for="id_password"]::before {
     transition: background-color 0.4s, color 0.4s;
 }
 
-#sign-out-div button:hover {
+.logout-cancel {
+    text-decoration: none;
+    padding: 17px;
+}
+
+#sign-out-div button:hover,
+.logout-cancel:hover {
     background-color: var(--white-color);
     color: var(--main-color);
 }

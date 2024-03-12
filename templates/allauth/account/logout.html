@@ -16,7 +16,7 @@
     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
     {% endif %}
     <button class="mt-3 mb-3" type="submit">{% trans 'Logout' %}</button>
-    <a href="{% url 'chefs:my_profile' %}"><button type="button">Cancel</button></a>
+    <a href="{% url 'chefs:my_profile' %}" class="logout-cancel">Cancel</a>
   </form>
 </div>
 
