@@ -73,7 +73,7 @@
 | Profile - Create     | Add new instance to DB | Instance created         | ✅         |
 | Profile - Read       | Retrieve all instances and data | Instances and data visible in UI  | ✅         |
 | Profile - Update     | Modify an instance     | Mods saved & visible     | ✅         |
-| Profile - Delete     | Delete an instance     | Instance removed from UI | ✅         |
+| Profile - Delete     | Delete an instance     | Instance removed from UI with all its data and other instances that have relation with it (Comments) | ✅         |
 | Comments - Create | Add new instance to DB | Instance created         | ✅         |
 | Comments - Read   | Retrieve all instances | Instances visible in UI  | ✅         |
 
@@ -137,4 +137,55 @@
 
 ## Fixed Bugs
 
+During the development lifecycle of this project, I encountered several critical bugs and challenges. My approach was methodical and thorough, aiming to deliver robust solutions. Here are some of the key issues I addressed:
+
+* Database Schema Refinement:
+  * One significant bug pertained to the database schema, specifically the phone field that need to install a package and add it to the project settings.py . Initially, it was implemented as complex data type, but after careful consideration, I decided to simplify it by changing it to a char field and set some validation on it.
+
+* View Rendering Issues:
+  * Another set of challenges arose when working with views. Despite creating the necessary views, I encountered difficulties displaying data correctly within the templates. Debugging involved meticulous examination of the view logic, template rendering, and data flow.
+
+* URL Handling Mistake:
+  * I had initially defined project URLs but inadvertently misused them within the templates. Correcting this required careful inspection of URL patterns, ensuring proper linkage between views and templates.
+
+* Update Profile Form Issue:
+  * I encountered an error related to the “update profile” form. Accidentally calling a form inside the Crispy form triggered an issue. To resolve this, I reviewed my form structure, ensured proper nesting, and adjusted the form rendering. The error message indicating that a form cannot be called inside another form was addressed, resulting in a smooth user experience.
+
+* Below some images related to some of the bugs I encountered during the development process:
+    - 1
+     ![bug image1](static/images/readme/bug1.png)
+    - 2
+    ![bug image2](static/images/readme/bug2.png)
+    - 3
+    ![bug image3](static/images/readme/bug3.png)
+    - 4
+    ![bug image4](static/images/readme/bug4.png)
+    - 5
+    ![bug image5](static/images/readme/bug5.png)
+    - 6
+    ![bug image6](static/images/readme/bug6.png)
+    - 7
+    ![bug image7](static/images/readme/bug7.png)
+    - 8
+    ![bug image8](static/images/readme/bug8.png)
+    - 9
+    ![bug image9](static/images/readme/bug9.png)
+    - 10
+    ![bug image10](static/images/readme/bug10.png)
+
 ## Unfixed Bugs
+
+* During the development of this project, I encountered an unresolved bug related to the RichTextField (also known as djrichtextfield). This issue manifests when a large amount of text is rapidly copied and pasted into the RichTextField. Upon attempting to save the form, an error occurs. While the local version displays the error as shown in the photo below, the live version results in a 500 error.
+
+![unfixed bug error 500](static/images/readme/debug-false.png)
+
+![unfixed bug error locally](static/images/readme/unfixed-bug-richttextfield.png)
+
+#### Bug Details
+
+- Field: RichTextField (djrichtextfield).
+- Symptoms: Error during form submission.
+- Cause: Large text input.
+- Local Error (Screenshot): as per the image above.
+
+In my pursuit to resolve the RichTextField issue, I embarked on an extensive exploration of potential solutions. I read some articles, delved into the intricacies of the RichTextField, and experimented with adjusting the field’s maximum length. While successfully limiting the input to 100 or 200 characters using max_length, I encountered an unexpected behavior. When I increased the limit to 5000 characters and entered a larg text, it triggered the error in question.
