@@ -609,10 +609,16 @@ label.form-label.requiredField[for="id_password"]::before {
 #sign-out-div {
     box-shadow: 0 2px 4px var(--green-color);
     border: 1px solid var(--green-color);
-    height: 40vh;
+    height: 50vh;
     margin-top: 40px;
     width: 50%;
     background-color: var(--green-color);
+}
+
+@media (max-width: 676px) {
+    #sign-out-div {
+        width: 90%;
+    }
 }
 
 #sign-out-div h1 {
