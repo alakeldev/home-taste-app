@@ -366,6 +366,10 @@ At this stage of the password reset process, you have already set your new passw
 - Registered users (Chefs) and Admin have full C.R.U.D functionality over the Chefs’ profiles.
 - Admin possesses full C.R.U.D functionality over the Chefs’ profile comments, while Registered users (Chefs) and General users (visitors) have access only to C.R (Create and Read).
 
+- The administrative control panel (django) has been implemented to display user data in an efficient manner, along with advanced filtering capabilities on Profiles and comments. Additionally, it showcases other django built-in models Users.. that the administrator can perform Create, Read, Update, and Delete (C.R.U.D.) operations on.
+
+![Admin panel](static/images/readme/admin-panel.png)
+
 ### Features Left to Implement
 
 - Enhance User Trust with Clear and Informative Alert and Success Messages during various interactions on the website.
