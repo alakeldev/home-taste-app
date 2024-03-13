@@ -123,17 +123,38 @@
 | Register Form (Username Field) Error Message: User enters special characters or white space in the username field |  Enter special characters or white space in the username field | An error message should appear, indicating which characters are allowed for use in the username | ✅  |
 | Register Form (Password Field & Password Again Field): User fills in the password and password again to register for an account  | Enter passwords in both fields   | (The password and password again fields should hide the value displaying *) - (Full information should be displayed between these two fields to prevent errors related to password similarity) - (The passwords entered in both fields must match; otherwise, an error should be raised) | ✅ |
 | Register Form (Important Note): User wants to take care of the username and email because they are fixed and will be related to the profile until deletion  | Observe the register form | A note should appear above the signup button, notifying the user about the importance of the email address and username | ✅  |
-| Login                         | User logs in           | UI updates & user is logged in                            | ✅  |
-| Sign up                       | User signs up          | new account created for the user                          | ✅  |
+| Registration Success   |   Fill in the required details during registration    | Registration successful, user redirected to profile page        | ✅  |
+| Register Success Alert as Signed In    | Registered successfully | An alert message should indicate sign-in and display the user’s name along with with the mesasage     | ✅  |
+| My Profile Page: Verify Correct Loading    | Ensure the “My Profile Page” loads correctly    | Profile page elements loaded as expected | ✅  |
+| My Profile Page elements and data  | Check the my profile page     | The profile page should display default values and images | ✅  |
+| Nav Bar for Logged-In Users    | Observe the navigation bar after logging in/ registering       | New pages visible in the navigation bar      | ✅  |
+| Update Button on My Profile Page: Validate the presence of the update button on the profile page     | Examine my profile page    |  Update button present       | ✅  |
+| Delete Button on My Profile Page: Validate the presence of the “Delete” button on the profile page     | Observe the profile page   | The “Delete” button should be visible, allowing users to delete their profile.  | ✅  |
+| View as Public Button on My Profile Page  | Observe the my profile page     | The “View as Public” button should be visible | ✅|
+| View as Public Functionality   | clicks the “View as Public” button     | The chef’s public profile should display, allowing information and comments related to the profile to be checked | ✅  |
+| Back to My Profile Button (After Viewing as Public)    | Observe the page after viewing as public.  | The button should be visible, allowing the user to return to their own profile.   | ✅  |
+| Back to My Profile Button Functionality     | Chef clicks the “Back to My Profile” button  | The user should be redirected to their profile page   | ✅  |
+| Social Media Icons on My Profile Page     | Ensure that social media icons appear if chef set its own account and function correctly     | Social media icons should be visible and clickable, leading to the chef’s social accounts in new tabs| ✅  |
+| Delete Button Functionality | User clicks the “Delete” button     | it should display a confirmation page, warning that deletion is irreversible | ✅  |
+| Confirm Delete Page - Cancel Button    | User clicks the “Cancel” button     | The user should be redirected back to their profile page | ✅  |
+| Confirm Delete Page - Delete Button    |  User clicks the “Delete” button     |  The user should be redirected to the home page, and an alert message should confirm successful profile deletion | ✅  |
+| Login After Account Deletion    | User attempts to log in after confirming deletion    | An alert message should indicate that the username and password are incorrect (similar to any other user without an account) | ✅  |
+| Logout Button  in the navigation bar (Logged-In User)   | User clicks the logout button  | The user should be taken to the logout confirmation page | ✅  |
+| Logout Confirm Page - Cancel Button   |  User clicks the “Cancel” logout button    |  The user should be directly redirected to their personal profile page | ✅  |
+| Logout Confirm Page - Logout Button   | User clicks the “Logout” button     | The user should be redirected to the home page, and an alert message should confirm successful sign-out | ✅  |
+| Update Profile Button on My Profile Page    | User clicks the “Update Profile” button     | The user should be directed to the update profile page | ✅  |
+| Nav Bar - Edit Profile Link   | User clicks the “Edit Profile” link    | The user should be taken to the edit profile page (similar to clicking the “Update Profile” button on the profile page) | ✅  |
 | Logout                        | User clicks logout     | UI updates, user is logged out, user cannot create a post | ✅  |
 | Logout                        | User clicks logout     | UI updates, user is logged out, user cannot create a post | ✅  |
-| Login                         | User logs in           | UI updates & user is logged in                            | ✅  |
-| Sign up                       | User signs up          | new account created for the user                          | ✅  |
 | Logout                        | User clicks logout     | UI updates, user is logged out, user cannot create a post | ✅  |
 | Logout                        | User clicks logout     | UI updates, user is logged out, user cannot create a post | ✅  |
-| Login                         | User logs in           | UI updates & user is logged in                            | ✅  |
-| Sign up                       | User signs up          | new account created for the user                          | ✅  |
 | Logout                        | User clicks logout     | UI updates, user is logged out, user cannot create a post | ✅  |
+| Logout                        | User clicks logout     | UI updates, user is logged out, user cannot create a post | ✅  |
+| Logout                        | User clicks logout     | UI updates, user is logged out, user cannot create a post | ✅  |
+| Logout                        | User clicks logout     | UI updates, user is logged out, user cannot create a post | ✅  |
+| Logout                        | User clicks logout     | UI updates, user is logged out, user cannot create a post | ✅  |
+| Logout                        | User clicks logout     | UI updates, user is logged out, user cannot create a post | ✅  |
+
 
 ## Fixed Bugs
 
@@ -151,7 +172,7 @@ During the development lifecycle of this project, I encountered several critical
 * Update Profile Form Issue:
   * I encountered an error related to the “update profile” form. Accidentally calling a form inside the Crispy form triggered an issue. To resolve this, I reviewed my form structure, ensured proper nesting, and adjusted the form rendering. The error message indicating that a form cannot be called inside another form was addressed, resulting in a smooth user experience.
 
-* Below some images related to some of the bugs I encountered during the development process:
+* Below some images related to some of the fixed bugs I encountered during the development process:
     - 1
      ![bug image1](static/images/readme/bug1.png)
     - 2
