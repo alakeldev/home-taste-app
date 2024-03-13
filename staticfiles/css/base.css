@@ -764,7 +764,6 @@ label.form-label.requiredField[for="id_password"]::before {
 #reset-done-div {
     box-shadow: 0 2px 4px var(--green-color);
     border: 1px solid var(--green-color);
-    height: 40vh;
     margin-top: 40px;
     width: 40%;
     background-color: var(--green-color);
