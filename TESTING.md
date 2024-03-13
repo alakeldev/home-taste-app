@@ -45,25 +45,25 @@
 
 | **TEST**                      | **ACTION**              | **EXPECTATION**             | **RESULT** |
 | ----------------------------- | ----------------------- | --------------------------- | ---------- |
-| Home page - responsiveness    | Size site down to 370px | all elements stay on screen | ✅         |
+| Home page - responsiveness    | Size site down to 320px | all elements stay on screen | ✅         |
 | Home page - responsiveness    | Size site up to 1920px  | all elements stay on screen | ✅         |
-| Chefs page - responsiveness   | Size site down to 370px | all elements stay on screen | ✅         |
+| Chefs page - responsiveness   | Size site down to 320px | all elements stay on screen | ✅         |
 | Chefs page - responsiveness   | Size site up to 1920px  | all elements stay on screen | ✅         |
-| Chef-Info Profile page - responsiveness  | Size site down to 370px | all elements stay on screen | ✅         |
+| Chef-Info Profile page - responsiveness  | Size site down to 320px | all elements stay on screen | ✅         |
 | Chef-Info Profile page - responsiveness  | Size site up to 1920px  | all elements stay on screen | ✅         |
-| Login page - responsiveness    | Size site down to 370px | all elements stay on screen | ✅         |
+| Login page - responsiveness    | Size site down to 320px | all elements stay on screen | ✅         |
 | Login page - responsiveness    | Size site up to 1920px  | all elements stay on screen | ✅         |
-| Register page - responsiveness | Size site down to 370px | all elements stay on screen | ✅         |
+| Register page - responsiveness | Size site down to 320px | all elements stay on screen | ✅         |
 | Register page - responsiveness | Size site up to 1920px  | all elements stay on screen | ✅         |
-| My Profile page - responsiveness | Size site down to 370px | all elements stay on screen | ✅         |
+| My Profile page - responsiveness | Size site down to 320px | all elements stay on screen | ✅         |
 | My Profile page - responsiveness | Size site up to 1920px  | all elements stay on screen | ✅         |
-| Update Profile page - responsiveness | Size site down to 370px | all elements stay on screen | ✅         |
+| Update Profile page - responsiveness | Size site down to 320px | all elements stay on screen | ✅         |
 | Update Profile page - responsiveness | Size site up to 1920px  | all elements stay on screen | ✅         |
-| Logout page - responsiveness | Size site down to 370px | all elements stay on screen | ✅         |
+| Logout page - responsiveness | Size site down to 320px | all elements stay on screen | ✅         |
 | Logout page - responsiveness | Size site up to 1920px  | all elements stay on screen | ✅         |
-| Delete Profile page - responsiveness | Size site down to 370px | all elements stay on screen | ✅         |
+| Delete Profile page - responsiveness | Size site down to 320px | all elements stay on screen | ✅         |
 | Delete Profile page - responsiveness | Size site up to 1920px  | all elements stay on screen | ✅         |
-| Forgot Password process (4-pages) - responsiveness | Size site down to 370px | all elements stay on screen | ✅         |
+| Forgot Password process (4-pages) - responsiveness | Size site down to 320px | all elements stay on screen | ✅         |
 | Forgot Password process (4-pages) - responsiveness | Size site up to 1920px  | all elements stay on screen | ✅         |
 
 ## C.R.U.D Testing
@@ -143,51 +143,51 @@
 | Logout Confirm Page - Cancel Button   |  User clicks the “Cancel” logout button    |  The user should be directly redirected to their personal profile page | ✅  |
 | Logout Confirm Page - Logout Button   | User clicks the “Logout” button     | The user should be redirected to the home page, and an alert message should confirm successful sign-out | ✅  |
 | Update Profile Button on My Profile Page    | User clicks the “Update Profile” button     | The user should be directed to the update profile page | ✅  |
-| Nav Bar - Edit Profile Link   | User clicks the “Edit Profile” link    | The user should be taken to the edit profile page (similar to clicking the “Update Profile” button on the profile page) | ✅  |
+| Nav Bar - Edit Profile Link   | User clicks the “Edit Profile” link    | The user should be taken to the edit profile page (similar to clicking the “Update Profile” button on my profile page) | ✅  |
 | Form edit Profile load seccessfully  | uesr navigate to edit its profile   | the edit/update profile page/form loaded properly | ✅  |
-|  Valid Name Entry   | Enter a valid name (containing only letters) in the input field     | The input should accept the valid name without any errors. | ✅  |
-| Invalid Name Entry (Special Characters) | Enter a name containing special characters (e.g., numbers, symbols) in the input field.    | UAn error message should appear, indicating that the name should contain only letters. | ✅  |
+|  Valid Name Entry   | Enter a valid name (containing only letters, white spaces between letters) in the input field  | The input should accept the valid name without any errors. | ✅  |
+| Invalid Name Entry (Special Characters) | Enter a name containing special characters (e.g., numbers, symbols) in the input field.    | An error message should appear, indicating that the name should contain only letters. | ✅  |
 | Empty Name Field   |  Leave the name field empty.     |  An error message should appear, prompting the user to enter a name | ✅  |
 |  Valid Email Entry   |  Enter a valid email address (e.g., <user@example.com>) in the input field    | The input should accept the valid email address without any errors | ✅  |
-| Invalid Email Entry (Incorrect Format)     | Enter an invalid email address (e.g., invalid_email) in the input field     |An error message should appear, indicating that the email format is incorrect | ✅  |
+| Invalid Email Entry (Incorrect Format)     | Enter an invalid email address (e.g., invalid_email) in the input field     |An hint/notify message should appear, indicating that the email format is incorrect | ✅  |
 | Empty Email Field    | Leave the email field empty     | The input should allow an empty value (since it’s marked as blank=True and null=True) | ✅  |
 | Different Email from Registration  | Enter an email address different from the one used during registration     | The input should accept the different email address without any issues | ✅  |
 |  Valid Image Upload (profile picture and dishes images)   | Upload an image file (e.g., a valid profile picture) in the input field     | The input should accept the image without any errors | ✅  |
-| Invalid Image Format     | Upload a file that is not in the specified format (e.g., a non-WEBP image).     | An error message should appear, indicating that the image format is incorrect | ✅  |
+| Invalid Image Format     | Upload a file that is not in the specified format (e.g., a non-WEBP, jpg.. image).     | An error message should appear, indicating that the image format is incorrect | ✅  |
 | Empty Image Field     | Leave the image field empty    | The input should allow an empty value (since it’s marked as blank=True and null=True) | ✅  |
 | Large Image Size    |  Upload an image larger than the specified dimensions (e.g., more than 400 pixels wide for profile pciture and 600 pixels for dishes images)     | The input should handle large images gracefully (e.g., resize) | ✅  |
 |  Valid Phone Number Entry    | Enter a valid phone number (e.g., “+1 123-456-7890” or “1234567890”) in the input field   | The input should accept the valid phone number without any errors | ✅  |
-|  Invalid Phone Number (Insufficient Digits)   | Enter a phone number with fewer than 6 digits (e.g., “12345”)     | An error message should appear, indicating that the phone number should have at least 6 digits | ✅  |
+|  Invalid Phone Number (Insufficient Digits)   | Enter a phone number with fewer than 6 digits (e.g., “12345”)     | An error message should appear | ✅  |
 |  Invalid Phone Number (Invalid Characters)   | a phone number containing invalid characters    | An error message should appear, specifying that the phone number should consist of digits and symbols (-, +, ()) | ✅  |
-| Empty Phone Number Field        | Leave the phone number field empty     |  The input should allow an empty value (since it’s marked as blank=True and null=True) | ✅  |
+| Empty Phone Number Field        | Leave the phone number field empty     |  The input should allow an empty value | ✅  |
 | Valid Cuisine Entry     | Enter one or two valid cuisines (e.g., “Indian” or “Italian”) in the input field     | The input should accept the valid cuisine names without any errors | ✅  |
 | Invalid Cuisine Entry (Insufficient Characters)    | Enter a cuisine name with fewer than 3 characters      | An error message should appear must be include letters and symbols | ✅  |
 | Invalid Cuisine Entry (Invalid Characters)   | Enter a cuisine name containing invalid characters (e.g., “It@lian”)  | An error message should appear, specifying that the cuisine should consist of letters and symbols (, - /) | ✅  |
-| Empty Cuisine Field      | Leave the cuisine field empty   | The input should allow an empty value (since it’s marked as blank=True and null=True) | ✅  |
+| Empty Cuisine Field      | Leave the cuisine field empty   | The input should allow an empty value | ✅  |
 |  Valid Region Selection       | Choose a valid region from the available options (e.g., “Asia” or “North America”)   | The selection should be accepted without any errors | ✅  |
-|  Empty Region Field               | Leave the region field empty    | The input should allow an empty value (since it’s marked as blank=True and null=True) | ✅  |
 |  Default Region Value   | Load the form without making any specific region selection  | The default region (“Europe”) should be preselected | ✅  |
 | Valid Country Entry    | Enter a country name     |  should accept the country name less  than 12 char without any errors | ✅  |
 |  Long Country Name (Abbreviation)   | if it has long country name, use its abbreviation  | The input should accept the full name if it's short and its abbreviation if it's long | ✅  |
-|Empty Country Field  |  Leave the country field empty    | The input should allow an empty value (since it’s marked as blank=True and null=True) | ✅  |
+|Empty Country Field  |  Leave the country field empty    | The input should allow an empty value | ✅  |
 | Invalid Country Entry (Special Characters)  | Enter a country name containing special characters   |  An error message should appear, indicating that the country name should contain only letters | ✅  |
-|    Valid City Entry   | Enter a valid city name    | The input should accept thecity name less than 12 char without any errors | ✅  |
+|    Valid City Entry   | Enter a valid city name    | The input should accept city name less than 12 char without any errors | ✅  |
 | Invalid City Entry    |  Enter a city name containing special characters   | An error message should appear, indicating that the city name should contain only letters | ✅  |
 | Empty City Field    | Leave the city field empty     | The input should allow an empty value (since it’s marked as blank=True and null=True) | ✅  |
 | Long City Name (Abbreviation)    | use city abbreviation    | The input should accept the name if it's short and its abbreviation if it's long. | ✅  |
-| Valid Instructions Entry     | Enter valid cook instructions or schedules within the specified character limit (up to 6000 characters)  | The input should accept the valid instructions without any errors | ✅  |
-|  Instructions Exceeding Maximum Length     | Enter instructions longer than the specified maximum length (e.g., more than 6000 characters)    |  An error message should appear, indicating that the instructions exceed the allowed limit | ✅  |
-| Empty Instructions Field       | Leave the instructions field empty    |The input should allow an empty value (since it’s marked as blank=True and null=True) | ✅  |
+| Valid Instructions Entry     | Enter valid cook instructions or schedules within the specified character limit (up to 6000 characters) *****please read the unfixed bugs section  | The input should accept the valid instructions without any errors | ✅  |
+|  Instructions Exceeding Maximum Length     | Enter instructions longer than the specified maximum length (e.g., more than 6000 characters) *****please read the unfixed bugs section   |  An error message should appear, indicating that the instructions exceed the allowed limit | ✅  |
+| Empty Instructions Field       | Leave the instructions field empty    | The input should allow an empty value | ✅  |
 | Valid Facebook URL     |  Enter a valid Facebook URL     |  The input should accept the valid Facebook URL without any errors | ✅  |
-| Invalid Facebook URL     |  Enter an invalid Facebook URL or try another social media company x or any other URL  |An error message should appear, indicating that the Facebook URL is invalid | ✅  |
+| Invalid Facebook URL     |  Enter an invalid Facebook URL - try another social media company x or any other URL  |An error message should appear, indicating that the Facebook URL is invalid | ✅  |
 | Valid Instagram URL   | Enter a valid Instagram URL  | The input should accept the valid Instagram URL without any errors | ✅  |
-| Invalid Instagram URL    | Enter an invalid Instagram URL or try another social media company x or any other URL     |  An error message should appear, indicating that the Instagram URL is invalid | ✅  |
+| Invalid Instagram URL    | Enter an invalid Instagram URL - try another social media company x or any other URL     |  An error message should appear, indicating that the Instagram URL is invalid | ✅  |
 | Valid Youtube URL     |  Enter a valid Youtube URL   | The input should accept the valid Youtube URL without any errors | ✅  |
-| Invalid Youtube URL        | Enter an invalid Youtube URL or try another social media company x or any other URL   |An error message should appear, indicating that the Youtube URL is invalid | ✅  |
+| Invalid Youtube URL        | Enter an invalid Youtube URL - try another social media company x or any other URL   |An error message should appear, indicating that the Youtube URL is invalid | ✅  |
 | Valid Tiktok URL     | Enter a valid Tiktok URL  | The input should accept the valid Tiktok URL without any errors | ✅  |
-| Invalid Tiktok URL     | Enter an invalid Tiktok URL or try another social media company x or any other URL     | An error message should appear, indicating that the Tiktok URL is invalid | ✅  |
-| save changes     | user enter all valid values and accept values to the field    | the update data saved and displayed on my profile page with alert message that my profile updated  | ✅  |
-| save changes     | user enter one or more from the invalid values    | the alert message will show on the top of the update profile page that said an error and below the related field will pop up the exact reason of the fail save | ✅  |
+| Invalid Tiktok URL     | Enter an invalid Tiktok URL - try another social media company x or any other URL     | An error message should appear, indicating that the Tiktok URL is invalid | ✅  |
+| All social media URL links     | User leave all social media url fields empty     | no errors will display and it will accept it as a value and it has a default display value notify the general user that chef didn't specify any social media links | ✅  |
+| save changes     | user entering valid values to one input or more  | The updated data has been successfully saved and is now displayed on my profile page, accompanied by an alert message confirming that my profile has been updated | ✅  |
+| save changes     | user entering one or more invalid values    | When an error occurs during profile updates, an alert message will be displayed at the top of the update profile page. Additionally, a pop-up will appear below the relevant field, providing the exact reason for the failed save. | ✅  |
 
 ## Fixed Bugs
 
