@@ -718,7 +718,7 @@ label.form-label.requiredField[for="id_password"]::before {
 @media (max-width: 688px) {
     #reset-pass-div {
         width: 90%;
-        height: 65vh;
+        height: 100vh;
     }
 }
 
@@ -795,13 +795,14 @@ label.form-label.requiredField[for="id_password"]::before {
     border: 1px solid var(--green-color);
     height: 60vh;
     margin-top: 40px;
-    width: 45%;
+    width: 50%;
     background-color: var(--green-color);
 }
 
 @media (max-width: 550px) {
     #chage-password-form-page-div {
         width: 70%;
+        height: 100vh;
     }
 }
 
