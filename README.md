@@ -214,7 +214,7 @@ All fonts used on the website were sourced from the Google Fonts library. I sele
 
 ### Imagery
 
-The captivating visuals featured on our home page have been thoughtfully curated from [Pexels](https://www.pexels.com/search/home%20chef/),it's a reputable platform for high-quality stock photos, royalty-free images, and videos shared by talented creators.
+The captivating visuals featured on our home page, in addition to chefs profile images and dishes have been thoughtfully curated from [Pexels](https://www.pexels.com/search/home%20chef/),it's a reputable platform for high-quality stock photos, royalty-free images, and videos shared by talented creators.
 
 1. [Landing Image](https://www.pexels.com/photo/a-woman-cooking-on-the-table-8176610/): The revamped landing section image now exudes a sense of tranquility and approachability. The soft color palette and gentle gradients create a soothing ambiance, inviting users to explore further. The central focal point subtly hints at our website’s core purpose, while maintaining a balance that won’t overwhelm visitors. The overlaid text remains legible, ensuring a seamless reading experience.
 2. [About Us Image](https://www.pexels.com/photo/sliced-bread-on-brown-wooden-board-349610/): The carefully chosen image in our “About” section serves as a visual embodiment of our website’s core identity. in addition to The color palette of the image harmonizes seamlessly with our overall website color identity.
