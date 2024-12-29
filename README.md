@@ -45,7 +45,6 @@ Home Taste is a global culinary hub where home chefs from diverse backgrounds co
     - [Heroku Settings](#heroku-settings)
     - [Heroku Deployment](#heroku-deployment)
 - [Credits](#credits)
-- [Acknowledgements](#acknowledgements)
 
 ## UX
 
@@ -426,7 +425,7 @@ All testing results can be found [HERE](TESTING.md)
 
 ## Deployment
 
-1. A new repository was created using 'Code-Instutute-Org/ci-full-template'.
+1. A new repository was created using.
 2. A meaningful name was given to my new repository and I selected 'Create Repository'.
 3. inside the created repo select the 'Code' button above the file list on the right hand side.
 4. Ensure HTTPS is selected and click the clipboard on the right of the URL to copy it.
@@ -438,13 +437,13 @@ All testing results can be found [HERE](TESTING.md)
 
 ### Forking
 
-1. Go to [the project repository](https://github.com/alakeldev/home-taste-pp4).
+1. Go to [the project repository](https://github.com/alakeldev/home-taste-app).
 2. In the right most top menu, click the "Fork" button.
 3. There will now be a copy of the repository in your own GitHub account.
 
 ### Cloning the repo & Running the project locally
 
-1. Go to the following repository on GitHub: <https://github.com/alakeldev/home-taste-pp4>.
+1. Go to the following repository on GitHub: <https://github.com/alakeldev/home-taste-app>.
 2. At the top right of the screen, click the 'Code' button, and then click 'HTTPs'.
 3. Copy the link in this field.
 4. Open VS-code, creat new project folder, open the terminal.
@@ -452,8 +451,6 @@ All testing results can be found [HERE](TESTING.md)
 6. The clone process should now begin.
 
 ### Deploying with Heroku
-
-I followed the below steps using the [Code Institute tutorial](https://docs.google.com/document/d/1CncA1F2JClME2S_K0w4XoV3edMjOl_HrOQoEs3h9LOo/edit#heading=h.hvy9tw74f1o0):
 
 The following command in the IDE will create the relevant files needed for Heroku to install your project dependencies `pip3 freeze --local > requirements.txt`.
 
@@ -493,7 +490,6 @@ In the Deploy tab:
 
 ## Credits
 
-- [Code-Institute-Curriculum](https://codeinstitute.net/de/) - Full Stack Software Development Curriculum - [I blog 'new content' + Hello Django] Projects.
 - [Django-Doc](https://docs.djangoproject.com/en/5.0/) - Was my main source if I stuck in django.
 - [Django-CheatSheet](https://github.com/lucrae/django-cheat-sheet) - Cheat sheet on github was a very good and fast source for me.
 - [W3Schools-Django](https://www.w3schools.com/django/django_views.php) - Was a very help source of information.
@@ -510,8 +506,3 @@ In the Deploy tab:
 - [W3Schools-PostgresSQL](https://www.w3schools.com/postgresql/postgresql_create_table.php) - Was my main source to learn SQL statments.
 - [Python-Doc](https://docs.python.org/3/tutorial/index.html) - Was a very help source of information.
 - [W3Schools-Python](https://www.w3schools.com/python/default.asp) - Was a very help source of information.
-- [CI-Slack-Channels](https://code-institute-room.slack.com/) - I relied on the Code-Institute Slack community channels to increase my knowledge and to check for previous problems with the Heroku cloud platform and some errors that other students have faced through PP4.
-
-## Acknowledgements
-
-- I would like to express my gratitude to my mentor 'Martina Terlevic' for her invaluable feedback, advice, tips, and reviewing my project.
