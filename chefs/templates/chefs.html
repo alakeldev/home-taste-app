@@ -48,8 +48,21 @@
                 </div>
                 <div class="info text-center">
                     <h6 class="text-white">Region: {{ chef.profile.Region }}</h6>
+                    {% if chef.profile.country and chef.profile.city %}
                     <h6 class="text-white">Location: {{ chef.profile.country|title }}, {{ chef.profile.city|title }}</h6>
+                    {% elif not chef.profile.country and chef.profile.city %}
+                    <h6 class="text-white">Location: Country Not Set, {{ chef.profile.city|title }}</h6>
+                    {% elif chef.profile.country and not chef.profile.country %}
+                    <h6 class="text-white">Location: {{ chef.profile.country|title }}, City Not Set</h6>
+                    {% elif not chef.profile.country and not chef.profile.country %}
+                    <h6 class="text-white">Location: Country Not Set, City Not Set</h6>
+                    {% endif %}
+
+                    {% if chef.profile.cuisine_specialization %}
                     <h6 class="text-white">Cook-Exp: {{ chef.profile.cuisine_specialization|title }}</h6>
+                    {% elif not chef.profile.cuisine_specialization %}
+                    <h6 class="text-white">Cook-Exp: Not Set</h6>
+                    {% endif %}
                 </div>
                 <div class="social-icons my-2">
                     <h6 class="text-white">Member Since: {{ chef.profile.created_on|date:"Y-m-d" }}</h6>
