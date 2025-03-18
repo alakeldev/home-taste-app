@@ -11,7 +11,9 @@ django-crispy-forms==2.3
 django-phone-field==1.8.1
 django-resized==1.0.3
 django-richtextfield==1.6.2
+gunicorn==23.0.0
 idna==3.10
+packaging==24.2
 pillow==11.1.0
 psycopg2-binary==2.9.10
 python-dotenv==1.0.1
