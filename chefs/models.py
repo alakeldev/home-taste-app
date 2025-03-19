@@ -1,12 +1,11 @@
 from django.db import models
 from django.contrib.auth.models import User
 from djrichtextfield.models import RichTextField
-from django_resized import ResizedImageField
+from cloudinary.models import CloudinaryField
 from django.db.models.signals import post_save
 from django.utils.text import slugify
 
 # Create your models here.
-
 
 GENDER = (("Female", "Female"), ("Male", "Male"), ("Not Set", "Not Set"))
 
@@ -24,8 +23,8 @@ REGION = (
 
 class Profile(models.Model):
     """
-    Represents profile table inside the DB.
-    and the fields within this model define the columns of profile table
+    Represents profile table inside the DB
+    and the fields within this model define the columns of the profile table.
     """
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -34,12 +33,11 @@ class Profile(models.Model):
         max_length=20,
         help_text="You can enter a different name from your username.",
     )
-    image = ResizedImageField(
-        ("Profile Picture"),
-        size=[400, None],
-        quality=75,
-        upload_to="profile/",
-        force_format="WEBP",
+    image = CloudinaryField(
+        "Profile Picture",
+        folder="profile/",
+        format="webp",
+        transformation={"quality": 75},
         blank=True,
         null=True,
         help_text="Please upload your profile picture.",
@@ -83,7 +81,7 @@ class Profile(models.Model):
         null=True,
         help_text=(
             "Please enter your country of "
-            "residence (use abbreviations if its long)."),
+            "residence (use abbreviations if it's long)."),
     )
     city = models.CharField(
         ("City"),
@@ -92,7 +90,7 @@ class Profile(models.Model):
         null=True,
         help_text=(
             "Please enter your city of "
-            "residence (use abbreviations if its long)."),
+            "residence (use abbreviations if it's long)."),
     )
     created_on = models.DateTimeField(auto_now_add=True)
     slug = models.SlugField(blank=True, null=True)
@@ -131,64 +129,57 @@ class Profile(models.Model):
         null=True,
         help_text="Please enter the URL of your Tiktok account.",
     )
-    dish1 = ResizedImageField(
-        ("Dish Image-1"),
-        size=[600, 600],
-        quality=75,
-        upload_to="dishes/",
-        force_format="WEBP",
+    dish1 = CloudinaryField(
+        "Dish Image-1",
+        folder="dishes/",
+        format="webp",
+        transformation={"quality": 75, "width": 600, "height": 600, "crop": "limit"},
         blank=True,
         null=True,
-        help_text="Please upload a photo of your culinary masterpiece",
+        help_text="Please upload a photo of your culinary masterpiece.",
     )
-    dish2 = ResizedImageField(
-        ("Dish Image-2"),
-        size=[600, 600],
-        quality=75,
-        upload_to="dishes/",
-        force_format="WEBP",
+    dish2 = CloudinaryField(
+        "Dish Image-2",
+        folder="dishes/",
+        format="webp",
+        transformation={"quality": 75, "width": 600, "height": 600, "crop": "limit"},
         blank=True,
         null=True,
-        help_text="Please upload a photo of your culinary masterpiece",
+        help_text="Please upload a photo of your culinary masterpiece.",
     )
-    dish3 = ResizedImageField(
-        ("Dish Image-3"),
-        size=[600, 600],
-        quality=75,
-        upload_to="dishes/",
-        force_format="WEBP",
+    dish3 = CloudinaryField(
+        "Dish Image-3",
+        folder="dishes/",
+        format="webp",
+        transformation={"quality": 75, "width": 600, "height": 600, "crop": "limit"},
         blank=True,
         null=True,
-        help_text="Please upload a photo of your culinary masterpiece",
+        help_text="Please upload a photo of your culinary masterpiece.",
     )
-    dish4 = ResizedImageField(
-        ("Dish Image-4"),
-        size=[600, 600],
-        quality=75,
-        upload_to="dishes/",
-        force_format="WEBP",
+    dish4 = CloudinaryField(
+        "Dish Image-4",
+        folder="dishes/",
+        format="webp",
+        transformation={"quality": 75, "width": 600, "height": 600, "crop": "limit"},
         blank=True,
         null=True,
-        help_text="Please upload a photo of your culinary masterpiece",
+        help_text="Please upload a photo of your culinary masterpiece.",
     )
-    dish5 = ResizedImageField(
-        ("Dish Image-5"),
-        size=[600, 600],
-        quality=75,
-        upload_to="dishes/",
-        force_format="WEBP",
+    dish5 = CloudinaryField(
+        "Dish Image-5",
+        folder="dishes/",
+        format="webp",
+        transformation={"quality": 75, "width": 600, "height": 600, "crop": "limit"},
         blank=True,
         null=True,
-        help_text="Please upload a photo of your culinary masterpiece",
+        help_text="Please upload a photo of your culinary masterpiece.",
     )
 
     def save(self, *args, **kwargs):
         """
         If the 'slug' field is not set, generate it by
         slugifying the user's username.
-        super => save = to save the profile instance.
         """
-
         if not self.slug:
             self.slug = slugify(self.user.username)
         super(Profile, self).save(*args, **kwargs)
@@ -197,13 +188,13 @@ class Profile(models.Model):
         ordering = ["-created_on"]
 
     def __str__(self):
-        return "%s" % (self.user.username)
+        return f"{self.user.username}"
 
 
 def create_profile(sender, **kwargs):
     """
     Creates profile when a new user is created.
-    connect create function to user model using signal post_save
+    connect create function to user model using signal post_save.
     """
     if kwargs["created"]:
         Profile.objects.create(user=kwargs["instance"])
@@ -215,7 +206,7 @@ post_save.connect(create_profile, sender=User)
 class Comment(models.Model):
     """
     Represents comment table inside the DB.
-    and the fields within this model define the columns of comment table
+    and the fields within this model define the columns of comment table.
     """
 
     chef = models.ForeignKey(Profile, on_delete=models.CASCADE)
