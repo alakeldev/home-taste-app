@@ -70,6 +70,7 @@ class Profile(models.Model):
     )
     Region = models.CharField(
         ("Region"),
+        max_length=20,
         choices=REGION,
         default="Europe",
         help_text="Please specify your region.",
@@ -95,6 +96,7 @@ class Profile(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     slug = models.SlugField(blank=True, null=True)
     gender = models.CharField(
+        max_length=10,
         choices=GENDER,
         help_text="Please specify your gender.",
         default="Not Set",

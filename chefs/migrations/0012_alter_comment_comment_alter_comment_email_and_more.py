@@ -30,7 +30,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='profile',
             name='Region',
-            field=models.CharField(choices=[('Africa', 'Africa'), ('Asia', 'Asia'), ('Caribbean', 'Caribbean'), ('Central America', 'Central America'), ('Europe', 'Europe'), ('North America', 'North America'), ('Oceania', 'Oceania'), ('South America', 'South America')], default='Europe', help_text='Please specify your region.', verbose_name='Region'),
+            field=models.CharField(choices=[('Africa', 'Africa'), ('Asia', 'Asia'), ('Caribbean', 'Caribbean'), ('Central America', 'Central America'), ('Europe', 'Europe'), ('North America', 'North America'), ('Oceania', 'Oceania'), ('South America', 'South America')], default='Europe', help_text='Please specify your region.', max_length=20, verbose_name='Region'),
         ),
         migrations.AlterField(
             model_name='profile',
@@ -85,7 +85,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='profile',
             name='gender',
-            field=models.CharField(blank=True, choices=[('Female', 'Female'), ('Male', 'Male')], help_text='Please specify your gender.', null=True),
+            field=models.CharField(blank=True, choices=[('Female', 'Female'), ('Male', 'Male')], help_text='Please specify your gender.', max_length=10, null=True),
         ),
         migrations.AlterField(
             model_name='profile',

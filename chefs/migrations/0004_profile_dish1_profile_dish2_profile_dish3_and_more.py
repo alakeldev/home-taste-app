@@ -70,7 +70,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='profile',
             name='gender',
-            field=models.CharField(blank=True, choices=[('F', 'Female'), ('M', 'Male')], null=True),
+            field=models.CharField(blank=True, choices=[('F', 'Female'), ('M', 'Male')], max_length=10, null=True),
         ),
         migrations.AlterField(
             model_name='profile',

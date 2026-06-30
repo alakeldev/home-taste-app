@@ -34,7 +34,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='profile',
             name='gender',
-            field=models.CharField(choices=[('Female', 'Female'), ('Male', 'Male'), ('Not Set', 'Not Set')], default='Not Set', help_text='Please specify your gender.'),
+            field=models.CharField(choices=[('Female', 'Female'), ('Male', 'Male'), ('Not Set', 'Not Set')], default='Not Set', help_text='Please specify your gender.', max_length=10),
         ),
         migrations.AlterField(
             model_name='profile',

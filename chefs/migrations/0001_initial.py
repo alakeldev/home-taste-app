@@ -27,7 +27,7 @@ class Migration(migrations.Migration):
                 ('city', models.CharField(blank=True, max_length=25, null=True)),
                 ('created_on', models.DateTimeField(auto_now_add=True)),
                 ('slug', models.SlugField(blank=True, null=True)),
-                ('gender', models.CharField(blank=True, choices=[('F', 'Female'), ('M', 'Male')], default='not specify', null=True)),
+                ('gender', models.CharField(blank=True, choices=[('F', 'Female'), ('M', 'Male')], default='not specify', max_length=10, null=True)),
                 ('instructions', djrichtextfield.models.RichTextField(blank=True, max_length=20000, null=True)),
                 ('image', django_resized.forms.ResizedImageField(blank=True, crop=None, force_format='WEBP', keep_meta=True, null=True, quality=75, scale=None, size=[400, None], upload_to='profile/')),
                 ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),

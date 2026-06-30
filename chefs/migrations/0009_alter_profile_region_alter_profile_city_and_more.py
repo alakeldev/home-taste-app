@@ -16,7 +16,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='profile',
             name='Region',
-            field=models.CharField(choices=[('Africa', 'Africa'), ('Asia', 'Asia'), ('Caribbean', 'Caribbean'), ('Central America', 'Central America'), ('Europe', 'Europe'), ('North America', 'North America'), ('Oceania', 'Oceania'), ('South America', 'South America')], default='Europe', verbose_name='Please Choose Your Current Region'),
+            field=models.CharField(choices=[('Africa', 'Africa'), ('Asia', 'Asia'), ('Caribbean', 'Caribbean'), ('Central America', 'Central America'), ('Europe', 'Europe'), ('North America', 'North America'), ('Oceania', 'Oceania'), ('South America', 'South America')], default='Europe', max_length=20, verbose_name='Please Choose Your Current Region'),
         ),
         migrations.AlterField(
             model_name='profile',
