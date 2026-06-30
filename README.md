@@ -44,6 +44,7 @@ Home Taste is a global culinary hub where home chefs from diverse backgrounds co
   - [Deploying with Heroku](#deploying-with-heroku)
     - [Heroku Settings](#heroku-settings)
     - [Heroku Deployment](#heroku-deployment)
+- [Running the Project Locally](#running-the-project-locally)
 - [Credits](#credits)
 
 ## UX
@@ -487,6 +488,91 @@ In the Deploy tab:
 2. You can then choose to deploy the project manually or automatically, automatic deployment will generate a new application every time you push a change to Github, whereas manual deployment requires you to push the `Deploy Branch` button whenever you want a change made.
 3. Once you have chosen your deployment method and have clicked `Deploy Branch` your application will be built and you should now see the `View` button, click this to open your application.
 4. Be sure to delete settings in Heroku like `PORT` and `DISABLE_COLLECTSTATIC`, set `DEBUG` to `False` in your `settings.py` and add `X_FRAME_OPTIONS` there.
+
+---
+
+## Running the Project Locally
+
+Follow these steps to run Home Taste on your own machine using **SQLite** (no external database required).
+
+### Prerequisites
+
+- Python 3.10 or higher
+- Git
+
+### Step 1 — Clone the repository
+
+```bash
+git clone https://github.com/alakeldev/home-taste-app.git
+cd home-taste-app
+```
+
+### Step 2 — Create and activate a virtual environment
+
+**macOS / Linux:**
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+**Windows:**
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+```
+
+### Step 3 — Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Step 4 — Create your environment file
+
+Create a file named `env.py` in the project root (same folder as `manage.py`). This file is already in `.gitignore` so it will never be committed.
+
+```python
+import os
+
+os.environ["SECRET_KEY"] = "your-local-secret-key-change-this"
+os.environ["DATABASE_URL"] = "sqlite:///db.sqlite3"
+
+# Optional — only needed if you want image uploads to work locally.
+# Sign up at https://cloudinary.com and paste your API environment URL:
+# os.environ["CLOUDINARY_URL"] = "cloudinary://api_key:api_secret@cloud_name"
+```
+
+> **Note:** `DATABASE_URL` defaults to SQLite if not set, so you can skip setting it if you just want to run the project quickly. The `SECRET_KEY` must be set.
+
+### Step 5 — Apply database migrations
+
+```bash
+python manage.py migrate
+```
+
+### Step 6 — Create a superuser (optional, for admin panel access)
+
+```bash
+python manage.py createsuperuser
+```
+
+### Step 7 — Start the development server
+
+```bash
+python manage.py runserver
+```
+
+Open your browser and go to **http://127.0.0.1:8000/**
+
+The admin panel is available at **http://127.0.0.1:8000/admin/**
+
+### Notes
+
+- Profile picture and dish image uploads require a [Cloudinary](https://cloudinary.com) account. Without `CLOUDINARY_URL` set, the upload form will error on save. You can skip uploading images and leave those fields blank.
+- Email features (password reset etc.) require `EMAIL_HOST_USER`, `EMAIL_HOST_PASSWORD`, and `DEFAULT_FROM_EMAIL` to be set in `env.py`. These are not needed for basic local use.
+- `DEBUG` is set to `False` in `settings.py`. For local development you can temporarily set `os.environ["DEBUG"] = "True"` in `env.py` to see detailed error pages.
+
+---
 
 ## Credits
 
