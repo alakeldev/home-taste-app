@@ -19,7 +19,7 @@ def chefs_list(request):
 
     """
     search_query = request.GET.get("search", "")
-    queryset = User.objects.all()
+    queryset = User.objects.select_related("profile").all()
     if search_query:
         queryset = queryset.filter(
             Q(profile__Region__icontains=search_query)
