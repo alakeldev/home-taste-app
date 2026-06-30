@@ -83,7 +83,7 @@ class UserProfileForm(forms.ModelForm):
                     "phone_number",
                     "Phone Number should consist of digits and symbols -,+,()",
                 )
-        if len(instructions) > max_length:
+        if instructions and len(instructions) > max_length:
             raise forms.ValidationError(
                 f"schedules field exceeds a limit of {max_length} characters."
             )

@@ -132,7 +132,9 @@ WSGI_APPLICATION = "home_taste.wsgi.application"
 
 # Database configuration
 DATABASES = {
-    "default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    "default": dj_database_url.parse(
+        os.environ.get("DATABASE_URL", "sqlite:///db.sqlite3")
+    )
 }
 
 # Password validation

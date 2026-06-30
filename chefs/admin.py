@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.utils.html import format_html
+from django.utils.html import format_html, strip_tags
 from .models import Profile, Comment
 
 # Register your models here.
@@ -49,16 +49,16 @@ class ProfileAdmin(admin.ModelAdmin):
 
         if not full_instructions or len(full_instructions) == 0:
             return "-"
-        summary = full_instructions[:max_summary_length]
-        if len(full_instructions) > max_summary_length:
+        summary = strip_tags(full_instructions)[:max_summary_length]
+        if len(strip_tags(full_instructions)) > max_summary_length:
             summary += "..."
-        return format_html(summary)
+        return format_html("{}", summary)
 
     formatted_instructions.short_description = "Instructions/Schedules"
 
 
 @admin.register(Comment)
-class ProfileAdmin(admin.ModelAdmin):
+class CommentAdmin(admin.ModelAdmin):
     """
     Customizes the admin panel interface for the comment model.
     Set the filter on is_approved field.

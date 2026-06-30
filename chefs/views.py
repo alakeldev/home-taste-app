@@ -82,7 +82,7 @@ def my_profile(request):
     Otherwise redirects to login page
     """
 
-    return render(request, "my_profile.html", {"my_profile": my_profile})
+    return render(request, "my_profile.html")
 
 
 @login_required(login_url="/accounts/login/")
